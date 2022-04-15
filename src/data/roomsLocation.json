@@ -1,0 +1,49 @@
+{
+  "floor1": [
+    {
+      "name": "Sala 1",
+      "displayName": "1",
+      "position": {
+        "x": 7,
+        "y": 3,
+        "z": 8.5
+      }
+    },
+    {
+      "name": "Sala 2",
+      "displayName": "2",
+      "position": {
+        "x": 9,
+        "y": 3,
+        "z": -9
+      }
+    },
+    {
+      "name": "Sala 3",
+      "displayName": "3",
+      "position": {
+        "x": -8,
+        "y": 3,
+        "z": -9
+      }
+    },
+    {
+      "name": "S. Młodzieżowy",
+      "displayName": "S. Młodzieżowy",
+      "position": {
+        "x": -8,
+        "y": 3,
+        "z": -2
+      }
+    },
+    {
+      "name": "Sala 300",
+      "displayName": "300",
+      "position": {
+        "x": -6,
+        "y": 3,
+        "z": 9
+      }
+    }
+  ]
+}
