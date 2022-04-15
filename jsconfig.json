@@ -4,7 +4,8 @@
     "paths": {
       "@src/*": ["src/*"],
       "@comp/*": ["src/components/*"],
-      "@assets/*": ["src/assets/*"]
+      "@assets/*": ["src/assets/*"],
+      "@data/*": ["src/data/*"]
     }
   },
   "exclude": ["node_modules", "**/node_modules", "dist"]

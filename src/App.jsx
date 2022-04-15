@@ -1,10 +1,11 @@
 import React from 'react';
-import Map3D from './components/Map3D/Map3D';
+
 import './App.scss';
+import MapInterface from '@comp/MapInterface';
 function App() {
   return (
     <div className='App'>
-      <Map3D />
+      <MapInterface />
     </div>
   );
 }

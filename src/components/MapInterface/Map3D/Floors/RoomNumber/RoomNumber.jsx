@@ -1,7 +1,8 @@
 import React, { useRef } from 'react';
-import { Text } from '@react-three/drei';
-
+import { Html } from '@react-three/drei';
 import { useFrame } from '@react-three/fiber';
+
+import './RoomNumber.scss';
 
 function RoomNumber({ displayName, position }) {
   const groupRef = useRef(null);
@@ -12,14 +13,9 @@ function RoomNumber({ displayName, position }) {
 
   return (
     <group ref={groupRef} position={Object.values(position)}>
-      <Text
-        scale={[10, 10, 10]}
-        color='black'
-        anchorX='center'
-        anchorY='middle'
-      >
-        {displayName}
-      </Text>
+      <Html distanceFactor={10}>
+        <div className='RoomNumber__text'>{displayName}</div>
+      </Html>
     </group>
   );
 }
