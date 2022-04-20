@@ -1,5 +1,5 @@
 import React from 'react';
-import Map3D from './MapInterface/Map3D/Map3D';
+import Map3D from './Map3D/Map3D';
 import './MapInterface.scss';
 function MapInterface() {
   return (

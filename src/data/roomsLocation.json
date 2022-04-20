@@ -1,48 +1,369 @@
 {
-  "floor1": [
+  "floor-1": [
     {
-      "name": "Sala 1",
-      "displayName": "1",
+      "name": "Sala 7",
+      "displayName": "7",
       "position": {
-        "x": 7,
-        "y": 3,
-        "z": 8.5
+        "x": -10.7,
+        "y": 0.5,
+        "z": -1.4
       }
     },
     {
-      "name": "Sala 2",
-      "displayName": "2",
+      "name": "Sala 5",
+      "displayName": "5",
       "position": {
-        "x": 9,
-        "y": 3,
-        "z": -9
+        "x": -11.3,
+        "y": 0.5,
+        "z": -0.1
+      }
+    },
+    {
+      "name": "Sala 10",
+      "displayName": "10",
+      "position": {
+        "x": -10.3,
+        "y": 0.5,
+        "z": -0.3
+      }
+    },
+    {
+      "name": "Sala 4",
+      "displayName": "4",
+      "position": {
+        "x": -11.3,
+        "y": 0.5,
+        "z": 0.8
       }
     },
     {
       "name": "Sala 3",
       "displayName": "3",
       "position": {
-        "x": -8,
-        "y": 3,
-        "z": -9
+        "x": -11.3,
+        "y": 0.5,
+        "z": 2.1
       }
     },
     {
-      "name": "S. Młodzieżowy",
-      "displayName": "S. Młodzieżowy",
+      "name": "Sklepik",
+      "displayName": "Sklepik",
       "position": {
-        "x": -8,
-        "y": 3,
-        "z": -2
+        "x": -10.8,
+        "y": 0.5,
+        "z": 3.8
       }
     },
     {
-      "name": "Sala 300",
-      "displayName": "300",
+      "name": "Szatnia 1",
+      "displayName": "Szat. 1",
       "position": {
-        "x": -6,
-        "y": 3,
-        "z": 9
+        "x": -9.23,
+        "y": 0.5,
+        "z": 2.6
+      }
+    },
+    {
+      "name": "Szatnia 2",
+      "displayName": "Szat. 2",
+      "position": {
+        "x": -8.2,
+        "y": 0.5,
+        "z": 2.7
+      }
+    },
+    {
+      "name": "Szatnia 3",
+      "displayName": "Szat. 3",
+      "position": {
+        "x": -5.6,
+        "y": 0.5,
+        "z": 2.7
+      }
+    },
+    {
+      "name": "Szatnia WF",
+      "displayName": "Szat. WF",
+      "position": {
+        "x": 0.6,
+        "y": 0.5,
+        "z": 0
+      }
+    }
+  ],
+  "floor0": [
+    {
+      "name": "Sala 7",
+      "displayName": "7",
+      "position": {
+        "x": -10.7,
+        "y": 0.5,
+        "z": -1.4
+      }
+    },
+    {
+      "name": "Sala 5",
+      "displayName": "5",
+      "position": {
+        "x": -11.3,
+        "y": 0.5,
+        "z": -0.1
+      }
+    },
+    {
+      "name": "Sala 10",
+      "displayName": "10",
+      "position": {
+        "x": -10.3,
+        "y": 0.5,
+        "z": -0.3
+      }
+    },
+    {
+      "name": "Sala 4",
+      "displayName": "4",
+      "position": {
+        "x": -11.3,
+        "y": 0.5,
+        "z": 0.8
+      }
+    },
+    {
+      "name": "Sala 3",
+      "displayName": "3",
+      "position": {
+        "x": -11.3,
+        "y": 0.5,
+        "z": 2.1
+      }
+    },
+    {
+      "name": "Sklepik",
+      "displayName": "Sklepik",
+      "position": {
+        "x": -10.8,
+        "y": 0.5,
+        "z": 3.8
+      }
+    },
+    {
+      "name": "Szatnia 1",
+      "displayName": "Szat. 1",
+      "position": {
+        "x": -9.23,
+        "y": 0.5,
+        "z": 2.6
+      }
+    },
+    {
+      "name": "Szatnia 2",
+      "displayName": "Szat. 2",
+      "position": {
+        "x": -8.2,
+        "y": 0.5,
+        "z": 2.7
+      }
+    },
+    {
+      "name": "Szatnia 3",
+      "displayName": "Szat. 3",
+      "position": {
+        "x": -5.6,
+        "y": 0.5,
+        "z": 2.7
+      }
+    },
+    {
+      "name": "Szatnia WF",
+      "displayName": "Szat. WF",
+      "position": {
+        "x": 0.6,
+        "y": 0.5,
+        "z": 0
+      }
+    }
+  ],
+  "floor1": [
+    {
+      "name": "Sala 7",
+      "displayName": "7",
+      "position": {
+        "x": -10.7,
+        "y": 0.5,
+        "z": -1.4
+      }
+    },
+    {
+      "name": "Sala 5",
+      "displayName": "5",
+      "position": {
+        "x": -11.3,
+        "y": 0.5,
+        "z": -0.1
+      }
+    },
+    {
+      "name": "Sala 10",
+      "displayName": "10",
+      "position": {
+        "x": -10.3,
+        "y": 0.5,
+        "z": -0.3
+      }
+    },
+    {
+      "name": "Sala 4",
+      "displayName": "4",
+      "position": {
+        "x": -11.3,
+        "y": 0.5,
+        "z": 0.8
+      }
+    },
+    {
+      "name": "Sala 3",
+      "displayName": "3",
+      "position": {
+        "x": -11.3,
+        "y": 0.5,
+        "z": 2.1
+      }
+    },
+    {
+      "name": "Sklepik",
+      "displayName": "Sklepik",
+      "position": {
+        "x": -10.8,
+        "y": 0.5,
+        "z": 3.8
+      }
+    },
+    {
+      "name": "Szatnia 1",
+      "displayName": "Szat. 1",
+      "position": {
+        "x": -9.23,
+        "y": 0.5,
+        "z": 2.6
+      }
+    },
+    {
+      "name": "Szatnia 2",
+      "displayName": "Szat. 2",
+      "position": {
+        "x": -8.2,
+        "y": 0.5,
+        "z": 2.7
+      }
+    },
+    {
+      "name": "Szatnia 3",
+      "displayName": "Szat. 3",
+      "position": {
+        "x": -5.6,
+        "y": 0.5,
+        "z": 2.7
+      }
+    },
+    {
+      "name": "Szatnia WF",
+      "displayName": "Szat. WF",
+      "position": {
+        "x": 0.6,
+        "y": 0.5,
+        "z": 0
+      }
+    }
+  ],
+  "floor2": [
+    {
+      "name": "Sala 7",
+      "displayName": "7",
+      "position": {
+        "x": -10.7,
+        "y": 0.5,
+        "z": -1.4
+      }
+    },
+    {
+      "name": "Sala 5",
+      "displayName": "5",
+      "position": {
+        "x": -11.3,
+        "y": 0.5,
+        "z": -0.1
+      }
+    },
+    {
+      "name": "Sala 10",
+      "displayName": "10",
+      "position": {
+        "x": -10.3,
+        "y": 0.5,
+        "z": -0.3
+      }
+    },
+    {
+      "name": "Sala 4",
+      "displayName": "4",
+      "position": {
+        "x": -11.3,
+        "y": 0.5,
+        "z": 0.8
+      }
+    },
+    {
+      "name": "Sala 3",
+      "displayName": "3",
+      "position": {
+        "x": -11.3,
+        "y": 0.5,
+        "z": 2.1
+      }
+    },
+    {
+      "name": "Sklepik",
+      "displayName": "Sklepik",
+      "position": {
+        "x": -10.8,
+        "y": 0.5,
+        "z": 3.8
+      }
+    },
+    {
+      "name": "Szatnia 1",
+      "displayName": "Szat. 1",
+      "position": {
+        "x": -9.23,
+        "y": 0.5,
+        "z": 2.6
+      }
+    },
+    {
+      "name": "Szatnia 2",
+      "displayName": "Szat. 2",
+      "position": {
+        "x": -8.2,
+        "y": 0.5,
+        "z": 2.7
+      }
+    },
+    {
+      "name": "Szatnia 3",
+      "displayName": "Szat. 3",
+      "position": {
+        "x": -5.6,
+        "y": 0.5,
+        "z": 2.7
+      }
+    },
+    {
+      "name": "Szatnia WF",
+      "displayName": "Szat. WF",
+      "position": {
+        "x": 0.6,
+        "y": 0.5,
+        "z": 0
       }
     }
   ]

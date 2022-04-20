@@ -1,7 +1,7 @@
 import React from 'react';
 
 import './App.scss';
-import MapInterface from '@comp/MapInterface';
+import MapInterface from '@src/components/MapInterface/MapInterface';
 function App() {
   return (
     <div className='App'>
