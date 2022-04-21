@@ -1,368 +1,368 @@
 {
   "floor-1": [
     {
-      "name": "Sala 7",
+      "name": "-1 Sala 7",
       "displayName": "7",
       "position": {
         "x": -10.7,
-        "y": 0.5,
+        "y": 0.2,
         "z": -1.4
       }
     },
     {
-      "name": "Sala 5",
+      "name": "-1 Sala 5",
       "displayName": "5",
       "position": {
         "x": -11.3,
-        "y": 0.5,
+        "y": 0.2,
         "z": -0.1
       }
     },
     {
-      "name": "Sala 10",
+      "name": "-1 Sala 10",
       "displayName": "10",
       "position": {
         "x": -10.3,
-        "y": 0.5,
+        "y": 0.2,
         "z": -0.3
       }
     },
     {
-      "name": "Sala 4",
+      "name": "-1 Sala 4",
       "displayName": "4",
       "position": {
         "x": -11.3,
-        "y": 0.5,
+        "y": 0.2,
         "z": 0.8
       }
     },
     {
-      "name": "Sala 3",
+      "name": "-1 Sala 3",
       "displayName": "3",
       "position": {
         "x": -11.3,
-        "y": 0.5,
+        "y": 0.2,
         "z": 2.1
       }
     },
     {
-      "name": "Sklepik",
+      "name": "-1 Sklepik",
       "displayName": "Sklepik",
       "position": {
         "x": -10.8,
-        "y": 0.5,
+        "y": 0.2,
         "z": 3.8
       }
     },
     {
-      "name": "Szatnia 1",
+      "name": "-1 Szatnia 1",
       "displayName": "Szat. 1",
       "position": {
         "x": -9.23,
-        "y": 0.5,
+        "y": 0.2,
         "z": 2.6
       }
     },
     {
-      "name": "Szatnia 2",
+      "name": "-1 Szatnia 2",
       "displayName": "Szat. 2",
       "position": {
         "x": -8.2,
-        "y": 0.5,
+        "y": 0.2,
         "z": 2.7
       }
     },
     {
-      "name": "Szatnia 3",
+      "name": "-1 Szatnia 3",
       "displayName": "Szat. 3",
       "position": {
         "x": -5.6,
-        "y": 0.5,
+        "y": 0.2,
         "z": 2.7
       }
     },
     {
-      "name": "Szatnia WF",
+      "name": "-1 Szatnia WF",
       "displayName": "Szat. WF",
       "position": {
         "x": 0.6,
-        "y": 0.5,
+        "y": 0.2,
         "z": 0
       }
     }
   ],
   "floor0": [
     {
-      "name": "Sala 7",
+      "name": "0 Sala 7",
       "displayName": "7",
       "position": {
         "x": -10.7,
-        "y": 0.5,
+        "y": 0.2,
         "z": -1.4
       }
     },
     {
-      "name": "Sala 5",
+      "name": "0 Sala 5",
       "displayName": "5",
       "position": {
         "x": -11.3,
-        "y": 0.5,
+        "y": 0.2,
         "z": -0.1
       }
     },
     {
-      "name": "Sala 10",
+      "name": "0 Sala 10",
       "displayName": "10",
       "position": {
         "x": -10.3,
-        "y": 0.5,
+        "y": 0.2,
         "z": -0.3
       }
     },
     {
-      "name": "Sala 4",
+      "name": "0 Sala 4",
       "displayName": "4",
       "position": {
         "x": -11.3,
-        "y": 0.5,
+        "y": 0.2,
         "z": 0.8
       }
     },
     {
-      "name": "Sala 3",
+      "name": "0 Sala 3",
       "displayName": "3",
       "position": {
         "x": -11.3,
-        "y": 0.5,
+        "y": 0.2,
         "z": 2.1
       }
     },
     {
-      "name": "Sklepik",
+      "name": "0 Sklepik",
       "displayName": "Sklepik",
       "position": {
         "x": -10.8,
-        "y": 0.5,
+        "y": 0.2,
         "z": 3.8
       }
     },
     {
-      "name": "Szatnia 1",
+      "name": "0 Szatnia 1",
       "displayName": "Szat. 1",
       "position": {
         "x": -9.23,
-        "y": 0.5,
+        "y": 0.2,
         "z": 2.6
       }
     },
     {
-      "name": "Szatnia 2",
+      "name": "0 Szatnia 2",
       "displayName": "Szat. 2",
       "position": {
         "x": -8.2,
-        "y": 0.5,
+        "y": 0.2,
         "z": 2.7
       }
     },
     {
-      "name": "Szatnia 3",
+      "name": "0 Szatnia 3",
       "displayName": "Szat. 3",
       "position": {
         "x": -5.6,
-        "y": 0.5,
+        "y": 0.2,
         "z": 2.7
       }
     },
     {
-      "name": "Szatnia WF",
+      "name": "0 Szatnia WF",
       "displayName": "Szat. WF",
       "position": {
         "x": 0.6,
-        "y": 0.5,
+        "y": 0.2,
         "z": 0
       }
     }
   ],
   "floor1": [
     {
-      "name": "Sala 7",
+      "name": "1 Sala 7",
       "displayName": "7",
       "position": {
         "x": -10.7,
-        "y": 0.5,
+        "y": 0.2,
         "z": -1.4
       }
     },
     {
-      "name": "Sala 5",
+      "name": "1 Sala 5",
       "displayName": "5",
       "position": {
         "x": -11.3,
-        "y": 0.5,
+        "y": 0.2,
         "z": -0.1
       }
     },
     {
-      "name": "Sala 10",
+      "name": "1 Sala 10",
       "displayName": "10",
       "position": {
         "x": -10.3,
-        "y": 0.5,
+        "y": 0.2,
         "z": -0.3
       }
     },
     {
-      "name": "Sala 4",
+      "name": "1 Sala 4",
       "displayName": "4",
       "position": {
         "x": -11.3,
-        "y": 0.5,
+        "y": 0.2,
         "z": 0.8
       }
     },
     {
-      "name": "Sala 3",
+      "name": "1 Sala 3",
       "displayName": "3",
       "position": {
         "x": -11.3,
-        "y": 0.5,
+        "y": 0.2,
         "z": 2.1
       }
     },
     {
-      "name": "Sklepik",
+      "name": "1 Sklepik",
       "displayName": "Sklepik",
       "position": {
         "x": -10.8,
-        "y": 0.5,
+        "y": 0.2,
         "z": 3.8
       }
     },
     {
-      "name": "Szatnia 1",
+      "name": "1 Szatnia 1",
       "displayName": "Szat. 1",
       "position": {
         "x": -9.23,
-        "y": 0.5,
+        "y": 0.2,
         "z": 2.6
       }
     },
     {
-      "name": "Szatnia 2",
+      "name": "1 Szatnia 2",
       "displayName": "Szat. 2",
       "position": {
         "x": -8.2,
-        "y": 0.5,
+        "y": 0.2,
         "z": 2.7
       }
     },
     {
-      "name": "Szatnia 3",
+      "name": "1 Szatnia 3",
       "displayName": "Szat. 3",
       "position": {
         "x": -5.6,
-        "y": 0.5,
+        "y": 0.2,
         "z": 2.7
       }
     },
     {
-      "name": "Szatnia WF",
+      "name": "1 Szatnia WF",
       "displayName": "Szat. WF",
       "position": {
         "x": 0.6,
-        "y": 0.5,
+        "y": 0.2,
         "z": 0
       }
     }
   ],
   "floor2": [
     {
-      "name": "Sala 7",
+      "name": "2 Sala 7",
       "displayName": "7",
       "position": {
         "x": -10.7,
-        "y": 0.5,
+        "y": 0.2,
         "z": -1.4
       }
     },
     {
-      "name": "Sala 5",
+      "name": "2 Sala 5",
       "displayName": "5",
       "position": {
         "x": -11.3,
-        "y": 0.5,
+        "y": 0.2,
         "z": -0.1
       }
     },
     {
-      "name": "Sala 10",
+      "name": "2 Sala 10",
       "displayName": "10",
       "position": {
         "x": -10.3,
-        "y": 0.5,
+        "y": 0.2,
         "z": -0.3
       }
     },
     {
-      "name": "Sala 4",
+      "name": "2 Sala 4",
       "displayName": "4",
       "position": {
         "x": -11.3,
-        "y": 0.5,
+        "y": 0.2,
         "z": 0.8
       }
     },
     {
-      "name": "Sala 3",
+      "name": "2 Sala 3",
       "displayName": "3",
       "position": {
         "x": -11.3,
-        "y": 0.5,
+        "y": 0.2,
         "z": 2.1
       }
     },
     {
-      "name": "Sklepik",
+      "name": "2 Sklepik",
       "displayName": "Sklepik",
       "position": {
         "x": -10.8,
-        "y": 0.5,
+        "y": 0.2,
         "z": 3.8
       }
     },
     {
-      "name": "Szatnia 1",
+      "name": "2 Szatnia 1",
       "displayName": "Szat. 1",
       "position": {
         "x": -9.23,
-        "y": 0.5,
+        "y": 0.2,
         "z": 2.6
       }
     },
     {
-      "name": "Szatnia 2",
+      "name": "2 Szatnia 2",
       "displayName": "Szat. 2",
       "position": {
         "x": -8.2,
-        "y": 0.5,
+        "y": 0.2,
         "z": 2.7
       }
     },
     {
-      "name": "Szatnia 3",
+      "name": "2 Szatnia 3",
       "displayName": "Szat. 3",
       "position": {
         "x": -5.6,
-        "y": 0.5,
+        "y": 0.2,
         "z": 2.7
       }
     },
     {
-      "name": "Szatnia WF",
+      "name": "2 Szatnia WF",
       "displayName": "Szat. WF",
       "position": {
         "x": 0.6,
-        "y": 0.5,
+        "y": 0.2,
         "z": 0
       }
     }

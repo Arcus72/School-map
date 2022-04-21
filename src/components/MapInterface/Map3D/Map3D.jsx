@@ -1,25 +1,34 @@
 import React, { useState } from 'react';
 import { Canvas } from '@react-three/fiber';
-
+import { DoubleSide } from 'three';
 import './Map3D.scss';
 
 import Lights from './Lights/Lights';
 import Camera from './Camera/Camera';
 import Building from './Building/Building';
 
-function Map3D() {
-  console.log('Map3D');
-  const [floorNumber, setFloorNumber] = useState(2);
+function Map3D({ roomsToHighlighted }) {
+  const [floorNumber] = useState(1);
 
   return (
     <Canvas className='Map3D' camera={{ position: [0, 20, 20], fov: 75 }}>
       <Camera />
       <Lights />
 
-      <Building floorNumber={floorNumber} />
+      <Building
+        roomsToHighlighted={roomsToHighlighted}
+        floorNumber={floorNumber}
+      />
 
-      <gridHelper args={[80, 80, `white`, `gray`]} />
-      <axesHelper position={[0, 4, 0]} />
+      <mesh
+        position={[0, 0, 0]}
+        rotation={[Math.PI / 2, 0, 0]}
+        scale={[100, 100, 100]}
+      >
+        <planeBufferGeometry />
+
+        <meshBasicMaterial color='white' side={DoubleSide} />
+      </mesh>
     </Canvas>
   );
 }

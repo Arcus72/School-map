@@ -15,11 +15,8 @@ function Lights() {
   return (
     <>
       <ambientLight intensity={0.5} />
-      <PointLightHelperCreator castShadow position={[60, 10, 0]} />
-      <PointLightHelperCreator castShadow position={[30, 10, 0]} />
-      <PointLightHelperCreator castShadow position={[0, 10, 0]} />
-      <PointLightHelperCreator castShadow position={[-30, 10, 0]} />
-      <PointLightHelperCreator castShadow position={[-60, 10, 0]} />
+      <PointLightHelperCreator intensity={0.8} position={[60, 50, -10]} />
+      <PointLightHelperCreator intensity={0.8} position={[-60, 50, 10]} /> */
     </>
   );
 }

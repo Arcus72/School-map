@@ -7,13 +7,16 @@ import RoomNumber from '../RoomNumber/RoomNumber';
 import gsap from 'gsap';
 import gltfFile from './Floor0.gltf';
 
+import RoomPointer from '../RoomPointer/RoomPointer';
+
 export default function Floor0({
   isVisible = true,
   roomsLocations,
   isCurrentFloor,
+  startRoomToHighlight = null,
+  endRoomToHighlight = null,
   ...props
 }) {
-  console.log('Floor0');
   const group = useRef();
   const { nodes, materials } = useGLTF(gltfFile);
   const height = 1;
@@ -24,6 +27,12 @@ export default function Floor0({
   }, [isVisible]);
   return (
     <group ref={group} position={[0, height, 0]} {...props} dispose={null}>
+      {startRoomToHighlight && (
+        <RoomPointer room={startRoomToHighlight} status='start' />
+      )}
+      {endRoomToHighlight && (
+        <RoomPointer room={endRoomToHighlight} status='end' />
+      )}
       {isCurrentFloor &&
         roomsLocations.map((room, index) => (
           <RoomNumber key={index} {...room} />

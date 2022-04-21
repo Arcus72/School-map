@@ -6,6 +6,3 @@ import './main.scss';
 const container = document.getElementById('app');
 const root = createRoot(container);
 root.render(<App tab='home' />);
-
-//TODO: ziemia
-//TODO: animacje
