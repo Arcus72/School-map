@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Map3D from './MapInterface/Map3D/Map3D';
+import Map3D from './Map3D/Map3D';
 import './MapInterface.scss';
 
 function MapInterface() {
@@ -14,7 +14,7 @@ function MapInterface() {
   const ToggleButtonSwitch = () => {
     buttonSwitch ? setButtonSwitch(false) : setButtonSwitch(true);
     console.log(buttonSwitch);
-  }
+  };
 
   ('FormSection MapInterface__FormSection');
   return (
@@ -27,7 +27,6 @@ function MapInterface() {
             ? 'formActivator MapInterface__formActivator'
             : 'formActivator formActivator--active MapInterface__formActivator'
         }
-
       >
         &gt;&gt;
       </button>
@@ -62,24 +61,34 @@ function MapInterface() {
             Jakosc :{' '}
           </label>
           <div className='form__section'>
-            <button onClick={ToggleButtonSwitch} className={
-              buttonSwitch
-                ? 'FormSection__btn button button--active'
-                : 'FormSection__btn button '
-            }>Niska</button>
-            <button onClick={ToggleButtonSwitch} className={
-              buttonSwitch
-                ? 'FormSection__btn button '
-                : 'FormSection__btn button button--active'
-            }>Wysoko</button>
+            <button
+              onClick={ToggleButtonSwitch}
+              className={
+                buttonSwitch
+                  ? 'FormSection__btn button button--active'
+                  : 'FormSection__btn button '
+              }
+            >
+              Niska
+            </button>
+            <button
+              onClick={ToggleButtonSwitch}
+              className={
+                buttonSwitch
+                  ? 'FormSection__btn button '
+                  : 'FormSection__btn button button--active'
+              }
+            >
+              Wysoko
+            </button>
           </div>
           <br />
-          <button className='FormSection__btn button--send' type="submit">
+          <button className='FormSection__btn button--send' type='submit'>
             Pokaz
-            <span className="button__span"></span>
-            <span className="button__span"></span>
-            <span className="button__span"></span>
-            <span className="button__span"></span>
+            <span className='button__span'></span>
+            <span className='button__span'></span>
+            <span className='button__span'></span>
+            <span className='button__span'></span>
           </button>
         </form>
       </div>

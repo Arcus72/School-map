@@ -1,36 +1,34 @@
-import React, { Suspense, useState } from 'react';
+import React, { useState } from 'react';
 import { Canvas } from '@react-three/fiber';
-
+import { DoubleSide } from 'three';
 import './Map3D.scss';
 
 import Lights from './Lights/Lights';
 import Camera from './Camera/Camera';
-import TempFloor from './Floors/TempFloor/TempFloor';
+import Building from './Building/Building';
 
-import roomsLocations from '@data/roomsLocation.json';
-
-function Map3D() {
+function Map3D({ roomsToHighlighted }) {
   const [floorNumber] = useState(1);
 
   return (
-    <Canvas
-      className='Map3D'
-      linear
-      camera={{ position: [0, 20, 20], fov: 75 }}
-    >
+    <Canvas className='Map3D' camera={{ position: [0, 20, 20], fov: 75 }}>
       <Camera />
       <Lights />
 
-      <Suspense fallback={null}>
-        <TempFloor roomsLocations={roomsLocations[`floor${floorNumber}`]} />
-      </Suspense>
+      <Building
+        roomsToHighlighted={roomsToHighlighted}
+        floorNumber={floorNumber}
+      />
 
-      {/*
+      <mesh
+        position={[0, 0, 0]}
+        rotation={[Math.PI / 2, 0, 0]}
+        scale={[100, 100, 100]}
+      >
+        <planeBufferGeometry />
 
-      // Uncomment code to see helpers
-
-      <gridHelper args={[30, 30, `white`, `gray`]} />
-      <axesHelper position={[0, 4, 0]} /> */}
+        <meshBasicMaterial color='white' side={DoubleSide} />
+      </mesh>
     </Canvas>
   );
 }
