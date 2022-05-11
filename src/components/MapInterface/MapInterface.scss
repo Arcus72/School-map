@@ -10,6 +10,14 @@ $color2: #2d3776;
   font-family: 'Fredoka', sans-serif;
   align-items: center;
 
+  &__UpButton {
+    display: none;
+  }
+
+  &__DownButton {
+    display: none;
+  }
+
   .formActivator {
     transition: all 0.2s ease-in-out;
 
@@ -137,7 +145,7 @@ $color2: #2d3776;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    z-index: 100;
+    z-index: 2;
 
     &__btn {
       cursor: pointer;
@@ -176,7 +184,7 @@ $color2: #2d3776;
     &__form {
       background: #242e68;
       height: 80%;
-      width: 30%;
+      width: 40%;
       box-shadow: inset 0px 0px 10px 12px rgba(0, 0, 0, 0.25);
       border-radius: 91px;
       display: flex;
@@ -223,6 +231,67 @@ $color2: #2d3776;
       font-family: 'Fredoka', sans-serif;
       font-size: 24px;
       margin-top: 25px;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .MapInterface {
+    &__formActivator {
+      width: 45px;
+      height: 45px;
+      left: 30px;
+      top: 85vh;
+      font-size: 28px;
+    }
+
+    &__UpButton {
+      position: absolute;
+      top: 0;
+      width: 100vw;
+      height: 8vh;
+      background: white;
+      color: black;
+      box-shadow: 0px 0px 8px 1px black;
+      font-size: 38px;
+      z-index: 100;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    &__DownButton {
+      background: white;
+      position: absolute;
+      box-shadow: 0px 0px 8px 1px black;
+      width: 100vw;
+      height: 8vh;
+      bottom: 0;
+      z-index: 100;
+      font-size: 38px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    &__arrow {
+      font-size: 48px;
+      transform: translateY(-10%)
+    }
+
+    .menu {
+      display: none;
+    }
+
+    &__background {
+      display: none;
+    }
+
+    .FormSection {
+      &__form {
+        height: 100%;
+        width: 100%;
+      }
     }
   }
 }

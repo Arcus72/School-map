@@ -36,6 +36,16 @@ function MapInterface() {
         <button className='menu__btn button'>0</button>
         <button className='menu__btn button'>-1</button>
       </nav>
+      <button className="UpButton MapInterface__UpButton">
+        <div className="arrow MapInterface__arrow">&#8593;</div>
+        <div className="MapInterface__text">Piętro wyżej</div>
+        <div className="arrow MapInterface__arrow">&#8593;</div>
+      </button>
+      <button className="MapInterface__DownButton">
+        <div className="arrow MapInterface__arrow">&#8595;</div>
+        <div className="MapInterface__text">Piętro niżej</div>
+        <div className="arrow MapInterface__arrow">&#8595;</div>
+      </button>
       <div className='MapInterface__background'></div>
       <div
         className={
