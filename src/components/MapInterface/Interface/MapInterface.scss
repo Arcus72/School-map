@@ -10,21 +10,25 @@ $color2: #2d3776;
   font-family: 'Fredoka', sans-serif;
   align-items: center;
 
+  &__currentFloor {
+    display: none;
+    width: 80px;
+    height: 80px;
+    background: white;
+    box-shadow: 0 1px 6px 1px black;
+    position: absolute;
+    right: 0px;
+    top: 70px;
+    z-index: 1;
+    border-radius: 100%;
+  }
+
   &__UpButton {
     display: none;
   }
 
   &__DownButton {
     display: none;
-  }
-
-  .formActivator {
-    transition: all 0.2s ease-in-out;
-
-    &--active {
-      transform: rotate(180deg);
-      transition: all 0.2s ease-in-out;
-    }
   }
 
   .button {
@@ -100,21 +104,22 @@ $color2: #2d3776;
     transform: translate(0);
   }
 
+
   &__formActivator {
-    border: none;
+    transition: all 0.2s ease-in-out;
+
+    background-image: url(./Img/FormActivator.png) no-repeat;
     z-index: 100;
-    position: absolute;
     width: 60px;
-    height: 60px;
-    background: $color1;
+    position: absolute;
     right: 30px;
     top: 20px;
-    border-radius: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 38px;
     cursor: pointer;
+  }
+
+  &__formActivator--active {
+    transform: rotate(180deg);
+    transition: all 0.2s ease-in-out;
   }
 
   &__background {
@@ -180,6 +185,7 @@ $color2: #2d3776;
       height: 80%;
       width: 40%;
       box-shadow: inset 0px 0px 10px 12px rgba(0, 0, 0, 0.25);
+
       @media only screen and (min-width: 768px) {
         border-radius: 91px;
       }
@@ -235,9 +241,13 @@ $color2: #2d3776;
     &__formActivator {
       width: 45px;
       height: 45px;
-      left: 30px;
-      top: 85vh;
+      right: 0px;
+      top: 80vh;
       font-size: 28px;
+    }
+
+    &__currentFloor {
+      display: block;
     }
 
     &__UpButton {
@@ -288,6 +298,7 @@ $color2: #2d3776;
       &__form {
         height: 100%;
         width: 100%;
+        border-radius: 0;
       }
     }
   }
