@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&display=swap');
+
+$color1: #ffc229;
+$color2: #2d3776;
+.formBackground {
+  position: absolute;
+  background: $color2;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  transform: translateX(-100%);
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s ease-in-out;
+
+  &--active {
+    transform: translateX(0);
+    transition: all 0.5s ease-in-out;
+  }
+}
+
+.Form {
+  // position: absolute;
+  background: $color2;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s ease-in-out;
+  background: #242e68;
+  height: 85%;
+  width: 50%;
+  border-radius: 25px;
+  box-shadow: inset 0px 0px 10px 12px rgba(0, 0, 0, 0.25);
+
+  @media only screen and (max-width: 768px) {
+    height: 100%;
+    width: 100%;
+    border-radius: 0;
+  }
+
+  &--active {
+    left: 0%;
+    transition: all 0.5s ease-in-out;
+  }
+
+  &__input {
+    margin-bottom: 55px;
+    background: transparent;
+    border: none;
+    border-bottom: 3px solid white;
+    font-family: 'Fredoka', sans-serif;
+    width: 50%;
+    height: 50px;
+    font-size: 1.5em;
+    color: white;
+
+    &:focus {
+      font-size: 1.5em;
+      color: white;
+      outline: none;
+    }
+
+    &::placeholder {
+      color: white;
+      font-size: 18px;
+    }
+  }
+
+  &__label {
+    color: white;
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+
+  &__btnInForm {
+    cursor: pointer;
+    width: 150px;
+    height: 60px;
+    font-family: 'Fredoka', sans-serif;
+    font-size: 24px;
+    margin-top: 25px;
+  }
+
+  &__qualityBtn {
+    border: none;
+    margin: 0 5px;
+
+    &--active {
+      box-shadow: inset 0px 0px 6px 1px black;
+      border: none;
+      border: 2px solid $color1;
+    }
+  }
+
+  &__showBtn {
+    font-size: 2rem;
+    color: white;
+    padding: 0.6rem 4rem;
+    background: none;
+    border: none;
+    position: relative;
+    overflow: hidden;
+    transition: color 1s ease;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+
+    &:hover {
+      color: $color1;
+    }
+
+    span {
+      position: absolute;
+      background-color: $color1;
+      width: 4px;
+      height: 4px;
+      transition: transform 0.5s ease, background 0.5s ease;
+    }
+
+    &:hover span {
+      background: $color1;
+    }
+
+    span:nth-child(1) {
+      top: 0;
+      left: 0;
+      width: 100%;
+      transform: translateX(-90%);
+    }
+
+    span:nth-child(2) {
+      top: 0;
+      left: 0;
+      height: 100%;
+      transform: translateY(-85%);
+    }
+
+    span:nth-child(3) {
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      transform: translateX(90%);
+    }
+
+    span:nth-child(4) {
+      bottom: 0;
+      right: 0;
+      height: 100%;
+      transform: translateY(85%);
+    }
+
+    &:hover span {
+      transform: translate(0);
+    }
+  }
+}

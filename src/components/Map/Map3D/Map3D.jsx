@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Canvas } from '@react-three/fiber';
 import { DoubleSide } from 'three';
 import './Map3D.scss';
@@ -8,14 +8,7 @@ import Lights from './Lights/Lights';
 import Camera from './Camera/Camera';
 import Building from './Building/Building';
 
-const rooms = {
-  start: '-1 Szatnia 1',
-  end: '0 Szatnia 1',
-};
-
-function Map3D({ roomsToHighlight = rooms, currentFloor }) {
-  const [floorNumber] = useState(currentFloor || 1);
-
+function Map3D({ roomsToHighlight, currentFloor }) {
   return (
     <Canvas className='Map3D' camera={{ position: [0, 20, 20], fov: 75 }}>
       <Camera />
@@ -23,7 +16,7 @@ function Map3D({ roomsToHighlight = rooms, currentFloor }) {
 
       <Building
         roomsToHighlight={roomsToHighlight}
-        currentFloorNumber={floorNumber}
+        currentFloorNumber={currentFloor}
       />
 
       <mesh

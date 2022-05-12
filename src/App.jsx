@@ -1,11 +1,28 @@
-import React from 'react';
-
+import React, { useState } from 'react';
+import Map from '@comp/Map/Map';
 import './App.scss';
-import MapInterface from '@src/components/MapInterface/Interface/MapInterface';
+import MapForm from '@comp/MapForm/MapForm';
 function App() {
+  const [mapQuality, setMapQuality] = useState(false);
+  const [isFormVisible, setIsFormVisible] = useState(true);
+  const [crucialPoints, setCrucialPoints] = useState({
+    start: null,
+    end: null,
+  });
   return (
     <div className='App'>
-      <MapInterface />
+      <MapForm
+        isFormVisible={isFormVisible}
+        setIsFormVisible={setIsFormVisible}
+        mapQuality={mapQuality}
+        setMapQuality={setMapQuality}
+        setCrucialPoints={setCrucialPoints}
+      />
+      <Map
+        setIsFormVisible={setIsFormVisible}
+        isFormVisible={isFormVisible}
+        crucialPoints={crucialPoints}
+      />
     </div>
   );
 }

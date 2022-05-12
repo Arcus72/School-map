@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&display=swap');
+
+$color1: #ffc229;
+$color2: #2d3776;
+
+.MapInterface {
+  height: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+  font-family: 'Fredoka', sans-serif;
+  align-items: center;
+
+  &__currentFloor {
+    display: none;
+    width: 80px;
+    height: 80px;
+    background: white;
+    box-shadow: 0 1px 6px 1px black;
+    position: absolute;
+    right: 0px;
+    top: 70px;
+    z-index: 1;
+    justify-content: center;
+    align-items: center;
+    font-size: 48px;
+    border-radius: 100%;
+    @media only screen and (max-width: 768px) {
+      display: flex;
+    }
+  }
+
+  &__UpButton {
+    display: none;
+    @media only screen and (max-width: 768px) {
+      position: absolute;
+      top: 0;
+      width: 100vw;
+      height: 8vh;
+      background: white;
+      color: black;
+      box-shadow: 0px 0px 8px 1px black;
+      font-size: 38px;
+      z-index: 100;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      z-index: 1;
+    }
+  }
+
+  &__DownButton {
+    display: none;
+    @media only screen and (max-width: 768px) {
+      background: white;
+      position: absolute;
+      box-shadow: 0px 0px 8px 1px black;
+      width: 100vw;
+      height: 8vh;
+      bottom: 0;
+      z-index: 100;
+      font-size: 38px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      z-index: 1;
+    }
+  }
+
+  &__formActivator {
+    transition: all 0.2s ease-in-out;
+    z-index: 100;
+    width: 60px;
+    position: absolute;
+    right: 30px;
+    top: 20px;
+    cursor: pointer;
+
+    &--active {
+      transform: rotate(180deg);
+      transition: all 0.2s ease-in-out;
+    }
+
+    @media only screen and (max-width: 768px) {
+      width: 45px;
+      height: 45px;
+      left: 20px;
+      top: 80vh;
+      font-size: 28px;
+    }
+  }
+
+  &__background {
+    background: $color2;
+    width: 180px;
+    height: 80%;
+    left: 0;
+    border-top-right-radius: 80px;
+    border-bottom-right-radius: 80px;
+    position: absolute;
+    z-index: 1;
+    @media only screen and (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  &__menu {
+    left: 0;
+    position: absolute;
+    width: 170px;
+    height: 80%;
+    background: $color1;
+    border-top-right-radius: 80px;
+    border-bottom-right-radius: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    z-index: 1;
+    @media only screen and (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  &__menuBtn {
+    cursor: pointer;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.25),
+      -6px -6px 4px rgba(255, 255, 255, 0.25);
+    background: #ffffff;
+    height: 100px;
+    width: 100px;
+    border-radius: 15px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 42px;
+  }
+  &__arrow {
+    @media only screen and (max-width: 768px) {
+      font-size: 48px;
+      transform: translateY(-10%);
+    }
+  }
+}

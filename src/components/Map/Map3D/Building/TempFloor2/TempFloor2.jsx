@@ -14,8 +14,8 @@ export default function Model({ isVisible = true, ...props }) {
 
   useEffect(() => {
     !isVisible
-      ? gsap.to(group.current.position, { y: 90, duration: 2 })
-      : gsap.to(group.current.position, { y: 0, duration: 2 });
+      ? gsap.to(group.current.position, { y: 15, duration: 2 })
+      : gsap.to(group.current.position, { y: 0, duration: 0.5 });
   }, [isVisible]);
 
   return (
