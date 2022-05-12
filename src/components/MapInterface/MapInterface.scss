@@ -54,8 +54,6 @@ $color2: #2d3776;
     &:hover {
       color: $color1;
     }
-
-
   }
 
   .button--send span {
@@ -64,7 +62,6 @@ $color2: #2d3776;
     width: 4px;
     height: 4px;
     transition: transform 0.5s ease, background 0.5s ease;
-
   }
 
   .button--send:hover span {
@@ -118,8 +115,6 @@ $color2: #2d3776;
     justify-content: center;
     font-size: 38px;
     cursor: pointer;
-
-
   }
 
   &__background {
@@ -145,7 +140,7 @@ $color2: #2d3776;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    z-index: 2;
+    z-index: 1;
 
     &__btn {
       cursor: pointer;
@@ -178,7 +173,6 @@ $color2: #2d3776;
     &--active {
       left: 0%;
       transition: all 0.5s ease-in-out;
-
     }
 
     &__form {
@@ -186,13 +180,15 @@ $color2: #2d3776;
       height: 80%;
       width: 40%;
       box-shadow: inset 0px 0px 10px 12px rgba(0, 0, 0, 0.25);
-      border-radius: 91px;
+      @media only screen and (min-width: 768px) {
+        border-radius: 91px;
+      }
+
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
     }
-
 
     &__input {
       margin-bottom: 55px;
@@ -204,7 +200,6 @@ $color2: #2d3776;
       height: 50px;
       font-size: 1.5em;
       color: white;
-
 
       &:focus {
         font-size: 1.5em;
@@ -258,6 +253,7 @@ $color2: #2d3776;
       display: flex;
       justify-content: space-around;
       align-items: center;
+      z-index: 1;
     }
 
     &__DownButton {
@@ -272,11 +268,12 @@ $color2: #2d3776;
       display: flex;
       justify-content: space-around;
       align-items: center;
+      z-index: 1;
     }
 
     &__arrow {
       font-size: 48px;
-      transform: translateY(-10%)
+      transform: translateY(-10%);
     }
 
     .menu {
