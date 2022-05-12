@@ -1,6 +1,7 @@
 import React from 'react';
 import { Html } from '@react-three/drei';
 import PropTypes from 'prop-types';
+import './RoomPointer.scss';
 function RoomPointer({ room, status }) {
   return (
     <group position={Object.values(room.position)}>

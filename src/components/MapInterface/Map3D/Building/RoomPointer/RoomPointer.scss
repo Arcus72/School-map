@@ -1,0 +1,31 @@
+.RoomNumber__text {
+  &--start,
+  &--end {
+    position: relative;
+    box-shadow: none !important;
+    &::before {
+      content: '';
+      position: absolute;
+      top: -10px;
+      left: -10px;
+      border-radius: 2rem;
+      z-index: -1;
+      filter: blur(10px);
+      height: calc(100% + 20px);
+      width: calc(100% + 20px);
+    }
+  }
+
+  &--start {
+    background: linear-gradient(141.12deg, #3b4071 9.36%, #2ecc71 70.17%);
+    &::before {
+      background: linear-gradient(141.12deg, #3b4071 9.36%, #2ecc71 70.17%);
+    }
+  }
+  &--end {
+    background: linear-gradient(141.12deg, #3b4071 9.36%, #ff1818 70.17%);
+    &::before {
+      background: linear-gradient(141.12deg, #3b4071 9.36%, #ff1818 70.17%);
+    }
+  }
+}
