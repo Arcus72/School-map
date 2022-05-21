@@ -1,8 +1,6 @@
 .Map3D {
   position: relative;
   z-index: 1;
-  background: rgb(204, 204, 204);
-  background: radial-gradient(circle,
-      rgba(204, 204, 204, 1) 0%,
-      rgba(255, 255, 255, 1) 80%);
+
+  background: radial-gradient(circle at 50% 50%, #e6e6e6 0%, #ffffff 100%);
 }

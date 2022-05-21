@@ -1,6 +1,6 @@
 import React from 'react';
 import { Canvas } from '@react-three/fiber';
-import { DoubleSide } from 'three';
+
 import './Map3D.scss';
 import PropTypes from 'prop-types';
 
@@ -10,7 +10,7 @@ import Building from './Building/Building';
 
 function Map3D({ roomsToHighlight, currentFloor }) {
   return (
-    <Canvas className='Map3D' camera={{ position: [0, 20, 20], fov: 75 }}>
+    <Canvas className='Map3D' camera={{ position: [0, 30, 40], fov: 75 }}>
       <Camera />
       <Lights />
 
@@ -20,13 +20,12 @@ function Map3D({ roomsToHighlight, currentFloor }) {
       />
 
       <mesh
-        position={[0, 0, 0]}
+        position={[0, -1, 0]}
         rotation={[Math.PI / 2, 0, 0]}
-        scale={[100, 100, 100]}
+        scale={[10, 10, 10]}
       >
-        <planeBufferGeometry />
-
-        <meshBasicMaterial color='white' side={DoubleSide} />
+        <ringBufferGeometry args={[6, 0, 50]} />
+        <meshBasicMaterial attach='material' color={0xe6e6e6} />
       </mesh>
     </Canvas>
   );

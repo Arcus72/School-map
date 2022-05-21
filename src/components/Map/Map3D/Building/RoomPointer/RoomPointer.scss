@@ -1,4 +1,7 @@
-.RoomNumber__text {
+@import '../RoomNumber/RoomNumber.scss';
+
+.RoomPointer__text {
+  @include roomLabelStyle;
   &--start,
   &--end {
     position: relative;
