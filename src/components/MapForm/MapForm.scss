@@ -23,7 +23,6 @@ $color2: #2d3776;
 }
 
 .Form {
-  // position: absolute;
   background: $color2;
   z-index: 1;
   display: flex;
@@ -31,7 +30,6 @@ $color2: #2d3776;
   justify-content: center;
   align-items: center;
   transition: all 0.5s ease-in-out;
-  background: #242e68;
   height: 85%;
   width: 50%;
   border-radius: 25px;
@@ -48,33 +46,57 @@ $color2: #2d3776;
     transition: all 0.5s ease-in-out;
   }
 
+  &__inputField {
+    position: relative;
+  }
+
   &__input {
     margin-bottom: 55px;
     background: transparent;
     border: none;
     border-bottom: 3px solid white;
     font-family: 'Fredoka', sans-serif;
-    width: 50%;
-    height: 50px;
     font-size: 1.5em;
     color: white;
-
-    &:focus {
-      font-size: 1.5em;
-      color: white;
-      outline: none;
-    }
+    outline: none;
 
     &::placeholder {
-      color: white;
-      font-size: 18px;
+      color: transparent;
+    }
+
+    &:focus ~ label,
+    &:hover ~ label,
+    &:not(:placeholder-shown) ~ label {
+      transform: translateY(-100%);
+      font-size: 1rem;
+    }
+
+    &:focus,
+    &:not(:placeholder-shown) {
+      border-bottom: 3px solid $color1;
+    }
+
+    &:not(:placeholder-shown) ~ label {
+      font-size: 1rem;
     }
   }
 
-  &__label {
+  &__inputLabel {
+    width: 100%;
+    transition: all 0.2s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #dddddd;
+  }
+
+  &__qualityHeader {
     color: white;
     font-size: 24px;
     margin-bottom: 15px;
+    text-align: center;
   }
 
   &__btnInForm {
@@ -157,5 +179,14 @@ $color2: #2d3776;
     &:hover span {
       transform: translate(0);
     }
+  }
+
+  &__signature {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    color: white;
+    font-size: 0.9rem;
+    text-align: right;
   }
 }
