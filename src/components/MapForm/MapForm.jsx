@@ -1,6 +1,8 @@
 import React, { useRef } from 'react';
 
 import roomsLocation from '@data/roomsLocation.json';
+import logoTZN from '@assets/logoTZN.png';
+
 import './MapForm.scss';
 function MapForm({
   isFormVisible,
@@ -13,10 +15,6 @@ function MapForm({
   const endPointInput = useRef(null);
   const ToggleFormVisible = () => {
     isFormVisible ? setIsFormVisible(false) : setIsFormVisible(true);
-  };
-
-  const ToggleMapQuality = () => {
-    mapQuality ? setMapQuality(false) : setMapQuality(true);
   };
 
   const validateForm = () => {
@@ -37,12 +35,16 @@ function MapForm({
   };
 
   return (
-    <div
-      className={`formBackground ${
-        isFormVisible ? 'formBackground--active' : ''
-      }`}
-    >
-      <div className='Form'>
+    <div className={`Form ${isFormVisible ? 'Form--active' : ''}`}>
+      <header className='Form__header Form__header--Desktop'>
+        <h1>Mapa</h1>
+        <img src={logoTZN} alt='logoTZN' />
+      </header>
+      <div className='Form__main'>
+        <header className='Form__header Form__header--mobile'>
+          <h1>Mapa</h1>
+          <img src={logoTZN} alt='logoTZN' />
+        </header>
         <div className='Form__inputField'>
           <input
             className='Form__input'
@@ -56,7 +58,7 @@ function MapForm({
             Gdzie jesteś?
           </label>
         </div>
-        <br />
+
         <div className='Form__inputField'>
           <input
             className='Form__input'
@@ -75,23 +77,23 @@ function MapForm({
             <option key={text} value={text} />
           ))}
         </datalist>
-        <br />
+
         <div className='Form__section'>
           <h4 className='Form__qualityHeader'>Jakość:</h4>
-          image.png{' '}
+
           <button
-            onClick={ToggleMapQuality}
+            onClick={() => setMapQuality('low')}
             className={`Form__btnInForm Form__qualityBtn ${
-              mapQuality && 'Form__qualityBtn--active'
+              mapQuality === 'low' && 'Form__qualityBtn--active'
             }`}
             disabled
           >
             Niska
           </button>
           <button
-            onClick={ToggleMapQuality}
+            onClick={() => setMapQuality('high')}
             className={`Form__btnInForm Form__qualityBtn ${
-              !mapQuality && 'Form__qualityBtn--active'
+              mapQuality === 'high' && 'Form__qualityBtn--active'
             }`}
           >
             Wysoka
