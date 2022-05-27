@@ -3,7 +3,7 @@ import { MapControls } from '@react-three/drei';
 const mapControlsSettings = {
   maxPolarAngle: Math.PI / 3,
   minDistance: 15,
-  maxDistance: 50,
+  maxDistance: 60,
   zoomSpeed: 1.5,
 };
 

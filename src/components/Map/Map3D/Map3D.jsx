@@ -25,7 +25,7 @@ function Map3D({ roomsToHighlight, currentFloor }) {
         scale={[10, 10, 10]}
       >
         <ringBufferGeometry args={[6, 0, 50]} />
-        <meshBasicMaterial attach='material' color={0xe6e6e6} />
+        <meshBasicMaterial attach='material' color={0xd1d1d1} />
       </mesh>
     </Canvas>
   );
