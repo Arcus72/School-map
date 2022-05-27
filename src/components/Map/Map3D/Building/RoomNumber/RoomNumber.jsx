@@ -9,7 +9,11 @@ function RoomNumber({ displayName, position }) {
   return (
     <group position={Object.values(position)}>
       <Html zIndexRange={[100, 0]} distanceFactor={10} center>
-        <div className='RoomNumber__text'>{displayName}</div>
+        <div className={`RoomNumber__background `}>
+          <span className={displayName == '7' && 'RoomNumber--goldenText'}>
+            {displayName}
+          </span>
+        </div>
       </Html>
     </group>
   );

@@ -7,10 +7,10 @@ function RoomPointer({ room, status }) {
     <group position={Object.values(room.position)}>
       <Html distanceFactor={10} center>
         <div
-          className={`RoomNumber__text ${
+          className={`RoomPointer__text ${
             status == 'start'
-              ? 'RoomNumber__text--start'
-              : 'RoomNumber__text--end'
+              ? 'RoomPointer__text--start'
+              : 'RoomPointer__text--end'
           }`}
         >
           {room.displayName}
