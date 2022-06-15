@@ -93,7 +93,7 @@ $color2: #2d3776;
 
   &__inputField {
     position: relative;
-    margin-bottom: 35px;
+    margin-bottom: 15px;
     width: 70%;
   }
 
@@ -141,6 +141,45 @@ $color2: #2d3776;
     cursor: pointer;
     color: #dddddd;
     font-family: 'Poppins', sans-serif;
+  }
+
+  &__input:focus ~ &__inputHints {
+    display: block;
+  }
+
+  &__inputHints {
+    z-index: 100;
+    display: none;
+    font-size: 1.4em;
+    position: absolute;
+    background-color: #192d41;
+    color: white;
+    border-radius: 10px;
+  }
+
+  &__hint {
+    padding: 7px 15px;
+    cursor: pointer;
+    border-bottom: 1px solid white;
+
+    &:hover {
+      background-color: #3c4e5f;
+    }
+
+    &:first-child {
+      border-radius: 10px 10px 0px 0px;
+    }
+
+    &:last-child {
+      border-bottom: none;
+      border-radius: 0px 0px 10px 10px;
+    }
+  }
+
+  &__error {
+    color: #ff0008;
+    font-size: 1.3em;
+    margin-bottom: 25px;
   }
 
   &__qualityHeader {
