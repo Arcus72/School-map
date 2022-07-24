@@ -52,7 +52,6 @@ function MapForm({
   };
 
   const validateForm = () => {
-    console.log(nameOfEndPoint);
     const start = nameOfStartPoint.trim();
     const end = nameOfEndPoint.trim();
 

@@ -9,26 +9,13 @@ import TempFloor1 from './TempFloor1/TempFloor1';
 import TempFloor2 from './TempFloor2/TempFloor2';
 import RoomNumber from './RoomNumber/RoomNumber';
 
-const findRoom = (roomName) => {
-  let floorNumber = -1;
-  for (const floor in roomsLocations) {
-    for (const room of roomsLocations[floor]) {
-      if (room.name == roomName)
-        return {
-          room: room,
-          floorNumber: floorNumber,
-        };
-    }
-    floorNumber++;
-  }
-};
-
 function Building({ currentFloorNumber, roomsToHighlight }) {
-  const startRoom = { ...findRoom(roomsToHighlight.start), status: 'start' };
-  const endRoom = { ...findRoom(roomsToHighlight.end), status: 'end' };
-
   const floorsArr = [Floor_1, TempFloor0, TempFloor1, TempFloor2];
   const scale = [3, 5, 3];
+
+  let startRoom = { ...roomsToHighlight.startRoom, status: 'start' };
+  let endRoom = { ...roomsToHighlight.endRoom, status: 'end' };
+
   return (
     <Suspense fallback={null}>
       {floorsArr.map((Floor, index) => (
@@ -38,7 +25,11 @@ function Building({ currentFloorNumber, roomsToHighlight }) {
               room &&
               room.floorNumber <= currentFloorNumber &&
               room.floorNumber == index - 1 && (
-                <RoomPointer room={room.room} status={room.status} />
+                <RoomPointer
+                  key={room.floorNumber + 2}
+                  room={room.room}
+                  status={room.status}
+                />
               )
             );
           })}
@@ -60,8 +51,30 @@ function Building({ currentFloorNumber, roomsToHighlight }) {
 Building.propTypes = {
   currentFloorNumber: PropTypes.number,
   roomsToHighlight: PropTypes.shape({
-    start: PropTypes.string,
-    end: PropTypes.string,
+    start: PropTypes.shape({
+      floorNumber: PropTypes.number,
+      room: PropTypes.shape({
+        name: PropTypes.string,
+        displayName: PropTypes.string,
+        position: PropTypes.shape({
+          x: PropTypes.number,
+          y: PropTypes.number,
+          z: PropTypes.number,
+        }),
+      }),
+    }),
+    end: PropTypes.shape({
+      floorNumber: PropTypes.number,
+      room: PropTypes.shape({
+        name: PropTypes.string,
+        displayName: PropTypes.string,
+        position: PropTypes.shape({
+          x: PropTypes.number,
+          y: PropTypes.number,
+          z: PropTypes.number,
+        }),
+      }),
+    }),
   }),
 };
 
