@@ -101,14 +101,14 @@ $color2: #2d3776;
       background: linear-gradient(40deg, #ff1818 0%, rgb(255, 255, 255) 45%);
     }
 
-    &--endRoomFloor.MapInterface__startRoomFloor {
+    &--endRoomFloor.MapInterface__menuBtn--startRoomFloor {
       background: linear-gradient(
           -40deg,
           #2ecc70d5 0%,
           rgba(255, 255, 255, 0) 40%
         ),
         linear-gradient(40deg, #ff1818e5 0%, rgba(255, 255, 255, 0) 40%),
-        #ffffff;
+        #ffffff !important;
     }
   }
 
@@ -162,7 +162,7 @@ $color2: #2d3776;
       box-shadow: -5px -5px 4px rgba(255, 24, 24, 0.75);
     }
 
-    &--endRoomFloor.MapInterface__startRoomFloor {
+    &--endRoomFloor.MapInterface__mobileMenuBtn--startRoomFloor {
       box-shadow: 4px 4px 4px rgba(46, 204, 113, 0.75),
         -5px -5px 4px rgba(255, 24, 24, 0.75);
     }

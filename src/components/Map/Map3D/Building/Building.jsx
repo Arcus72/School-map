@@ -18,32 +18,35 @@ function Building({ currentFloorNumber, roomsToHighlight }) {
 
   return (
     <Suspense fallback={null}>
-      {floorsArr.map((Floor, index) => (
-        <group scale={scale} position={[0, index * 1.5, 0]} key={index}>
-          {[startRoom, endRoom].map((room) => {
-            return (
-              room &&
-              room.floorNumber <= currentFloorNumber &&
-              room.floorNumber == index - 1 && (
-                <RoomPointer
-                  key={room.floorNumber + 2}
-                  room={room.room}
-                  status={room.status}
-                />
-              )
-            );
-          })}
+      {floorsArr.map((Floor, index) => {
+        console.log(index);
+        return (
+          <group scale={scale} position={[0, index * 1.5, 0]} key={index}>
+            {[startRoom, endRoom].map((room, index2) => {
+              return (
+                room &&
+                room.floorNumber <= currentFloorNumber &&
+                room.floorNumber == index - 1 && (
+                  <RoomPointer
+                    key={index2}
+                    room={room.room}
+                    status={room.status}
+                  />
+                )
+              );
+            })}
 
-          {currentFloorNumber === index - 1 &&
-            roomsLocations[`floor` + (index - 1)].map((room, index) => (
-              <RoomNumber key={index} {...room} />
-            ))}
-          <Floor
-            scale={[1, 1, 1]}
-            isVisible={currentFloorNumber >= index - 1}
-          />
-        </group>
-      ))}
+            {currentFloorNumber === index - 1 &&
+              roomsLocations[`floor` + (index - 1)].map((room, index) => (
+                <RoomNumber key={index} {...room} />
+              ))}
+            <Floor
+              scale={[1, 1, 1]}
+              isVisible={currentFloorNumber >= index - 1}
+            />
+          </group>
+        );
+      })}
     </Suspense>
   );
 }
