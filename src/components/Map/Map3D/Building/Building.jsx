@@ -4,15 +4,15 @@ import roomsLocations from '@data/roomsLocation.json';
 import RoomPointer from './RoomPointer/RoomPointer';
 import PropTypes from 'prop-types';
 import Floor_1 from './Floor_1/Floor_1';
-import TempFloor0 from './TempFloor0/TempFloor0';
-import TempFloor1 from './TempFloor1/TempFloor1';
-import TempFloor2 from './TempFloor2/TempFloor2';
+import Floor0 from './Floor0/Floor0';
+import Floor1 from './Floor1/Floor1';
+import Floor2 from './Floor2/Floor2';
 import RoomNumber from './RoomNumber/RoomNumber';
 
 function Building({ currentFloorNumber, roomsToHighlight }) {
-  const floorsArr = [Floor_1, TempFloor0, TempFloor1, TempFloor2];
+  const floorsArr = [Floor_1, Floor0, Floor1, Floor2];
   const scale = [3, 5, 3];
-
+  const floorHeight = 1.51;
   let startRoom = { ...roomsToHighlight.startRoom, status: 'start' };
   let endRoom = { ...roomsToHighlight.endRoom, status: 'end' };
 
@@ -21,7 +21,11 @@ function Building({ currentFloorNumber, roomsToHighlight }) {
       {floorsArr.map((Floor, index) => {
         console.log(index);
         return (
-          <group scale={scale} position={[0, index * 1.5, 0]} key={index}>
+          <group
+            scale={scale}
+            position={[0, index * floorHeight, 0]}
+            key={index}
+          >
             {[startRoom, endRoom].map((room, index2) => {
               return (
                 room &&
@@ -40,10 +44,7 @@ function Building({ currentFloorNumber, roomsToHighlight }) {
               roomsLocations[`floor` + (index - 1)].map((room, index) => (
                 <RoomNumber key={index} {...room} />
               ))}
-            <Floor
-              scale={[1, 1, 1]}
-              isVisible={currentFloorNumber >= index - 1}
-            />
+            <Floor isVisible={currentFloorNumber >= index - 1} />
           </group>
         );
       })}
