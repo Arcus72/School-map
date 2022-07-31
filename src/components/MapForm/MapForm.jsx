@@ -5,6 +5,36 @@ import logoTZN from '@assets/logoTZN.png';
 
 import './MapForm.scss';
 
+const findRooms = (roomName = '') => {
+  if (roomName.trim() === '') return [];
+
+  let foundRooms = [];
+  for (let key in roomsLocation) {
+    for (let room of roomsLocation[key]) {
+      let index = room.name.toUpperCase().indexOf(roomName.toUpperCase());
+      if (index != -1) {
+        foundRooms.push(room.name);
+        if (foundRooms.length >= 5) return foundRooms;
+      }
+    }
+  }
+  if (foundRooms.length == 1) {
+    return [];
+  }
+  return foundRooms;
+};
+
+const doesRoomExist = (roomToFind) => {
+  for (let key in roomsLocation) {
+    for (let room of roomsLocation[key]) {
+      if (room.name === roomToFind) {
+        return true;
+      }
+    }
+  }
+  return false;
+};
+
 function MapForm({
   isFormVisible,
   setIsFormVisible,
@@ -17,38 +47,9 @@ function MapForm({
 
   const [startPointMessageError, setStartPointMessageError] = useState('');
   const [endPointMessageError, setEndPointMessageError] = useState('');
+
   const ToggleFormVisible = () => {
-    isFormVisible ? setIsFormVisible(false) : setIsFormVisible(true);
-  };
-
-  const findRooms = (inputText = '') => {
-    if (inputText.trim() === '') return [];
-
-    let roomsNameToDisplay = [];
-    for (let key in roomsLocation) {
-      for (let room of roomsLocation[key]) {
-        let index = room.name.toUpperCase().indexOf(inputText.toUpperCase());
-        if (index != -1) {
-          roomsNameToDisplay.push(room.name);
-        }
-      }
-    }
-    if (roomsNameToDisplay.length == 1) {
-      return [];
-    }
-    roomsNameToDisplay.length = 5;
-    return roomsNameToDisplay;
-  };
-
-  const doesRoomExist = (roomToFind) => {
-    for (let key in roomsLocation) {
-      for (let room of roomsLocation[key]) {
-        if (room.name === roomToFind) {
-          return true;
-        }
-      }
-    }
-    return false;
+    setIsFormVisible((value) => !value);
   };
 
   const validateForm = () => {
@@ -60,6 +61,8 @@ function MapForm({
         setStartPointMessageError('Taka sala nie istnieje');
         return;
       }
+    } else {
+      setStartPointMessageError('');
     }
 
     if (end != '') {
@@ -67,9 +70,10 @@ function MapForm({
         setEndPointMessageError('Taka sala nie istnieje');
         return;
       }
+    } else {
+      setEndPointMessageError('');
     }
-    setStartPointMessageError('');
-    setEndPointMessageError('');
+
     setCrucialPoints({ start: start, end: end });
     ToggleFormVisible();
   };
@@ -159,7 +163,7 @@ function MapForm({
         </div>
         <br />
         <button
-          className='Form__showBtn Form__btnInForm Form__showBtn'
+          className='Form__btnInForm Form__showBtn'
           onClick={() => validateForm()}
         >
           Pokaż
