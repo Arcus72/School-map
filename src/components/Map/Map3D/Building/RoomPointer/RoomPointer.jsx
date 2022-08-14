@@ -5,7 +5,7 @@ import './RoomPointer.scss';
 function RoomPointer({ room, status }) {
   return (
     <group position={Object.values(room.position)}>
-      <Html distanceFactor={10} center>
+      <Html distanceFactor={9} center>
         <div
           className={`RoomPointer__text ${
             status == 'start'

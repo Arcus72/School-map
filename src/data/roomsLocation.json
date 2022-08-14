@@ -1,369 +1,722 @@
 {
   "floor-1": [
     {
-      "name": "-1 Sala 7",
-      "displayName": "7",
-      "position": {
-        "x": -10.7,
-        "y": 0.2,
-        "z": -1.4
-      }
-    },
-    {
-      "name": "-1 Sala 5",
-      "displayName": "5",
-      "position": {
-        "x": -11.3,
-        "y": 0.2,
-        "z": -0.1
-      }
-    },
-    {
-      "name": "-1 Sala 10",
-      "displayName": "10",
-      "position": {
-        "x": -10.3,
-        "y": 0.2,
-        "z": -0.3
-      }
-    },
-    {
-      "name": "-1 Sala 4",
-      "displayName": "4",
-      "position": {
-        "x": -11.3,
-        "y": 0.2,
-        "z": 0.8
-      }
-    },
-    {
-      "name": "-1 Sala 3",
-      "displayName": "3",
-      "position": {
-        "x": -11.3,
-        "y": 0.2,
-        "z": 2.1
-      }
-    },
-    {
-      "name": "-1 Sklepik",
+      "name": "Sklepik",
       "displayName": "Sklepik",
       "position": {
-        "x": -10.8,
+        "x": -11,
         "y": 0.2,
-        "z": 3.8
+        "z": 3.9
       }
     },
     {
-      "name": "-1 Szatnia 1",
-      "displayName": "Szat. 1",
+      "name": "Główne szatnie",
+      "displayName": "Główne szatnie",
       "position": {
-        "x": -9.23,
+        "x": -8,
         "y": 0.2,
         "z": 2.6
       }
     },
     {
-      "name": "-1 Szatnia 2",
-      "displayName": "Szat. 2",
+      "name": "Archiwum",
+      "displayName": "Archiwum",
       "position": {
-        "x": -8.2,
+        "x": -1,
         "y": 0.2,
-        "z": 2.7
+        "z": 2.6
       }
     },
     {
-      "name": "-1 Szatnia 3",
-      "displayName": "Szat. 3",
+      "name": "Sala 4",
+      "displayName": "4",
       "position": {
-        "x": -5.6,
+        "x": -11.5,
         "y": 0.2,
-        "z": 2.7
+        "z": 0.8
       }
     },
     {
-      "name": "-1 Szatnia WF",
-      "displayName": "Szat. WF",
+      "name": "Sala 3",
+      "displayName": "3",
       "position": {
-        "x": 0.6,
+        "x": -11.5,
         "y": 0.2,
-        "z": 0
+        "z": 2.1
+      }
+    },
+    {
+      "name": "Sala 5",
+      "displayName": "5",
+      "position": {
+        "x": -11.5,
+        "y": 0.2,
+        "z": -0.1
+      }
+    },
+    {
+      "name": "Sala 7",
+      "displayName": "7",
+      "position": {
+        "x": -11,
+        "y": 0.2,
+        "z": -1.45
+      }
+    },
+    {
+      "name": "Sala 10",
+      "displayName": "10",
+      "position": {
+        "x": -10.45,
+        "y": 0.2,
+        "z": -0.23
       }
     }
   ],
   "floor0": [
     {
-      "name": "0 Sala 7",
-      "displayName": "7",
+      "name": "WC Męskie, P. 0",
+      "displayName": "WC Męskie",
       "position": {
-        "x": -10.7,
+        "x": -9.5,
         "y": 0.2,
-        "z": -1.4
+        "z": 2.5
       }
     },
     {
-      "name": "0 Sala 5",
-      "displayName": "5",
+      "name": "Biblioteka",
+      "displayName": "Biblioteka",
       "position": {
-        "x": -11.3,
+        "x": -11,
         "y": 0.2,
-        "z": -0.1
+        "z": -1.45
       }
     },
     {
-      "name": "0 Sala 10",
-      "displayName": "10",
+      "name": "Świetlica",
+      "displayName": "Świetlica",
       "position": {
-        "x": -10.3,
+        "x": -11,
         "y": 0.2,
-        "z": -0.3
+        "z": 3.95
       }
     },
     {
-      "name": "0 Sala 4",
-      "displayName": "4",
+      "name": "Siłownia",
+      "displayName": "Siłownia",
       "position": {
-        "x": -11.3,
-        "y": 0.2,
-        "z": 0.8
-      }
-    },
-    {
-      "name": "0 Sala 3",
-      "displayName": "3",
-      "position": {
-        "x": -11.3,
-        "y": 0.2,
-        "z": 2.1
-      }
-    },
-    {
-      "name": "0 Sklepik",
-      "displayName": "Sklepik",
-      "position": {
-        "x": -10.8,
-        "y": 0.2,
-        "z": 3.8
-      }
-    },
-    {
-      "name": "0 Szatnia 1",
-      "displayName": "Szat. 1",
-      "position": {
-        "x": -9.23,
+        "x": -3.8,
         "y": 0.2,
         "z": 2.6
       }
     },
     {
-      "name": "0 Szatnia 2",
-      "displayName": "Szat. 2",
+      "name": "Małą Sala Gimnastyczna",
+      "displayName": "Małą Sala Gim.",
       "position": {
-        "x": -8.2,
+        "x": -3.9,
         "y": 0.2,
-        "z": 2.7
+        "z": 0.2
       }
     },
     {
-      "name": "0 Szatnia 3",
-      "displayName": "Szat. 3",
+      "name": "Sala 29",
+      "displayName": "29",
       "position": {
-        "x": -5.6,
+        "x": -11.5,
         "y": 0.2,
-        "z": 2.7
+        "z": -0.23
       }
     },
     {
-      "name": "0 Szatnia WF",
-      "displayName": "Szat. WF",
+      "name": "Sala 28",
+      "displayName": "28",
       "position": {
-        "x": 0.6,
+        "x": -11.5,
         "y": 0.2,
-        "z": 0
+        "z": 0.25
+      }
+    },
+    {
+      "name": "Sala 27",
+      "displayName": "27",
+      "position": {
+        "x": -11.5,
+        "y": 0.2,
+        "z": 0.75
+      }
+    },
+    {
+      "name": "Sala 26",
+      "displayName": "26",
+      "position": {
+        "x": -11.5,
+        "y": 0.2,
+        "z": 1.25
+      }
+    },
+    {
+      "name": "Sala 25",
+      "displayName": "25",
+      "position": {
+        "x": -11.5,
+        "y": 0.2,
+        "z": 1.75
+      }
+    },
+    {
+      "name": "Sala 35",
+      "displayName": "35",
+      "position": {
+        "x": -10.45,
+        "y": 0.2,
+        "z": 1.5
+      }
+    },
+    {
+      "name": "Sala 36",
+      "displayName": "36",
+      "position": {
+        "x": -10.45,
+        "y": 0.2,
+        "z": 0.5
+      }
+    },
+    {
+      "name": "Sala 38",
+      "displayName": "38",
+      "position": {
+        "x": -8.45,
+        "y": 0.2,
+        "z": 2.65
+      }
+    },
+    {
+      "name": "Sala 39",
+      "displayName": "39",
+      "position": {
+        "x": -7.45,
+        "y": 0.2,
+        "z": 2.65
+      }
+    },
+    {
+      "name": "Sala 40",
+      "displayName": "40",
+      "position": {
+        "x": -6.25,
+        "y": 0.2,
+        "z": 2.65
+      }
+    },
+    {
+      "name": "Sala 41",
+      "displayName": "41",
+      "position": {
+        "x": -5.1,
+        "y": 0.2,
+        "z": 2.65
       }
     }
   ],
   "floor1": [
     {
-      "name": "1 Sala 7",
-      "displayName": "7",
+      "name": "WC Męskie, P. 1",
+      "displayName": "WC Męskie",
       "position": {
-        "x": -10.7,
+        "x": -9.5,
         "y": 0.2,
-        "z": -1.4
+        "z": 2.5
       }
     },
     {
-      "name": "1 Sala 5",
-      "displayName": "5",
+      "name": "Pokój Nauczycielski",
+      "displayName": "Pok. Nauczycielski",
       "position": {
-        "x": -11.3,
+        "x": -11,
         "y": 0.2,
-        "z": -0.1
+        "z": 3.9
       }
     },
     {
-      "name": "1 Sala 10",
-      "displayName": "10",
+      "name": "Sala 49",
+      "displayName": "49",
       "position": {
-        "x": -10.3,
+        "x": -11.5,
         "y": 0.2,
-        "z": -0.3
+        "z": 0.75
       }
     },
     {
-      "name": "1 Sala 4",
-      "displayName": "4",
+      "name": "Sala 50",
+      "displayName": "50",
       "position": {
-        "x": -11.3,
+        "x": -11.5,
         "y": 0.2,
-        "z": 0.8
+        "z": 0.05
       }
     },
     {
-      "name": "1 Sala 3",
-      "displayName": "3",
+      "name": "Sala 52",
+      "displayName": "52",
       "position": {
-        "x": -11.3,
+        "x": -11,
         "y": 0.2,
-        "z": 2.1
+        "z": -1.45
+      }
+    },
+
+    {
+      "name": "Sala 56",
+      "displayName": "56",
+      "position": {
+        "x": -10.45,
+        "y": 0.2,
+        "z": 0.5
       }
     },
     {
-      "name": "1 Sklepik",
-      "displayName": "Sklepik",
+      "name": "Sala 57",
+      "displayName": "57",
       "position": {
-        "x": -10.8,
+        "x": -10.45,
         "y": 0.2,
-        "z": 3.8
+        "z": 1.5
       }
     },
     {
-      "name": "1 Szatnia 1",
-      "displayName": "Szat. 1",
+      "name": "Sala 59",
+      "displayName": "59",
       "position": {
-        "x": -9.23,
+        "x": -8.4,
         "y": 0.2,
-        "z": 2.6
+        "z": 2.65
       }
     },
     {
-      "name": "1 Szatnia 2",
-      "displayName": "Szat. 2",
+      "name": "Sala 60",
+      "displayName": "60",
       "position": {
-        "x": -8.2,
+        "x": -7.35,
         "y": 0.2,
-        "z": 2.7
+        "z": 2.65
       }
     },
     {
-      "name": "1 Szatnia 3",
-      "displayName": "Szat. 3",
+      "name": "Sala 61",
+      "displayName": "61",
       "position": {
-        "x": -5.6,
+        "x": -6.25,
         "y": 0.2,
-        "z": 2.7
+        "z": 2.65
       }
     },
     {
-      "name": "1 Szatnia WF",
-      "displayName": "Szat. WF",
+      "name": "Sala 62",
+      "displayName": "62",
       "position": {
-        "x": 0.6,
+        "x": -5.2,
         "y": 0.2,
-        "z": 0
+        "z": 2.65
+      }
+    },
+    {
+      "name": "Sala 63",
+      "displayName": "63",
+      "position": {
+        "x": -3.7,
+        "y": 0.2,
+        "z": 2.65
+      }
+    },
+    {
+      "name": "Sala 86",
+      "displayName": "86",
+      "position": {
+        "x": -3.7,
+        "y": 0.2,
+        "z": -0.7
+      }
+    },
+    {
+      "name": "Sala 85",
+      "displayName": "85",
+      "position": {
+        "x": -3.7,
+        "y": 0.2,
+        "z": 1.1
+      }
+    },
+    {
+      "name": "Sala 90",
+      "displayName": "90",
+      "position": {
+        "x": -2.78,
+        "y": 0.2,
+        "z": 2.85
+      }
+    },
+    {
+      "name": "Sala 91",
+      "displayName": "91",
+      "position": {
+        "x": -2.2,
+        "y": 0.2,
+        "z": 2.85
+      }
+    },
+    {
+      "name": "Sala 92",
+      "displayName": "92",
+      "position": {
+        "x": -1.45,
+        "y": 0.2,
+        "z": 2.85
+      }
+    },
+
+    {
+      "name": "Sala 93",
+      "displayName": "93",
+      "position": {
+        "x": -0.65,
+        "y": 0.2,
+        "z": 2.85
       }
     }
   ],
   "floor2": [
     {
-      "name": "2 Sala 7",
-      "displayName": "7",
+      "name": "Sala 67",
+      "displayName": "67",
       "position": {
-        "x": -10.7,
-        "y": 0.2,
-        "z": -1.4
-      }
-    },
-    {
-      "name": "2 Sala 5",
-      "displayName": "5",
-      "position": {
-        "x": -11.3,
-        "y": 0.2,
-        "z": -0.1
-      }
-    },
-    {
-      "name": "2 Sala 10",
-      "displayName": "10",
-      "position": {
-        "x": -10.3,
-        "y": 0.2,
-        "z": -0.3
-      }
-    },
-    {
-      "name": "2 Sala 4",
-      "displayName": "4",
-      "position": {
-        "x": -11.3,
-        "y": 0.2,
-        "z": 0.8
-      }
-    },
-    {
-      "name": "2 Sala 3",
-      "displayName": "3",
-      "position": {
-        "x": -11.3,
+        "x": -11.5,
         "y": 0.2,
         "z": 2.1
       }
     },
     {
-      "name": "2 Sklepik",
-      "displayName": "Sklepik",
+      "name": "Sala 68",
+      "displayName": "68",
       "position": {
-        "x": -10.8,
+        "x": -11.5,
         "y": 0.2,
-        "z": 3.8
+        "z": 1
       }
     },
     {
-      "name": "2 Szatnia 1",
-      "displayName": "Szat. 1",
+      "name": "Sala 69",
+      "displayName": "69",
       "position": {
-        "x": -9.23,
-        "y": 0.2,
-        "z": 2.6
-      }
-    },
-    {
-      "name": "2 Szatnia 2",
-      "displayName": "Szat. 2",
-      "position": {
-        "x": -8.2,
-        "y": 0.2,
-        "z": 2.7
-      }
-    },
-    {
-      "name": "2 Szatnia 3",
-      "displayName": "Szat. 3",
-      "position": {
-        "x": -5.6,
-        "y": 0.2,
-        "z": 2.7
-      }
-    },
-    {
-      "name": "2 Szatnia WF",
-      "displayName": "Szat. WF",
-      "position": {
-        "x": 0.6,
+        "x": -11.5,
         "y": 0.2,
         "z": 0
+      }
+    },
+    {
+      "name": "Sala 71",
+      "displayName": "71",
+      "position": {
+        "x": -11,
+        "y": 0.2,
+        "z": -1.45
+      }
+    },
+    {
+      "name": "Sala 74",
+      "displayName": "74",
+      "position": {
+        "x": -10.45,
+        "y": 0.2,
+        "z": -0.23
+      }
+    },
+    {
+      "name": "Sala 79",
+      "displayName": "79",
+      "position": {
+        "x": -8.45,
+        "y": 0.2,
+        "z": 2.65
+      }
+    },
+    {
+      "name": "Sala 80",
+      "displayName": "80",
+      "position": {
+        "x": -7.35,
+        "y": 0.2,
+        "z": 2.65
+      }
+    },
+    {
+      "name": "Sala 81",
+      "displayName": "81",
+      "position": {
+        "x": -6.3,
+        "y": 0.2,
+        "z": 2.65
+      }
+    },
+    {
+      "name": "Sala 82",
+      "displayName": "82",
+      "position": {
+        "x": -5.2,
+        "y": 0.2,
+        "z": 2.65
+      }
+    },
+    {
+      "name": "Sala 84",
+      "displayName": "84",
+      "position": {
+        "x": -3.75,
+        "y": 0.2,
+        "z": 2.65
+      }
+    },
+    {
+      "name": "Sala 84",
+      "displayName": "84",
+      "position": {
+        "x": -10.65,
+        "y": 0.2,
+        "z": 3.95
+      }
+    },
+    {
+      "name": "WC Damskie, P. 2",
+      "displayName": "WC Damskie",
+      "position": {
+        "x": -9.5,
+        "y": 0.2,
+        "z": 2.5
+      }
+    },
+    {
+      "name": "Sala 200",
+      "displayName": "200",
+      "position": {
+        "x": 0.95,
+        "y": 0.2,
+        "z": 3
+      }
+    },
+    {
+      "name": "Sala 201",
+      "displayName": "201",
+      "position": {
+        "x": 2.3,
+        "y": 0.2,
+        "z": 3
+      }
+    },
+    {
+      "name": "Sala 202",
+      "displayName": "202",
+      "position": {
+        "x": 3.45,
+        "y": 0.2,
+        "z": 3
+      }
+    },
+    {
+      "name": "Sala 203",
+      "displayName": "203",
+      "position": {
+        "x": 4.6,
+        "y": 0.2,
+        "z": 3
+      }
+    },
+    {
+      "name": "Sala 204",
+      "displayName": "204",
+      "position": {
+        "x": 5.7,
+        "y": 0.2,
+        "z": 3
+      }
+    },
+    {
+      "name": "Sala 205",
+      "displayName": "205",
+      "position": {
+        "x": 6.85,
+        "y": 0.2,
+        "z": 3
+      }
+    },
+    {
+      "name": "Sala 206",
+      "displayName": "206",
+      "position": {
+        "x": 7.95,
+        "y": 0.2,
+        "z": 3
+      }
+    },
+    {
+      "name": "Sala 207",
+      "displayName": "207",
+      "position": {
+        "x": 9.25,
+        "y": 0.2,
+        "z": 3
+      }
+    },
+    {
+      "name": "Sala 208",
+      "displayName": "208",
+      "position": {
+        "x": 8.75,
+        "y": 0.2,
+        "z": 2.05
+      }
+    },
+    {
+      "name": "Sala 209",
+      "displayName": "209",
+      "position": {
+        "x": 7.95,
+        "y": 0.2,
+        "z": 2.05
+      }
+    },
+    {
+      "name": "Sala 210",
+      "displayName": "210",
+      "position": {
+        "x": 7.2,
+        "y": 0.2,
+        "z": 2.05
+      }
+    },
+    {
+      "name": "Sala 211",
+      "displayName": "211",
+      "position": {
+        "x": 6.15,
+        "y": 0.2,
+        "z": 2.05
+      }
+    },
+    {
+      "name": "Sala 212",
+      "displayName": "212",
+      "position": {
+        "x": 4.45,
+        "y": 0.2,
+        "z": 2.05
+      }
+    },
+    {
+      "name": "Sala 213",
+      "displayName": "213",
+      "position": {
+        "x": 2.1,
+        "y": 0.2,
+        "z": 2.05
+      }
+    },
+    {
+      "name": "Sala 214",
+      "displayName": "214",
+      "position": {
+        "x": 11.35,
+        "y": 0.2,
+        "z": 0.3
+      }
+    },
+    {
+      "name": "Sala 215",
+      "displayName": "215",
+      "position": {
+        "x": 11.35,
+        "y": 0.2,
+        "z": -0.95
+      }
+    },
+    {
+      "name": "Sala 216",
+      "displayName": "216",
+      "position": {
+        "x": 11.35,
+        "y": 0.2,
+        "z": -1.73
+      }
+    },
+    {
+      "name": "Sala 218",
+      "displayName": "218",
+      "position": {
+        "x": 10.3,
+        "y": 0.2,
+        "z": -1.95
+      }
+    },
+    {
+      "name": "Sala 219",
+      "displayName": "219",
+      "position": {
+        "x": 10.3,
+        "y": 0.2,
+        "z": -1.04
+      }
+    },
+    {
+      "name": "Sala 220",
+      "displayName": "220",
+      "position": {
+        "x": 10.3,
+        "y": 0.2,
+        "z": -0.15
+      }
+    },
+    {
+      "name": "Sala 221",
+      "displayName": "221",
+      "position": {
+        "x": 10.3,
+        "y": 0.2,
+        "z": 0.85
+      }
+    },
+    {
+      "name": "Sala 222",
+      "displayName": "222",
+      "position": {
+        "x": 11.2,
+        "y": 0.2,
+        "z": 3.15
+      }
+    },
+    {
+      "name": "Sala 223",
+      "displayName": "223",
+      "position": {
+        "x": 10.3,
+        "y": 0.2,
+        "z": 3.15
+      }
+    },
+    {
+      "name": "Sala 224",
+      "displayName": "224",
+      "position": {
+        "x": 11.35,
+        "y": 0.2,
+        "z": 1.55
+      }
+    },
+    {
+      "name": "Sala 225",
+      "displayName": "225",
+      "position": {
+        "x": 0.3,
+        "y": 0.2,
+        "z": 3
       }
     }
   ]

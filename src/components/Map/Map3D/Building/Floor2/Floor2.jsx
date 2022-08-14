@@ -273,12 +273,6 @@ export default function Model({ isVisible = true }) {
         rotation={[0, -Math.PI / 2, 0]}
       />
       <mesh
-        geometry={nodes.Wall012.geometry}
-        material={materials.Wall}
-        position={[-10.75, 0, 0]}
-        rotation={[0, -Math.PI / 2, 0]}
-      />
-      <mesh
         geometry={nodes.Wall011.geometry}
         material={materials.Wall}
         position={[-10.75, 0, 1.75]}
@@ -319,12 +313,6 @@ export default function Model({ isVisible = true }) {
         material={materials.Wall}
         position={[-11.22, 0, -0.44]}
         rotation={[-Math.PI, 0, -Math.PI]}
-      />
-      <mesh
-        geometry={nodes.Wall002.geometry}
-        material={materials.Wall}
-        position={[-10.16, 0, -1.03]}
-        rotation={[0, Math.PI / 2, 0]}
       />
       <mesh
         geometry={nodes.Wall001.geometry}
@@ -382,95 +370,251 @@ export default function Model({ isVisible = true }) {
         scale={[11.8, 1, 4.42]}
       />
       <mesh
-        geometry={nodes.Wall102.geometry}
-        material={nodes.Wall102.material}
-        position={[5.26, 0.13, 1.93]}
-        rotation={[0, -Math.PI / 2, 0]}
-        scale={[0.62, 0.11, 0.54]}
-      />
-      <group position={[5.33, 0.02, 2.25]} scale={[0.13, 0.05, 0.07]}>
-        <mesh
-          geometry={nodes.Stairs014.geometry}
-          material={nodes.Stairs014.material}
-        />
-        <mesh
-          geometry={nodes.Stairs014_1.geometry}
-          material={nodes.Stairs014_1.material}
-        />
-        <mesh
-          geometry={nodes.Stairs014_2.geometry}
-          material={nodes.Stairs014_2.material}
-        />
-        <mesh
-          geometry={nodes.Stairs014_3.geometry}
-          material={nodes.Stairs014_3.material}
-        />
-        <mesh
-          geometry={nodes.Stairs014_4.geometry}
-          material={nodes.Stairs014_4.material}
-        />
-        <mesh
-          geometry={nodes.Stairs014_5.geometry}
-          material={nodes.Stairs014_5.material}
-        />
-        <mesh
-          geometry={nodes.Stairs014_6.geometry}
-          material={nodes.Stairs014_6.material}
-        />
-        <mesh
-          geometry={nodes.Stairs014_7.geometry}
-          material={nodes.Stairs014_7.material}
-        />
-      </group>
-      <group
-        position={[5.52, 0.16, 1.98]}
-        rotation={[-Math.PI, 0, -Math.PI]}
-        scale={[0.13, 0.05, 0.07]}
-      >
-        <mesh
-          geometry={nodes.Stairs013.geometry}
-          material={nodes.Stairs013.material}
-        />
-        <mesh
-          geometry={nodes.Stairs013_1.geometry}
-          material={nodes.Stairs013_1.material}
-        />
-        <mesh
-          geometry={nodes.Stairs013_2.geometry}
-          material={nodes.Stairs013_2.material}
-        />
-        <mesh
-          geometry={nodes.Stairs013_3.geometry}
-          material={nodes.Stairs013_3.material}
-        />
-        <mesh
-          geometry={nodes.Stairs013_4.geometry}
-          material={nodes.Stairs013_4.material}
-        />
-        <mesh
-          geometry={nodes.Stairs013_5.geometry}
-          material={nodes.Stairs013_5.material}
-        />
-        <mesh
-          geometry={nodes.Stairs013_6.geometry}
-          material={nodes.Stairs013_6.material}
-        />
-        <mesh
-          geometry={nodes.Stairs013_7.geometry}
-          material={nodes.Stairs013_7.material}
-        />
-      </group>
-      <mesh
         geometry={nodes.Plane.geometry}
         material={materials.Ground}
-        position={[-1.52, 0.29, 2.59]}
+        position={[-1.52, -0.01, 2.59]}
         scale={[1.7, 1, 0.79]}
       />
       <mesh
         geometry={nodes.Plane002.geometry}
-        material={materials.Ground}
+        material={materials.Wall}
         position={[10.26, 0.29, -3.55]}
         scale={[1.64, 1, 0.79]}
+      />
+      <mesh
+        geometry={nodes.Cube003.geometry}
+        material={nodes.Cube003.material}
+        position={[9.93, 0.14, 1.87]}
+        scale={[0, 0.15, 0]}
+      />
+      <mesh
+        geometry={nodes.Cube001.geometry}
+        material={nodes.Cube001.material}
+        position={[9.91, 0.14, 1.87]}
+        scale={[0, 0.15, 0]}
+      />
+      <mesh
+        geometry={nodes.Cube002.geometry}
+        material={nodes.Cube002.material}
+        position={[10.16, 0.14, 1.87]}
+        scale={[0, 0.15, 0]}
+      />
+      <mesh
+        geometry={nodes.Cube004.geometry}
+        material={nodes.Cube004.material}
+        position={[10.18, 0.14, 1.87]}
+        scale={[0, 0.15, 0]}
+      />
+      <mesh
+        geometry={nodes.Cube005.geometry}
+        material={nodes.Cube005.material}
+        position={[10.08, 0.14, 1.87]}
+        scale={[0, 0.15, 0]}
+      />
+      <mesh
+        geometry={nodes.Cube006.geometry}
+        material={nodes.Cube006.material}
+        position={[10.03, 0.14, 1.87]}
+        scale={[0, 0.15, 0]}
+      />
+      <mesh
+        geometry={nodes.Cube007.geometry}
+        material={nodes.Cube007.material}
+        position={[10.06, 0.14, 1.87]}
+        scale={[0, 0.15, 0]}
+      />
+      <mesh
+        geometry={nodes.Cube008.geometry}
+        material={nodes.Cube008.material}
+        position={[10.01, 0.14, 1.87]}
+        scale={[0, 0.15, 0]}
+      />
+      <mesh
+        geometry={nodes.Cube009.geometry}
+        material={nodes.Cube009.material}
+        position={[10.21, 0.14, 1.87]}
+        scale={[0, 0.15, 0]}
+      />
+      <mesh
+        geometry={nodes.Cube010.geometry}
+        material={nodes.Cube010.material}
+        position={[10.26, 0.14, 1.87]}
+        scale={[0, 0.15, 0]}
+      />
+      <mesh
+        geometry={nodes.Cube011.geometry}
+        material={nodes.Cube011.material}
+        position={[10.23, 0.14, 1.87]}
+        scale={[0, 0.15, 0]}
+      />
+      <mesh
+        geometry={nodes.Cube012.geometry}
+        material={nodes.Cube012.material}
+        position={[10.28, 0.14, 1.87]}
+        scale={[0, 0.15, 0]}
+      />
+      <mesh
+        geometry={nodes.Cube013.geometry}
+        material={nodes.Cube013.material}
+        position={[9.98, 0.14, 1.87]}
+        scale={[0, 0.15, 0]}
+      />
+      <mesh
+        geometry={nodes.Cube014.geometry}
+        material={nodes.Cube014.material}
+        position={[10.13, 0.14, 1.87]}
+        scale={[0, 0.15, 0]}
+      />
+      <mesh
+        geometry={nodes.Cube015.geometry}
+        material={nodes.Cube015.material}
+        position={[9.96, 0.14, 1.87]}
+        scale={[0, 0.15, 0]}
+      />
+      <mesh
+        geometry={nodes.Cube016.geometry}
+        material={nodes.Cube016.material}
+        position={[10.11, 0.14, 1.87]}
+        scale={[0, 0.15, 0]}
+      />
+      <mesh
+        geometry={nodes.Cube017.geometry}
+        material={nodes.Cube017.material}
+        position={[10.38, 0.14, 1.87]}
+        scale={[0, 0.15, 0]}
+      />
+      <mesh
+        geometry={nodes.Cube018.geometry}
+        material={nodes.Cube018.material}
+        position={[10.4, 0.14, 1.87]}
+        scale={[0, 0.15, 0]}
+      />
+      <mesh
+        geometry={nodes.Cube019.geometry}
+        material={nodes.Cube019.material}
+        position={[10.55, 0.14, 1.87]}
+        scale={[0, 0.15, 0]}
+      />
+      <mesh
+        geometry={nodes.Cube020.geometry}
+        material={nodes.Cube020.material}
+        position={[10.5, 0.14, 1.87]}
+        scale={[0, 0.15, 0]}
+      />
+      <mesh
+        geometry={nodes.Cube021.geometry}
+        material={nodes.Cube021.material}
+        position={[10.53, 0.14, 1.87]}
+        scale={[0, 0.15, 0]}
+      />
+      <mesh
+        geometry={nodes.Cube022.geometry}
+        material={nodes.Cube022.material}
+        position={[10.48, 0.14, 1.87]}
+        scale={[0, 0.15, 0]}
+      />
+      <mesh
+        geometry={nodes.Cube023.geometry}
+        material={nodes.Cube023.material}
+        position={[10.33, 0.14, 1.87]}
+        scale={[0, 0.15, 0]}
+      />
+      <mesh
+        geometry={nodes.Cube024.geometry}
+        material={nodes.Cube024.material}
+        position={[10.3, 0.14, 1.87]}
+        scale={[0, 0.15, 0]}
+      />
+      <mesh
+        geometry={nodes.Cube025.geometry}
+        material={nodes.Cube025.material}
+        position={[10.35, 0.14, 1.87]}
+        scale={[0, 0.15, 0]}
+      />
+      <mesh
+        geometry={nodes.Cube026.geometry}
+        material={nodes.Cube026.material}
+        position={[10.45, 0.14, 1.87]}
+        scale={[0, 0.15, 0]}
+      />
+      <mesh
+        geometry={nodes.Cube027.geometry}
+        material={nodes.Cube027.material}
+        position={[10.43, 0.14, 1.87]}
+        scale={[0, 0.15, 0]}
+      />
+      <mesh
+        geometry={nodes.Cube028.geometry}
+        material={nodes.Cube028.material}
+        position={[10.53, 0.14, 1.87]}
+        scale={[0, 0.15, 0]}
+      />
+      <mesh
+        geometry={nodes.Cube029.geometry}
+        material={nodes.Cube029.material}
+        position={[10.5, 0.14, 1.87]}
+        scale={[0, 0.15, 0]}
+      />
+      <mesh
+        geometry={nodes.Cube030.geometry}
+        material={nodes.Cube030.material}
+        position={[10.55, 0.14, 1.87]}
+        scale={[0, 0.15, 0]}
+      />
+      <mesh
+        geometry={nodes.Cube031.geometry}
+        material={nodes.Cube031.material}
+        position={[10.53, 0.14, 1.87]}
+        scale={[0, 0.15, 0]}
+      />
+      <mesh
+        geometry={nodes.Cube032.geometry}
+        material={nodes.Cube032.material}
+        position={[10.5, 0.14, 1.87]}
+        scale={[0, 0.15, 0]}
+      />
+      <mesh
+        geometry={nodes.Cube033.geometry}
+        material={nodes.Cube033.material}
+        position={[10.55, 0.14, 1.87]}
+        scale={[0, 0.15, 0]}
+      />
+      <mesh
+        geometry={nodes.Cube034.geometry}
+        material={nodes.Cube034.material}
+        position={[10.63, 0.14, 1.87]}
+        scale={[0, 0.15, 0]}
+      />
+      <mesh
+        geometry={nodes.Cube035.geometry}
+        material={nodes.Cube035.material}
+        position={[10.58, 0.14, 1.87]}
+        scale={[0, 0.15, 0]}
+      />
+      <mesh
+        geometry={nodes.Cube036.geometry}
+        material={nodes.Cube036.material}
+        position={[10.6, 0.14, 1.87]}
+        scale={[0, 0.15, 0]}
+      />
+      <mesh
+        geometry={nodes.Cube037.geometry}
+        material={nodes.Cube037.material}
+        position={[10.26, 0.28, 1.87]}
+        rotation={[0, 0, -Math.PI / 2]}
+        scale={[0, 0.36, 0]}
+      />
+      <mesh
+        geometry={nodes.Wall023.geometry}
+        material={materials.Wall}
+        position={[-10.75, 0, 0.02]}
+        rotation={[0, -Math.PI / 2, 0]}
+      />
+      <mesh
+        geometry={nodes.Wall002.geometry}
+        material={materials.Wall}
+        position={[-10.16, 0, -1.03]}
+        rotation={[0, Math.PI / 2, 0]}
       />
     </group>
   );
