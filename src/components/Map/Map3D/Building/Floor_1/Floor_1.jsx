@@ -129,12 +129,6 @@ export default function Floor_1() {
         position={[-7.87, 0, 2.99]}
       />
       <mesh
-        geometry={nodes.Wall015.geometry}
-        material={materials.Wall}
-        position={[-8.98, 0, 2.78]}
-        rotation={[-Math.PI, 0, -Math.PI]}
-      />
-      <mesh
         geometry={nodes.Wall014.geometry}
         material={materials.Wall}
         position={[-10.16, 0, 2.3]}
@@ -234,13 +228,6 @@ export default function Floor_1() {
         scale={[11.8, 1, 4.42]}
       />
       <mesh
-        geometry={nodes.Wall032.geometry}
-        material={nodes.Wall032.material}
-        position={[-10.75, 0.13, 2.26]}
-        rotation={[0, -Math.PI / 2, 0]}
-        scale={[1, 0.11, 1]}
-      />
-      <mesh
         geometry={nodes.Stairs008.geometry}
         material={nodes.Stairs008.material}
         position={[-10.26, 0.15, 2.31]}
@@ -336,51 +323,6 @@ export default function Floor_1() {
         />
       </group>
       <mesh
-        geometry={nodes.Wall036.geometry}
-        material={materials.Wall}
-        position={[-4.56, -0.01, 2.8]}
-        rotation={[0, 0, -Math.PI]}
-        scale={[-0.45, -1.03, -0.7]}
-      />
-      <group
-        position={[-4.52, -0.02, 2.48]}
-        rotation={[-Math.PI, 0, -Math.PI]}
-        scale={[0.15, 0.12, 0.07]}
-      >
-        <mesh
-          geometry={nodes.Stairs026.geometry}
-          material={nodes.Stairs026.material}
-        />
-        <mesh
-          geometry={nodes.Stairs026_1.geometry}
-          material={nodes.Stairs026_1.material}
-        />
-        <mesh
-          geometry={nodes.Stairs026_2.geometry}
-          material={nodes.Stairs026_2.material}
-        />
-        <mesh
-          geometry={nodes.Stairs026_3.geometry}
-          material={nodes.Stairs026_3.material}
-        />
-        <mesh
-          geometry={nodes.Stairs026_4.geometry}
-          material={nodes.Stairs026_4.material}
-        />
-        <mesh
-          geometry={nodes.Stairs026_5.geometry}
-          material={nodes.Stairs026_5.material}
-        />
-        <mesh
-          geometry={nodes.Stairs026_6.geometry}
-          material={nodes.Stairs026_6.material}
-        />
-        <mesh
-          geometry={nodes.Stairs026_7.geometry}
-          material={nodes.Stairs026_7.material}
-        />
-      </group>
-      <mesh
         geometry={nodes.Wall039.geometry}
         material={materials.Wall}
         position={[0.16, -0.01, -4.42]}
@@ -435,19 +377,13 @@ export default function Floor_1() {
       <mesh
         geometry={nodes.Wall004.geometry}
         material={materials.Wall}
-        position={[-10.84, -0.01, -0.44]}
-        rotation={[-Math.PI, 0, -Math.PI]}
+        position={[-10.84, -0.01, 2.74]}
+        rotation={[Math.PI, 0, Math.PI]}
       />
       <mesh
         geometry={nodes.Wall002.geometry}
         material={materials.Wall}
         position={[-10.16, 0, -1.03]}
-        rotation={[0, Math.PI / 2, 0]}
-      />
-      <mesh
-        geometry={nodes.Wall019.geometry}
-        material={materials.Wall}
-        position={[-10.16, 0, -0.53]}
         rotation={[0, Math.PI / 2, 0]}
       />
       <mesh
@@ -457,11 +393,98 @@ export default function Floor_1() {
         rotation={[-Math.PI, 0, -Math.PI]}
       />
       <mesh
-        geometry={nodes.Wall047.geometry}
-        material={materials.Wall}
-        position={[-10.81, 0, -0.53]}
-        scale={[1, 1, 0.67]}
+        geometry={nodes.Wall001.geometry}
+        material={materials['Wall.001']}
+        position={[-4.56, 0, 2.29]}
+        rotation={[Math.PI, 0, Math.PI]}
       />
+      <mesh
+        geometry={nodes.Stairs005.geometry}
+        material={nodes.Stairs005.material}
+        position={[-6.9, 0.04, 2.76]}
+        scale={[0.17, 0.1, 0.04]}
+      />
+      <mesh
+        geometry={nodes.Stairs003.geometry}
+        material={nodes.Stairs003.material}
+        position={[-7.79, 0.04, 2.76]}
+        scale={[0.17, 0.1, 0.04]}
+      />
+      <mesh
+        geometry={nodes.Wall020.geometry}
+        material={materials['Wall.002']}
+        position={[-7.87, 0, 2.58]}
+        rotation={[0, -Math.PI / 2, 0]}
+      />
+      <mesh
+        geometry={nodes.Wall022.geometry}
+        material={nodes.Wall022.material}
+        position={[-10.75, 0.13, 2.26]}
+        rotation={[0, -Math.PI / 2, 0]}
+        scale={[1, 0.11, 1]}
+      />
+      <mesh
+        geometry={nodes.Plane001.geometry}
+        material={nodes.Plane001.material}
+        position={[-7.35, 0.29, 2.33]}
+      />
+      <mesh
+        geometry={nodes.Wall028.geometry}
+        material={materials['Wall.004']}
+        position={[-11.82, 0, -0.53]}
+        rotation={[0, 1.57, 0]}
+      />
+      <mesh
+        geometry={nodes.Wall015.geometry}
+        material={materials['Wall.003']}
+        position={[-10.16, 0, -0.53]}
+        rotation={[0, Math.PI / 2, 0]}
+      />
+      <mesh
+        geometry={nodes.Wall019.geometry}
+        material={materials['Wall.008']}
+        position={[-4.4, 0, 2.84]}
+        rotation={[0, 0, -Math.PI]}
+        scale={[-0.45, -1.03, -0.7]}
+      />
+      <group
+        position={[-4.48, -0.02, 2.52]}
+        rotation={[-Math.PI, 0, -Math.PI]}
+        scale={[0.18, 0.12, 0.07]}
+      >
+        <mesh
+          geometry={nodes.Stairs001_1.geometry}
+          material={nodes.Stairs001_1.material}
+        />
+        <mesh
+          geometry={nodes.Stairs001_2.geometry}
+          material={nodes.Stairs001_2.material}
+        />
+        <mesh
+          geometry={nodes.Stairs001_3.geometry}
+          material={nodes.Stairs001_3.material}
+        />
+        <mesh
+          geometry={nodes.Stairs001_4.geometry}
+          material={nodes.Stairs001_4.material}
+        />
+        <mesh
+          geometry={nodes.Stairs001_5.geometry}
+          material={nodes.Stairs001_5.material}
+        />
+        <mesh
+          geometry={nodes.Stairs001_6.geometry}
+          material={nodes.Stairs001_6.material}
+        />
+        <mesh
+          geometry={nodes.Stairs001_7.geometry}
+          material={nodes.Stairs001_7.material}
+        />
+        <mesh
+          geometry={nodes.Stairs001_8.geometry}
+          material={nodes.Stairs001_8.material}
+        />
+      </group>
     </group>
   );
 }

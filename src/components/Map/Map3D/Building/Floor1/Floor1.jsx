@@ -20,21 +20,9 @@ export default function Model({ isVisible = true }) {
       ? timeLineGsap.to(group.current.position, { y: 15, duration: 1 })
       : timeLineGsap.to(group.current.position, { y: 0, duration: 0.5 });
   }, [isVisible]);
-  //    <group ref={group} scale={[1, 1, 1]} dispose={null}>
+
   return (
     <group ref={group} scale={[1, 1, 1]} dispose={null}>
-      <mesh
-        geometry={nodes.Wall003.geometry}
-        material={materials.Wall}
-        position={[-11.22, -0.01, -0.44]}
-        rotation={[-Math.PI, 0, -Math.PI]}
-      />
-      <mesh
-        geometry={nodes.Wall004.geometry}
-        material={materials.Wall}
-        position={[-10.84, -0.01, -0.44]}
-        rotation={[-Math.PI, 0, -Math.PI]}
-      />
       <mesh
         geometry={nodes.Wall006.geometry}
         material={materials.Wall}
@@ -223,12 +211,6 @@ export default function Model({ isVisible = true }) {
         rotation={[0, 1.57, 0]}
       />
       <mesh
-        geometry={nodes.Wall047.geometry}
-        material={materials.Wall}
-        position={[-10.81, -0.01, -0.53]}
-        scale={[1, 1, 0.67]}
-      />
-      <mesh
         geometry={nodes.Wall046.geometry}
         material={materials.Wall}
         position={[7.64, -0.01, 2.3]}
@@ -288,13 +270,6 @@ export default function Model({ isVisible = true }) {
         scale={[0.15, 0.03, 0.07]}
       />
       <mesh
-        geometry={nodes.Stairs011.geometry}
-        material={nodes.Stairs011.material}
-        position={[0.43, 0.21, 1.98]}
-        rotation={[-Math.PI, 0, -Math.PI]}
-        scale={[0.15, 0.03, 0.07]}
-      />
-      <mesh
         geometry={nodes.Wall104.geometry}
         material={materials.Wall}
         position={[-0.29, -0.01, -1.75]}
@@ -326,13 +301,6 @@ export default function Model({ isVisible = true }) {
         position={[-4.59, 0.19, 2.44]}
         rotation={[0, -Math.PI / 2, 0]}
         scale={[0.65, 0.11, 0.59]}
-      />
-      <mesh
-        geometry={nodes.Stairs005.geometry}
-        material={nodes.Stairs005.material}
-        position={[-4.52, 0.21, 2.48]}
-        rotation={[-Math.PI, 0, -Math.PI]}
-        scale={[0.15, 0.03, 0.07]}
       />
       <mesh
         geometry={nodes.Wall111.geometry}
@@ -386,13 +354,6 @@ export default function Model({ isVisible = true }) {
         position={[5.26, 0.19, 1.97]}
         rotation={[0, -Math.PI / 2, 0]}
         scale={[0.65, 0.11, 0.59]}
-      />
-      <mesh
-        geometry={nodes.Stairs003.geometry}
-        material={nodes.Stairs003.material}
-        position={[5.52, 0.21, 2.01]}
-        rotation={[-Math.PI, 0, -Math.PI]}
-        scale={[0.15, 0.03, 0.07]}
       />
       <mesh
         geometry={nodes.Stairs014.geometry}
@@ -705,7 +666,7 @@ export default function Model({ isVisible = true }) {
       <mesh
         geometry={nodes.Trybuny.geometry}
         material={nodes.Trybuny.material}
-        position={[-0.06, 0.12, -1.14]}
+        position={[-0.06, 0.01, -1.14]}
         rotation={[0, -Math.PI / 2, 0]}
         scale={[0.6, 0.8, 0.6]}
       />
@@ -722,10 +683,34 @@ export default function Model({ isVisible = true }) {
         rotation={[0, Math.PI / 2, 0]}
       />
       <mesh
+        geometry={nodes.Plane.geometry}
+        material={nodes.Plane.material}
+        position={[0.16, -0.01, 0.15]}
+        scale={[0.52, 1.07, 2.32]}
+      />
+      <mesh
+        geometry={nodes.Wall003.geometry}
+        material={materials.Wall}
+        position={[-11.22, -0.01, -0.44]}
+        rotation={[-Math.PI, 0, -Math.PI]}
+      />
+      <mesh
         geometry={nodes.Wall002.geometry}
         material={materials.Wall}
-        position={[-10.16, 0, -0.53]}
+        position={[-11.82, -0.01, -0.53]}
+        rotation={[0, 1.57, 0]}
+      />
+      <mesh
+        geometry={nodes.Wall056.geometry}
+        material={materials.Wall}
+        position={[-10.16, -0.01, -0.53]}
         rotation={[0, Math.PI / 2, 0]}
+      />
+      <mesh
+        geometry={nodes.Wall004.geometry}
+        material={materials['Wall.001']}
+        position={[-10.84, 0, 2.74]}
+        rotation={[Math.PI, 0, Math.PI]}
       />
       <mesh
         geometry={nodes.Wall005.geometry}
