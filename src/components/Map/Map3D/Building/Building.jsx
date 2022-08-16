@@ -7,7 +7,7 @@ import Floor_1 from './Floor_1/Floor_1';
 import Floor0 from './Floor0/Floor0';
 import Floor1 from './Floor1/Floor1';
 import Floor2 from './Floor2/Floor2';
-import RoomNumber from './RoomNumber/RoomNumber';
+import RoomLabel from './RoomLabel/RoomLabel';
 
 function Building({ currentFloorNumber, roomsToHighlight }) {
   const floorsArr = [Floor_1, Floor0, Floor1, Floor2];
@@ -42,7 +42,7 @@ function Building({ currentFloorNumber, roomsToHighlight }) {
 
             {currentFloorNumber === index - 1 &&
               roomsLocations[`floor` + (index - 1)].map((room, index) => (
-                <RoomNumber key={index} {...room} />
+                <RoomLabel key={index} {...room} />
               ))}
             <Floor isVisible={currentFloorNumber >= index - 1} />
           </group>

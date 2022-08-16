@@ -2,29 +2,30 @@ import React from 'react';
 import { Html } from '@react-three/drei';
 import PropTypes from 'prop-types';
 import './RoomPointer.scss';
-function RoomPointer({ room, status }) {
+
+function RoomPointer({ room: { displayName, position }, status }) {
   return (
-    <group position={Object.values(room.position)}>
-      <Html distanceFactor={9} center>
-        <div
-          className={`RoomPointer__text ${
-            status == 'start'
-              ? 'RoomPointer__text--start'
-              : 'RoomPointer__text--end'
-          }`}
-        >
-          {room.displayName}
-        </div>
-      </Html>
-    </group>
+    <Html position={Object.values(position)} distanceFactor={9} center>
+      <div
+        className={`RoomPointer__background ${
+          status == 'start'
+            ? 'RoomPointer__background--start'
+            : 'RoomPointer__background--end'
+        }`}
+      >
+        <span className={displayName == '7' && 'RoomPointer--goldenText'}>
+          {displayName}
+        </span>
+      </div>
+    </Html>
   );
 }
 
 RoomPointer.prototype = {
   status: PropTypes.oneOf(['start', 'end']).isRequired,
-  floorNumber: PropTypes.number.isRequired,
   room: PropTypes.shape({
     position: PropTypes.arrayOf(PropTypes.number).isRequired,
+    displayName: PropTypes.arrayOf(PropTypes.string).isRequired,
   }),
 };
 
