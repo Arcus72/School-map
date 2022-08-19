@@ -19,7 +19,6 @@ function Building({ currentFloorNumber, roomsToHighlight }) {
   return (
     <Suspense fallback={null}>
       {floorsArr.map((Floor, index) => {
-        console.log(index);
         return (
           <group
             scale={scale}

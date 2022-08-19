@@ -31,7 +31,7 @@ function MapInterface({ isFormVisible, setIsFormVisible, crucialPoints }) {
   roomsToHighlight.endRoom = findRoom(crucialPoints.end);
 
   const ToggleSwitch = () => {
-    isFormVisible ? setIsFormVisible(false) : setIsFormVisible(true);
+    setIsFormVisible((value) => !value);
   };
 
   const increaseFloor = () => {
@@ -40,6 +40,61 @@ function MapInterface({ isFormVisible, setIsFormVisible, crucialPoints }) {
   const decreaseFloor = () => {
     if (currentFloor > -1) setCurrentFloor((number) => number - 1);
   };
+
+  if (!isFormVisible) {
+    if (
+      navigator.userAgent.match(/Android/i) ||
+      navigator.userAgent.match(/iPhone/i)
+    ) {
+      openFullscreen();
+    }
+  } else {
+    if (
+      navigator.userAgent.match(/Android/i) ||
+      navigator.userAgent.match(/iPhone/i)
+    ) {
+      closeFullscreen();
+    }
+  }
+
+  window.onfocus = () => {
+    console.log('focus1');
+    console.log(!isFormVisible);
+    if (!isFormVisible) {
+      if (
+        navigator.userAgent.match(/Android/i) ||
+        navigator.userAgent.match(/iPhone/i)
+      ) {
+        console.log('focus2');
+        openFullscreen();
+      }
+    }
+  };
+  function openFullscreen() {
+    let elem = document.documentElement;
+    if (elem.requestFullscreen) {
+      elem.requestFullscreen();
+    } else if (elem.webkitRequestFullscreen) {
+      /* Safari */
+      elem.webkitRequestFullscreen();
+    } else if (elem.msRequestFullscreen) {
+      /* IE11 */
+      elem.msRequestFullscreen();
+    }
+  }
+
+  function closeFullscreen() {
+    if (document.exitFullscreen) {
+      document.exitFullscreen();
+    } else if (document.webkitExitFullscreen) {
+      /* Safari */
+      document.webkitExitFullscreen();
+    } else if (document.msExitFullscreen) {
+      /* IE11 */
+      document.msExitFullscreen();
+    }
+  }
+
   return (
     <div className='MapInterface'>
       <Map3D roomsToHighlight={roomsToHighlight} currentFloor={currentFloor} />

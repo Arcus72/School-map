@@ -3,12 +3,13 @@ import Map from '@comp/Map/Map';
 import './App.scss';
 import MapForm from '@comp/MapForm/MapForm';
 function App() {
-  const [mapQuality, setMapQuality] = useState("high");
+  const [mapQuality, setMapQuality] = useState('high');
   const [isFormVisible, setIsFormVisible] = useState(true);
   const [crucialPoints, setCrucialPoints] = useState({
     start: null,
     end: null,
   });
+
   return (
     <div className='App'>
       <MapForm

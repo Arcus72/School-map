@@ -2,12 +2,12 @@ $color1: #ffc229;
 $color2: #2d3776;
 
 .MapInterface {
-  height: 100%;
+  height: 100vh;
   display: flex;
   flex-direction: row-reverse;
   font-family: 'Poppins', sans-serif;
   align-items: center;
-
+  overflow: hidden;
   &__formActivator {
     background-color: $color1;
     transition: all 0.2s ease-in-out;
@@ -19,9 +19,7 @@ $color2: #2d3776;
     justify-content: center;
     align-items: center;
     right: 30px;
-
-    top: 20px;
-
+    top: 30px;
     cursor: pointer;
     border-radius: 50%;
 
@@ -32,7 +30,7 @@ $color2: #2d3776;
     &--active {
       transform: rotate(180deg);
       transition: all 0.2s ease-in-out;
-      @media only screen and (max-width: 768px) {
+      @media only screen and (max-width: 768px), (max-height: 580px) {
         transform: rotate(180deg) translateY(calc(64px + -90vh));
       }
     }
@@ -47,7 +45,7 @@ $color2: #2d3776;
     border-bottom-right-radius: 80px;
     position: absolute;
     z-index: 1;
-    @media only screen and (max-width: 768px) {
+    @media only screen and (max-width: 768px), (max-height: 580px) {
       display: none;
     }
   }
@@ -65,7 +63,7 @@ $color2: #2d3776;
     justify-content: space-evenly;
     align-items: center;
     z-index: 1;
-    @media only screen and (max-width: 768px) {
+    @media only screen and (max-width: 768px), (max-height: 580px) {
       display: none;
     }
   }
@@ -129,7 +127,7 @@ $color2: #2d3776;
       width: min(18vw, 32px);
     }
 
-    @media only screen and (min-width: 768px) {
+    @media only screen and (min-width: 768px) and (min-height: 580px) {
       display: none;
     }
   }

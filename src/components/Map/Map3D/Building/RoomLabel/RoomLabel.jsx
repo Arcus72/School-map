@@ -9,11 +9,15 @@ function RoomLabel({ displayName, position }) {
   // Without camera's single movement, labels are incorrect rendered
   camera.position.x += 0.0000001;
 
+  let isMobile =
+    navigator.userAgent.match(/Android/i) ||
+    navigator.userAgent.match(/iPhone/i);
+
   return (
     <Html
       position={Object.values(position)}
       zIndexRange={[100, 0]}
-      distanceFactor={9}
+      distanceFactor={isMobile ? 5 : 9}
       center
     >
       <div className={`RoomNumber__background `}>

@@ -18,9 +18,13 @@ const findRooms = (roomName = '') => {
       }
     }
   }
-  if (foundRooms.length == 1) {
+  if (
+    foundRooms.length == 1 &&
+    foundRooms[0].toUpperCase() == roomName.toUpperCase()
+  ) {
     return [];
   }
+
   return foundRooms;
 };
 
@@ -113,7 +117,9 @@ function MapForm({
             ))}
           </div>
         </div>
-        <span className='Form__error'> {startPointMessageError}</span>
+        <span className='Form__error Form__error'>
+          {startPointMessageError}
+        </span>
         <div className='Form__inputField'>
           <input
             className='Form__input'
@@ -138,7 +144,9 @@ function MapForm({
             ))}
           </div>
         </div>
-        <span className='Form__error'> {endPointMessageError}</span>
+        <span className='Form__error Form__error--end'>
+          {endPointMessageError}
+        </span>
 
         <div className='Form__section'>
           <h4 className='Form__qualityHeader'>Jakość:</h4>

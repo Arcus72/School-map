@@ -5,21 +5,23 @@ $color2: #2d3776;
 .Form {
   position: absolute;
   background: $color2;
-  height: 100%;
+  min-height: 100vh;
   width: 100%;
   left: 0;
   top: 0;
-  transform: translateX(-100%);
   z-index: 2;
   display: flex;
-
   align-items: center;
   flex-direction: column;
+
+  transform: translateX(0);
   transition: all 0.5s ease-in-out;
 
-  &--active {
-    transform: translateX(0);
-    transition: all 0.5s ease-in-out;
+  &:not(.Form--active) {
+    transform: translateX(-100%);
+    height: 0px;
+    overflow: hidden;
+    transition: transform 0.5s ease-in-out, transition 0.01s linear 0.1s;
   }
 
   &__header {
@@ -37,9 +39,9 @@ $color2: #2d3776;
     }
 
     &--Desktop {
-      margin: 20px 0;
+      margin: 20px 0 30px 0;
       font-size: 3em;
-      @media only screen and (max-width: 768px) {
+      @media only screen and (max-width: 768px), (max-height: 580px) {
         display: none;
       }
     }
@@ -51,8 +53,12 @@ $color2: #2d3776;
       font-size: 1.5em;
       top: 0;
       margin-top: 24px;
-      @media only screen and (max-width: 768px) {
+      @media only screen and (max-width: 768px), (max-height: 580px) {
         display: flex;
+      }
+
+      @media only screen and (max-width: 300px), (max-height: 540px) {
+        display: none;
       }
 
       img {
@@ -62,7 +68,7 @@ $color2: #2d3776;
   }
 
   &__main {
-    padding-top: 16px;
+    padding: 40px;
     background: $color2;
     z-index: 1;
     display: flex;
@@ -71,17 +77,17 @@ $color2: #2d3776;
     align-items: center;
     transition: all 0.5s ease-in-out;
     height: 75%;
-    width: 45%;
+    width: 52%;
     border-radius: 25px;
     box-shadow: inset 0px 0px 10px 12px rgba(0, 0, 0, 0.25);
 
-    @media only screen and (max-width: 768px) {
-      height: 100%;
+    @media only screen and (max-width: 768px), (max-height: 580px) {
+      min-height: 100vh;
       width: 100%;
       border-radius: 0;
     }
 
-    @media only screen and (max-width: 500px) {
+    @media only screen and (max-width: 500px), (max-height: 580px) {
       font-size: 0.9em;
     }
 
@@ -219,7 +225,7 @@ $color2: #2d3776;
   &__showBtn {
     font-size: 2em;
     color: white;
-    padding: 0.6rem 4rem;
+    padding: 1.2rem 4rem;
     background: none;
     border: none;
     position: relative;
