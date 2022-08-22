@@ -23,12 +23,17 @@ const findRoom = (roomName) => {
 
 function MapInterface({ isFormVisible, setIsFormVisible, crucialPoints }) {
   const [currentFloor, setCurrentFloor] = useState(2);
-
   let roomsToHighlight = {};
 
   roomsToHighlight.startRoom = findRoom(crucialPoints.start);
 
   roomsToHighlight.endRoom = findRoom(crucialPoints.end);
+
+  const [messageToCamera, setMessageToCamera] = useState({
+    nameOfAction: 0,
+    roomsToHighlight: roomsToHighlight,
+    id: 0,
+  });
 
   const ToggleSwitch = () => {
     setIsFormVisible((value) => !value);
@@ -58,14 +63,12 @@ function MapInterface({ isFormVisible, setIsFormVisible, crucialPoints }) {
   }
 
   window.onfocus = () => {
-    console.log('focus1');
     console.log(!isFormVisible);
     if (!isFormVisible) {
       if (
         navigator.userAgent.match(/Android/i) ||
         navigator.userAgent.match(/iPhone/i)
       ) {
-        console.log('focus2');
         openFullscreen();
       }
     }
@@ -95,9 +98,37 @@ function MapInterface({ isFormVisible, setIsFormVisible, crucialPoints }) {
     }
   }
 
+  const setMessageToCameraOnCurrentValue = (message) => {
+    let floorToSet;
+    switch (message) {
+      case 'reset':
+        floorToSet = 2;
+        break;
+
+      case 'start':
+        floorToSet = roomsToHighlight.startRoom.floorNumber;
+        break;
+
+      case 'end':
+        floorToSet = roomsToHighlight.endRoom.floorNumber;
+        break;
+    }
+    floorToSet != currentFloor && setCurrentFloor(floorToSet);
+
+    setMessageToCamera({
+      nameOfAction: message,
+      roomsToHighlight: roomsToHighlight,
+      id: messageToCamera.id + 1,
+    });
+  };
+
   return (
     <div className='MapInterface'>
-      <Map3D roomsToHighlight={roomsToHighlight} currentFloor={currentFloor} />
+      <Map3D
+        messageToCamera={messageToCamera}
+        roomsToHighlight={roomsToHighlight}
+        currentFloor={currentFloor}
+      />
       <div
         onClick={ToggleSwitch}
         className={`MapInterface__formActivator ${
@@ -105,6 +136,31 @@ function MapInterface({ isFormVisible, setIsFormVisible, crucialPoints }) {
         }`}
       >
         <DoubleArrow />
+      </div>
+
+      <div className='MapInterface__positionMenu'>
+        <button
+          onClick={() => setMessageToCameraOnCurrentValue('reset')}
+          className='MapInterface__resetPositionBtn'
+        >
+          Wyśrodkuj
+        </button>
+        {crucialPoints.start && (
+          <button
+            onClick={() => setMessageToCameraOnCurrentValue('start')}
+            className='MapInterface__showStartBtn'
+          >
+            {crucialPoints.start}
+          </button>
+        )}
+        {crucialPoints.end && (
+          <button
+            onClick={() => setMessageToCameraOnCurrentValue('end')}
+            className='MapInterface__showEndBtn'
+          >
+            {crucialPoints.end}
+          </button>
+        )}
       </div>
 
       <div className='MapInterface__background'></div>

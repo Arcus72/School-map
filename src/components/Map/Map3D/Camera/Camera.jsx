@@ -1,18 +1,40 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { MapControls } from '@react-three/drei';
+import { useThree } from '@react-three/fiber';
 const mapControlsSettings = {
   maxPolarAngle: Math.PI / 3,
   minDistance: 15,
-  maxDistance: 60,
+  maxDistance: 100,
   zoomSpeed: 1.5,
 };
 
-function Camera() {
-  return (
-    <>
-      <MapControls {...mapControlsSettings} />
-    </>
-  );
+function Camera({ messageToCamera }) {
+  const cameraRef = useRef();
+  const { camera } = useThree();
+
+  const focusCamera = ({ x, z }) => {
+    const multiplier = 3;
+
+    camera.position.set(x * multiplier, 20, z * multiplier + 15);
+    cameraRef.current.target.set(x * multiplier, 0, z * multiplier);
+  };
+
+  useEffect(() => {
+    console.log(camera.position);
+    switch (messageToCamera.nameOfAction) {
+      case 'reset':
+        cameraRef.current.reset();
+        break;
+      case 'start':
+        focusCamera(messageToCamera.roomsToHighlight.startRoom.room.position);
+        break;
+      case 'end':
+        focusCamera(messageToCamera.roomsToHighlight.endRoom.room.position);
+        break;
+    }
+  }, [messageToCamera.id]);
+
+  return <MapControls ref={cameraRef} {...mapControlsSettings} />;
 }
 
 export default Camera;

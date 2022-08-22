@@ -1,6 +1,28 @@
 $color1: #ffc229;
 $color2: #2d3776;
 
+@mixin SetPositionBtn {
+  cursor: pointer;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  border: none;
+  font-size: 1em;
+  padding: 0.5rem 1rem;
+  margin: 4px 2px;
+  border-radius: 2rem;
+  text-shadow: 5px 3px 6px rgba(0, 0, 0, 1);
+  white-space: nowrap;
+  -webkit-box-shadow: 4px 4px 16px -5px rgba(66, 68, 90, 1);
+  -moz-box-shadow: 4px 4px 16px -5px rgba(66, 68, 90, 1);
+  box-shadow: 4px 4px 16px -5px rgba(66, 68, 90, 1);
+
+  @media only screen and (max-width: 768px), (max-height: 580px) {
+    font-size: 0.8em;
+    padding: 0.3rem 0.8rem;
+    margin: 4px 2px;
+  }
+}
+
 .MapInterface {
   height: 100vh;
   display: flex;
@@ -163,6 +185,37 @@ $color2: #2d3776;
     &--endRoomFloor.MapInterface__mobileMenuBtn--startRoomFloor {
       box-shadow: 4px 4px 4px rgba(46, 204, 113, 0.75),
         -5px -5px 4px rgba(255, 24, 24, 0.75);
+    }
+  }
+
+  &__positionMenu {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 60%;
+  }
+
+  &__resetPositionBtn {
+    background-color: #2d3776;
+    @include SetPositionBtn;
+  }
+
+  &__showStartBtn {
+    @include SetPositionBtn;
+    background: linear-gradient(141deg, #3b4071 10%, #2ecc71 70%);
+    &::before {
+      background: linear-gradient(141deg, #3b4071 10%, #2ecc71 70%);
+    }
+  }
+
+  &__showEndBtn {
+    @include SetPositionBtn;
+    background: linear-gradient(219deg, #3b4071 10%, #ff1818 70%);
+    &::before {
+      background: linear-gradient(219deg, #3b4071 10%, #ff1818 70%);
     }
   }
 }

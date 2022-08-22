@@ -3,15 +3,14 @@ import { Canvas } from '@react-three/fiber';
 
 import './Map3D.scss';
 import PropTypes from 'prop-types';
-
 import Lights from './Lights/Lights';
 import Camera from './Camera/Camera';
 import Building from './Building/Building';
 
-function Map3D({ roomsToHighlight, currentFloor }) {
+function Map3D({ roomsToHighlight, currentFloor, messageToCamera }) {
   return (
-    <Canvas className='Map3D' camera={{ position: [0, 30, 40], fov: 75 }}>
-      <Camera />
+    <Canvas className='Map3D' camera={{ position: [-80, 12, 14], fov: 75 }}>
+      <Camera messageToCamera={messageToCamera} />
       <Lights />
 
       <Building
