@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import { Canvas } from '@react-three/fiber';
 
 import './Map3D.scss';
@@ -9,7 +9,7 @@ import Building from './Building/Building';
 
 function Map3D({ roomsToHighlight, currentFloor, messageToCamera }) {
   return (
-    <Canvas className='Map3D' camera={{ position: [-80, 12, 14], fov: 75 }}>
+    <Canvas className='Map3D' camera={{ position: [-80, 5, 5], fov: 75 }}>
       <Camera messageToCamera={messageToCamera} />
       <Lights />
 
@@ -37,4 +37,4 @@ Map3D.propTypes = {
   }),
 };
 
-export default Map3D;
+export default memo(Map3D);

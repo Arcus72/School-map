@@ -43,7 +43,10 @@ function Building({ currentFloorNumber, roomsToHighlight }) {
               roomsLocations[`floor` + (index - 1)].map((room, index) => (
                 <RoomLabel key={index} {...room} />
               ))}
-            <Floor isVisible={currentFloorNumber >= index - 1} />
+
+            <Suspense fallback={null}>
+              <Floor isVisible={currentFloorNumber >= index - 1} />
+            </Suspense>
           </group>
         );
       })}

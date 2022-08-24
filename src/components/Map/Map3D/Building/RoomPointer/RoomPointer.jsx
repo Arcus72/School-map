@@ -4,9 +4,10 @@ import PropTypes from 'prop-types';
 import './RoomPointer.scss';
 
 function RoomPointer({ room: { displayName, position }, status }) {
-  let isMobile =
-    navigator.userAgent.match(/Android/i) ||
-    navigator.userAgent.match(/iPhone/i);
+  const isMobile =
+    /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+      navigator.userAgent,
+    );
 
   return (
     <Html
@@ -21,7 +22,7 @@ function RoomPointer({ room: { displayName, position }, status }) {
             : 'RoomPointer__background--end'
         }`}
       >
-        <span className={displayName == '7' && 'RoomPointer--goldenText'}>
+        <span className={displayName == '7' ? 'RoomPointer--goldenText' : ''}>
           {displayName}
         </span>
       </div>

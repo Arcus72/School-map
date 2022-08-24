@@ -1,13 +1,12 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, memo } from 'react';
 import { MapControls } from '@react-three/drei';
 import { useThree } from '@react-three/fiber';
 const mapControlsSettings = {
-  maxPolarAngle: Math.PI / 3,
-  minDistance: 15,
-  maxDistance: 100,
+  maxPolarAngle: Math.PI / 2.5,
+  minDistance: 30,
+  maxDistance: 80,
   zoomSpeed: 1.5,
 };
-
 function Camera({ messageToCamera }) {
   const cameraRef = useRef();
   const { camera } = useThree();
@@ -20,7 +19,6 @@ function Camera({ messageToCamera }) {
   };
 
   useEffect(() => {
-    console.log(camera.position);
     switch (messageToCamera.nameOfAction) {
       case 'reset':
         cameraRef.current.reset();
@@ -37,4 +35,4 @@ function Camera({ messageToCamera }) {
   return <MapControls ref={cameraRef} {...mapControlsSettings} />;
 }
 
-export default Camera;
+export default memo(Camera);

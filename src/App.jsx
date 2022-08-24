@@ -5,7 +5,7 @@ import MapForm from '@comp/MapForm/MapForm';
 function App() {
   const [mapQuality, setMapQuality] = useState('high');
   const [isFormVisible, setIsFormVisible] = useState(true);
-  const [crucialPoints, setCrucialPoints] = useState({
+  const [namesOfCrucialPoints, setNamesOfCrucialPoints] = useState({
     start: null,
     end: null,
   });
@@ -17,12 +17,12 @@ function App() {
         setIsFormVisible={setIsFormVisible}
         mapQuality={mapQuality}
         setMapQuality={setMapQuality}
-        setCrucialPoints={setCrucialPoints}
+        setNamesOfCrucialPoints={setNamesOfCrucialPoints}
       />
       <Map
         setIsFormVisible={setIsFormVisible}
         isFormVisible={isFormVisible}
-        crucialPoints={crucialPoints}
+        namesOfCrucialPoints={namesOfCrucialPoints}
       />
     </div>
   );

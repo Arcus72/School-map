@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import { Html } from '@react-three/drei';
 import { useThree } from '@react-three/fiber';
 import PropTypes from 'prop-types';
@@ -9,9 +9,10 @@ function RoomLabel({ displayName, position }) {
   // Without camera's single movement, labels are incorrect rendered
   camera.position.x += 0.0000001;
 
-  let isMobile =
-    navigator.userAgent.match(/Android/i) ||
-    navigator.userAgent.match(/iPhone/i);
+  const isMobile =
+    /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+      navigator.userAgent,
+    );
 
   return (
     <Html
@@ -21,7 +22,7 @@ function RoomLabel({ displayName, position }) {
       center
     >
       <div className={`RoomNumber__background `}>
-        <span className={displayName == '7' && 'RoomNumber--goldenText'}>
+        <span className={displayName == '7' ? 'RoomNumber--goldenText' : ''}>
           {displayName}
         </span>
       </div>
@@ -34,4 +35,4 @@ RoomLabel.prototype = {
   displayName: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
 
-export default RoomLabel;
+export default memo(RoomLabel);

@@ -44,7 +44,7 @@ function MapForm({
   setIsFormVisible,
   mapQuality,
   setMapQuality,
-  setCrucialPoints,
+  setNamesOfCrucialPoints,
 }) {
   const [nameOfStartPoint, setNameOfStartPoint] = useState('');
   const [nameOfEndPoint, setNameOfEndPoint] = useState('');
@@ -65,20 +65,18 @@ function MapForm({
         setStartPointMessageError('Taka sala nie istnieje');
         return;
       }
-    } else {
-      setStartPointMessageError('');
     }
+    setStartPointMessageError('');
 
     if (end != '') {
       if (!doesRoomExist(end)) {
         setEndPointMessageError('Taka sala nie istnieje');
         return;
       }
-    } else {
-      setEndPointMessageError('');
     }
+    setEndPointMessageError('');
 
-    setCrucialPoints({ start: start, end: end });
+    setNamesOfCrucialPoints({ start: start, end: end });
     ToggleFormVisible();
   };
 
@@ -154,7 +152,7 @@ function MapForm({
           <button
             onClick={() => setMapQuality('low')}
             className={`Form__btnInForm Form__qualityBtn ${
-              mapQuality === 'low' && 'Form__qualityBtn--active'
+              mapQuality === 'low' ? 'Form__qualityBtn--active' : ''
             }`}
             disabled
           >

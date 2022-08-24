@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import Map3D from './Map3D/Map3D';
 import './Map.scss';
 import DoubleArrow from '@src/assets/icons/DoubleArrow';
@@ -21,13 +21,23 @@ const findRoom = (roomName) => {
   }
 };
 
-function MapInterface({ isFormVisible, setIsFormVisible, crucialPoints }) {
+function MapInterface({
+  isFormVisible,
+  setIsFormVisible,
+  namesOfCrucialPoints,
+}) {
   const [currentFloor, setCurrentFloor] = useState(2);
   let roomsToHighlight = {};
 
-  roomsToHighlight.startRoom = findRoom(crucialPoints.start);
+  roomsToHighlight.startRoom = useMemo(
+    () => findRoom(namesOfCrucialPoints.start),
+    [namesOfCrucialPoints.start],
+  );
 
-  roomsToHighlight.endRoom = findRoom(crucialPoints.end);
+  roomsToHighlight.endRoom = useMemo(
+    () => findRoom(namesOfCrucialPoints.end),
+    [namesOfCrucialPoints.end],
+  );
 
   const [messageToCamera, setMessageToCamera] = useState({
     nameOfAction: 0,
@@ -47,43 +57,41 @@ function MapInterface({ isFormVisible, setIsFormVisible, crucialPoints }) {
   };
 
   if (!isFormVisible) {
-    if (
-      navigator.userAgent.match(/Android/i) ||
-      navigator.userAgent.match(/iPhone/i)
-    ) {
+    const isMobile =
+      /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+        navigator.userAgent,
+      );
+    if (isMobile) {
       openFullscreen();
     }
   } else {
-    if (
-      navigator.userAgent.match(/Android/i) ||
-      navigator.userAgent.match(/iPhone/i)
-    ) {
+    const isMobile =
+      /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+        navigator.userAgent,
+      );
+    if (isMobile) {
       closeFullscreen();
     }
   }
 
   window.onfocus = () => {
-    console.log(!isFormVisible);
     if (!isFormVisible) {
-      if (
-        navigator.userAgent.match(/Android/i) ||
-        navigator.userAgent.match(/iPhone/i)
-      ) {
+      const isMobile =
+        /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+          navigator.userAgent,
+        );
+
+      if (isMobile) {
         openFullscreen();
       }
     }
   };
   function openFullscreen() {
     let elem = document.documentElement;
-    if (elem.requestFullscreen) {
-      elem.requestFullscreen();
-    } else if (elem.webkitRequestFullscreen) {
-      /* Safari */
+    if (elem.requestFullscreen) elem.requestFullscreen();
+    /* Safari */ else if (elem.webkitRequestFullscreen)
       elem.webkitRequestFullscreen();
-    } else if (elem.msRequestFullscreen) {
-      /* IE11 */
-      elem.msRequestFullscreen();
-    }
+    /* IE11 */ else if (elem.msRequestFullscreen) elem.msRequestFullscreen();
   }
 
   function closeFullscreen() {
@@ -97,14 +105,12 @@ function MapInterface({ isFormVisible, setIsFormVisible, crucialPoints }) {
       document.msExitFullscreen();
     }
   }
-
   const setMessageToCameraOnCurrentValue = (message) => {
     let floorToSet;
     switch (message) {
       case 'reset':
         floorToSet = 2;
         break;
-
       case 'start':
         floorToSet = roomsToHighlight.startRoom.floorNumber;
         break;
@@ -132,7 +138,7 @@ function MapInterface({ isFormVisible, setIsFormVisible, crucialPoints }) {
       <div
         onClick={ToggleSwitch}
         className={`MapInterface__formActivator ${
-          isFormVisible && 'MapInterface__formActivator--active'
+          isFormVisible ? 'MapInterface__formActivator--active' : ''
         }`}
       >
         <DoubleArrow />
@@ -145,20 +151,20 @@ function MapInterface({ isFormVisible, setIsFormVisible, crucialPoints }) {
         >
           Wyśrodkuj
         </button>
-        {crucialPoints.start && (
+        {namesOfCrucialPoints.start && (
           <button
             onClick={() => setMessageToCameraOnCurrentValue('start')}
             className='MapInterface__showStartBtn'
           >
-            {crucialPoints.start}
+            {namesOfCrucialPoints.start}
           </button>
         )}
-        {crucialPoints.end && (
+        {namesOfCrucialPoints.end && (
           <button
             onClick={() => setMessageToCameraOnCurrentValue('end')}
             className='MapInterface__showEndBtn'
           >
-            {crucialPoints.end}
+            {namesOfCrucialPoints.end}
           </button>
         )}
       </div>
