@@ -111,10 +111,19 @@
       }
     },
     {
-      "name": "Małą Sala Gimnastyczna",
-      "displayName": "Małą Sala Gim.",
+      "name": "Mała sala gimnastyczna",
+      "displayName": "Mała sala gim.",
       "position": {
         "x": -3.9,
+        "y": 0.2,
+        "z": 0.2
+      }
+    },
+    {
+      "name": "Duża sala gimnastyczna",
+      "displayName": "Duża sala gim.",
+      "position": {
+        "x": -1.25,
         "y": 0.2,
         "z": 0.2
       }
@@ -382,6 +391,105 @@
         "x": -0.65,
         "y": 0.2,
         "z": 2.85
+      }
+    },
+    {
+      "name": "Sala 100",
+      "displayName": "100",
+      "position": {
+        "x": 1.1,
+        "y": 0.2,
+        "z": 3
+      }
+    },
+    {
+      "name": "Sala 101",
+      "displayName": "101",
+      "position": {
+        "x": 2.3,
+        "y": 0.2,
+        "z": 3
+      }
+    },
+    {
+      "name": "Sala 102",
+      "displayName": "102",
+      "position": {
+        "x": 3.4,
+        "y": 0.2,
+        "z": 3
+      }
+    },
+    {
+      "name": "Sala 103",
+      "displayName": "103",
+      "position": {
+        "x": 4.5,
+        "y": 0.2,
+        "z": 3
+      }
+    },
+    {
+      "name": "Sala 104",
+      "displayName": "104",
+      "position": {
+        "x": 5.65,
+        "y": 0.2,
+        "z": 3
+      }
+    },
+    {
+      "name": "Sala 105",
+      "displayName": "105",
+      "position": {
+        "x": 6.8,
+        "y": 0.2,
+        "z": 3
+      }
+    },
+    {
+      "name": "Sala 106",
+      "displayName": "106",
+      "position": {
+        "x": 7.2,
+        "y": 0.2,
+        "z": 2.05
+      }
+    },
+    {
+      "name": "Sala 107",
+      "displayName": "107",
+      "position": {
+        "x": 6.4,
+        "y": 0.2,
+        "z": 2.05
+      }
+    },
+    {
+      "name": "Sala 108",
+      "displayName": "108",
+      "position": {
+        "x": 5.8,
+        "y": 0.2,
+        "z": 2.05
+      }
+    },
+    {
+      "name": "Sala 109",
+      "displayName": "109",
+      "position": {
+        "x": 4.8,
+        "y": 0.2,
+        "z": 2.05
+      }
+    },
+    {
+      "name": "Sala 110",
+      "displayName": "110",
+      "position": {
+        "x": 4,
+        "y": 0.2,
+        "z": 2.05
       }
     }
   ],

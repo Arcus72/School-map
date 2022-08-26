@@ -20,7 +20,7 @@ export default function Model({ isVisible = true }) {
       ? timeLineGsap.to(group.current.position, { y: 15, duration: 1 })
       : timeLineGsap.to(group.current.position, { y: 0, duration: 0.5 });
   }, [isVisible]);
-
+  //    <group ref={group} scale={[1, 1, 1]} dispose={null}>
   return (
     <group ref={group} scale={[1, 1, 1]} dispose={null}>
       <mesh

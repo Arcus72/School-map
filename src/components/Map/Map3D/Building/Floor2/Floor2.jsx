@@ -215,12 +215,12 @@ export default function Model({ isVisible = true }) {
       <mesh
         geometry={nodes.Wall027.geometry}
         material={materials.Wall}
-        position={[0.16, 0, 3.32]}
+        position={[0.16, -0.03, 3.32]}
       />
       <mesh
         geometry={nodes.Wall021.geometry}
         material={materials.Wall}
-        position={[-1.94, 0, 1.77]}
+        position={[-1.94, -0.03, 1.77]}
         rotation={[0, -1.57, 0]}
       />
       <mesh
@@ -344,7 +344,7 @@ export default function Model({ isVisible = true }) {
       <mesh
         geometry={nodes.Wall.geometry}
         material={materials.Wall}
-        position={[-11.81, 0, -1.51]}
+        position={[-11.81, -0.03, -1.51]}
       />
       <mesh
         geometry={nodes.Plane001.geometry}
@@ -607,7 +607,7 @@ export default function Model({ isVisible = true }) {
       <mesh
         geometry={nodes.Wall026.geometry}
         material={materials.Wall}
-        position={[-4.48, 0, -1.42]}
+        position={[-4.48, -0.03, -1.42]}
       />
       <mesh
         geometry={nodes.Wall028.geometry}
@@ -641,6 +641,13 @@ export default function Model({ isVisible = true }) {
         position={[5.52, -0.08, 2.01]}
         rotation={[-Math.PI, 0, -Math.PI]}
         scale={[0.15, 0.03, 0.07]}
+      />
+      <mesh
+        geometry={nodes.Wall029.geometry}
+        material={materials['Wall.003']}
+        position={[-11.91, -0.02, -0.84]}
+        rotation={[Math.PI, 0, Math.PI]}
+        scale={[1, 1.09, 0.2]}
       />
     </group>
   );
