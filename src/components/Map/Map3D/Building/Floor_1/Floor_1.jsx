@@ -8,7 +8,7 @@ import floorGltf from './Floor_1.gltf';
 
 function Floor_1() {
   const { nodes, materials } = useGLTF(floorGltf);
-  //    <group scale={[1, 1, 1]} dispose={null}>
+
   return (
     <group scale={[1, 1, 1]} dispose={null}>
       <mesh

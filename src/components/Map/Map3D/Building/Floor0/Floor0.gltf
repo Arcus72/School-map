@@ -2328,7 +2328,8 @@
                         "POSITION" : 178,
                         "NORMAL" : 179
                     },
-                    "indices" : 180
+                    "indices" : 180,
+                    "material" : 0
                 }
             ]
         },
@@ -2340,7 +2341,8 @@
                         "POSITION" : 181,
                         "NORMAL" : 182
                     },
-                    "indices" : 172
+                    "indices" : 172,
+                    "material" : 0
                 }
             ]
         },
@@ -2352,7 +2354,8 @@
                         "POSITION" : 183,
                         "NORMAL" : 184
                     },
-                    "indices" : 172
+                    "indices" : 172,
+                    "material" : 0
                 }
             ]
         },
@@ -2364,7 +2367,8 @@
                         "POSITION" : 185,
                         "NORMAL" : 186
                     },
-                    "indices" : 172
+                    "indices" : 172,
+                    "material" : 0
                 }
             ]
         },
@@ -2376,7 +2380,8 @@
                         "POSITION" : 187,
                         "NORMAL" : 188
                     },
-                    "indices" : 172
+                    "indices" : 172,
+                    "material" : 0
                 }
             ]
         },
@@ -2388,7 +2393,8 @@
                         "POSITION" : 189,
                         "NORMAL" : 190
                     },
-                    "indices" : 172
+                    "indices" : 172,
+                    "material" : 0
                 }
             ]
         },
@@ -2400,7 +2406,8 @@
                         "POSITION" : 191,
                         "NORMAL" : 192
                     },
-                    "indices" : 193
+                    "indices" : 193,
+                    "material" : 0
                 }
             ]
         },

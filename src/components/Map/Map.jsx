@@ -7,11 +7,11 @@ import ArrowLeft from '@src/assets/icons/ArrowLeft';
 import roomsLocations from '@data/roomsLocation.json';
 
 const findRoom = (roomName) => {
-  if (roomName?.trim() === '') return null;
+  if (roomName?.trim() === '' || roomName == null) return null;
   let floorNumber = -1;
   for (const floor in roomsLocations) {
     for (const room of roomsLocations[floor]) {
-      if (room.name == roomName)
+      if (room.name == roomName || room.alias?.replace('<br>', ' ') == roomName)
         return {
           room: room,
           floorNumber: floorNumber,

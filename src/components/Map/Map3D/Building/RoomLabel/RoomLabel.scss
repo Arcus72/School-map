@@ -8,24 +8,63 @@
   }
 }
 
-@mixin roomLabelStyle {
-  &__background {
-    font-family: 'Poppins', sans-serif;
-    background-color: #2d3776;
-    color: white;
-    font-size: 5rem;
-    line-height: 4rem;
-    padding: 1rem;
-    border-radius: 2rem;
-    text-shadow: 5px 3px 6px rgba(0, 0, 0, 1);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    white-space: nowrap;
-    -webkit-box-shadow: 8px 8px 24px -5px rgba(66, 68, 90, 1);
-    -moz-box-shadow: 8px 8px 24px -5px rgba(66, 68, 90, 1);
-    box-shadow: 8px 8px 24px -5px rgba(66, 68, 90, 1);
-    animation: roomFadeIn 0.5s linear;
+@mixin RoomLabelTextStyle {
+  font-family: 'Poppins', sans-serif;
+  background-color: #2d3776;
+  color: white;
+  text-shadow: 5px 3px 6px rgba(0, 0, 0, 1);
+  -webkit-box-shadow: 8px 8px 24px -5px rgba(66, 68, 90, 1);
+  -moz-box-shadow: 8px 8px 24px -5px rgba(66, 68, 90, 1);
+  box-shadow: 8px 8px 24px -5px rgba(66, 68, 90, 1);
+  white-space: nowrap;
+  margin: 0 auto;
+  font-size: 5rem;
+  width: min-content;
+  line-height: 4rem;
+  padding: 1rem;
+  border-radius: 2rem;
+}
+
+.RoomLabel {
+  animation: roomFadeIn 0.5s linear;
+
+  &__mainText {
+    @include RoomLabelTextStyle;
+
+    &--start,
+    &--end {
+      position: relative;
+      box-shadow: none !important;
+      &::before {
+        content: '';
+        position: absolute;
+        top: -10px;
+        left: -10px;
+        border-radius: 2rem;
+        z-index: -1;
+        filter: blur(10px);
+        height: calc(100% + 20px);
+        width: calc(100% + 20px);
+      }
+    }
+
+    &--start {
+      background: linear-gradient(141deg, #3b4071 10%, #2ecc71 70%);
+      &::before {
+        background: linear-gradient(141deg, #3b4071 10%, #2ecc71 70%);
+      }
+    }
+    &--end {
+      background: linear-gradient(219deg, #3b4071 10%, #ff1818 70%);
+      &::before {
+        background: linear-gradient(219deg, #3b4071 10%, #ff1818 70%);
+      }
+    }
+  }
+
+  &__subText {
+    @include RoomLabelTextStyle;
+    font-size: 4em;
   }
 
   &--goldenText {
@@ -34,8 +73,18 @@
     -webkit-text-fill-color: transparent;
     text-shadow: 5px 3px 6px rgba(255, 255, 255, 0.212);
   }
-}
 
-.RoomNumber {
-  @include roomLabelStyle;
+  &__arrowDown {
+    margin: 5px auto 0px auto;
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid white;
+    transition: transform 0.2s ease-in-out;
+
+    &--rotated {
+      transform: rotateZ(180deg);
+    }
+  }
 }

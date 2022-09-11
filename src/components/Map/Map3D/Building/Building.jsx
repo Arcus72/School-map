@@ -1,7 +1,6 @@
 import React from 'react';
 import { Suspense } from 'react';
 import roomsLocations from '@data/roomsLocation.json';
-import RoomPointer from './RoomPointer/RoomPointer';
 import PropTypes from 'prop-types';
 import Floor_1 from './Floor_1/Floor_1';
 import Floor0 from './Floor0/Floor0';
@@ -12,7 +11,7 @@ import RoomLabel from './RoomLabel/RoomLabel';
 function Building({ currentFloorNumber, roomsToHighlight }) {
   const floorsArr = [Floor_1, Floor0, Floor1, Floor2];
   const scale = [3, 5, 3];
-  const floorHeight = 1.51;
+  const floorHeight = [1.51, 1.5, 1.51, 1.53];
   let startRoom = { ...roomsToHighlight.startRoom, status: 'start' };
   let endRoom = { ...roomsToHighlight.endRoom, status: 'end' };
 
@@ -22,16 +21,15 @@ function Building({ currentFloorNumber, roomsToHighlight }) {
         return (
           <group
             scale={scale}
-            position={[0, index * floorHeight, 0]}
+            position={[0, index * floorHeight[index], 0]}
             key={index}
           >
-            {[startRoom, endRoom].map((room, index2) => {
+            {[startRoom, endRoom].map((room, subIndex) => {
               return (
-                room &&
                 room.floorNumber <= currentFloorNumber &&
                 room.floorNumber == index - 1 && (
-                  <RoomPointer
-                    key={index2}
+                  <RoomLabel
+                    key={subIndex}
                     room={room.room}
                     status={room.status}
                   />
@@ -40,8 +38,8 @@ function Building({ currentFloorNumber, roomsToHighlight }) {
             })}
 
             {currentFloorNumber === index - 1 &&
-              roomsLocations[`floor` + (index - 1)].map((room, index) => (
-                <RoomLabel key={index} {...room} />
+              roomsLocations[`floor` + (index - 1)].map((room, subIndex) => (
+                <RoomLabel key={subIndex} room={room} />
               ))}
 
             <Suspense fallback={null}>

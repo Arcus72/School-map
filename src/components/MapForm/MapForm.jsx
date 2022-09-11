@@ -7,17 +7,27 @@ import './MapForm.scss';
 
 const findRooms = (roomName = '') => {
   if (roomName.trim() === '') return [];
-
+  roomName = roomName.toUpperCase();
   let foundRooms = [];
   for (let key in roomsLocation) {
     for (let room of roomsLocation[key]) {
-      let index = room.name.toUpperCase().indexOf(roomName.toUpperCase());
+      let index = room.name.toUpperCase().indexOf(roomName);
       if (index != -1) {
         foundRooms.push(room.name);
-        if (foundRooms.length >= 5) return foundRooms;
       }
+      if (room.alias) {
+        let indexOfAlias = room.alias
+          .toUpperCase()
+          .replace('<br>', ' ')
+          .indexOf(roomName);
+        if (indexOfAlias != -1) {
+          foundRooms.push(room.alias.replace('<br>', ' '));
+        }
+      }
+      if (foundRooms.length >= 5) return foundRooms;
     }
   }
+
   if (
     foundRooms.length == 1 &&
     foundRooms[0].toUpperCase() == roomName.toUpperCase()
@@ -31,7 +41,10 @@ const findRooms = (roomName = '') => {
 const doesRoomExist = (roomToFind) => {
   for (let key in roomsLocation) {
     for (let room of roomsLocation[key]) {
-      if (room.name === roomToFind) {
+      if (
+        room.name === roomToFind ||
+        room.alias?.replace('<br>', ' ') === roomToFind
+      ) {
         return true;
       }
     }

@@ -69,13 +69,22 @@
       "position": {
         "x": -10.45,
         "y": 0.2,
-        "z": -0.23
+        "z": 0.5
       }
     }
   ],
   "floor0": [
     {
-      "name": "WC Męskie, P. 0",
+      "name": "WC Męskie przy Pok. Nauczycielskim",
+      "displayName": "WC Męskie",
+      "position": {
+        "x": -9.5,
+        "y": 0.2,
+        "z": 2.5
+      }
+    },
+    {
+      "name": "WC Męskie przy Świetlicy",
       "displayName": "WC Męskie",
       "position": {
         "x": -9.5,
@@ -129,6 +138,33 @@
       }
     },
     {
+      "name": "Gabinet lekarski",
+      "displayName": "Lekarz",
+      "position": {
+        "x": 0.35,
+        "y": 0.2,
+        "z": 1.3
+      }
+    },
+    {
+      "name": "Sala 3G",
+      "displayName": "3G",
+      "position": {
+        "x": -1.2,
+        "y": 0.2,
+        "z": 3
+      }
+    },
+    {
+      "name": "Sala 3A",
+      "displayName": "3A",
+      "position": {
+        "x": -1.65,
+        "y": 0.2,
+        "z": 3.05
+      }
+    },
+    {
       "name": "Sala 29",
       "displayName": "29",
       "position": {
@@ -140,6 +176,7 @@
     {
       "name": "Sala 28",
       "displayName": "28",
+      "alias": "Zastępca Dyrektora<br>ds. administracji",
       "position": {
         "x": -11.5,
         "y": 0.2,
@@ -149,6 +186,7 @@
     {
       "name": "Sala 27",
       "displayName": "27",
+      "alias": "Referent",
       "position": {
         "x": -11.5,
         "y": 0.2,
@@ -171,6 +209,16 @@
         "x": -11.5,
         "y": 0.2,
         "z": 1.75
+      }
+    },
+    {
+      "name": "Sala 24",
+      "displayName": "24",
+      "alias": "Główna księgowa",
+      "position": {
+        "x": -11.5,
+        "y": 0.2,
+        "z": 2.45
       }
     },
     {
@@ -230,15 +278,6 @@
   ],
   "floor1": [
     {
-      "name": "WC Męskie, P. 1",
-      "displayName": "WC Męskie",
-      "position": {
-        "x": -9.5,
-        "y": 0.2,
-        "z": 2.5
-      }
-    },
-    {
       "name": "Pokój Nauczycielski",
       "displayName": "Pok. Nauczycielski",
       "position": {
@@ -254,6 +293,27 @@
         "x": -11.5,
         "y": 0.2,
         "z": 0.75
+      }
+    },
+    {
+      "name": "Sala 48",
+      "displayName": "48",
+      "alias": "Sek. Główny",
+
+      "position": {
+        "x": -11.5,
+        "y": 0.2,
+        "z": 1.7
+      }
+    },
+    {
+      "name": "Sala 47",
+      "displayName": "47",
+      "alias": "Dyrektor",
+      "position": {
+        "x": -11.5,
+        "y": 0.2,
+        "z": 2.3
       }
     },
     {
@@ -491,6 +551,33 @@
         "y": 0.2,
         "z": 2.05
       }
+    },
+    {
+      "name": "Sala 111",
+      "displayName": "111",
+      "position": {
+        "x": 3.25,
+        "y": 0.2,
+        "z": 2.05
+      }
+    },
+    {
+      "name": "Sala 112",
+      "displayName": "112",
+      "position": {
+        "x": 2.6,
+        "y": 0.2,
+        "z": 2.05
+      }
+    },
+    {
+      "name": "Sala 113",
+      "displayName": "113",
+      "position": {
+        "x": 2,
+        "y": 0.2,
+        "z": 2.05
+      }
     }
   ],
   "floor2": [
@@ -594,12 +681,30 @@
       }
     },
     {
-      "name": "WC Damskie, P. 2",
+      "name": "WC Damskie przy Sali 79",
       "displayName": "WC Damskie",
       "position": {
         "x": -9.5,
         "y": 0.2,
         "z": 2.5
+      }
+    },
+    {
+      "name": "WC Damskie przy Sali 208",
+      "displayName": "WC Damskie",
+      "position": {
+        "x": 9.8,
+        "y": 0.2,
+        "z": 2
+      }
+    },
+    {
+      "name": "WC Męstkie przy Sali 216",
+      "displayName": "WC Męstkie",
+      "position": {
+        "x": 11.4,
+        "y": 0.2,
+        "z": -2.6
       }
     },
     {
@@ -821,6 +926,7 @@
     {
       "name": "Sala 225",
       "displayName": "225",
+      "alias": "Wicedyrektor ds.<br>Pedagogicznych",
       "position": {
         "x": 0.3,
         "y": 0.2,

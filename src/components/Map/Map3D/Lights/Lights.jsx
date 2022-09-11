@@ -12,7 +12,6 @@ import React, { memo } from 'react';
 // };
 
 function Lights() {
-  //TODO: Better Lights positioning
   return (
     <>
       <ambientLight intensity={0.5} />

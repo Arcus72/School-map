@@ -20,7 +20,7 @@ export default function Model({ isVisible = true }) {
       ? timeLineGsap.to(group.current.position, { y: 15, duration: 1 })
       : timeLineGsap.to(group.current.position, { y: 0, duration: 0.5 });
   }, [isVisible]);
-  //    <group ref={group} scale={[1, 1, 1]} dispose={null}>
+
   return (
     <group ref={group} scale={[1, 1, 1]} dispose={null}>
       <mesh
@@ -471,42 +471,42 @@ export default function Model({ isVisible = true }) {
       />
       <mesh
         geometry={nodes.Wall117.geometry}
-        material={nodes.Wall117.material}
+        material={materials.Wall}
         position={[0.02, 0, 1.52]}
       />
       <mesh
         geometry={nodes.Wall118.geometry}
-        material={nodes.Wall118.material}
+        material={materials.Wall}
         position={[0.58, 0, 1.15]}
         rotation={[0, Math.PI / 2, 0]}
       />
       <mesh
         geometry={nodes.Wall119.geometry}
-        material={nodes.Wall119.material}
+        material={materials.Wall}
         position={[0.58, 0, 0.43]}
         rotation={[0, Math.PI / 2, 0]}
       />
       <mesh
         geometry={nodes.Wall120.geometry}
-        material={nodes.Wall120.material}
+        material={materials.Wall}
         position={[0.58, 0, 0.07]}
         rotation={[0, Math.PI / 2, 0]}
       />
       <mesh
         geometry={nodes.Wall121.geometry}
-        material={nodes.Wall121.material}
+        material={materials.Wall}
         position={[0.58, 0, -0.3]}
         rotation={[0, Math.PI / 2, 0]}
       />
       <mesh
         geometry={nodes.Wall122.geometry}
-        material={nodes.Wall122.material}
+        material={materials.Wall}
         position={[0.58, 0, -0.67]}
         rotation={[0, Math.PI / 2, 0]}
       />
       <mesh
         geometry={nodes.Wall123.geometry}
-        material={nodes.Wall123.material}
+        material={materials.Wall}
         position={[0.3, 0, 1.11]}
       />
       <mesh

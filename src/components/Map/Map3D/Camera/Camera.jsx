@@ -3,9 +3,10 @@ import { MapControls } from '@react-three/drei';
 import { useThree } from '@react-three/fiber';
 const mapControlsSettings = {
   maxPolarAngle: Math.PI / 2.5,
-  minDistance: 30,
-  maxDistance: 80,
+  minDistance: 25,
+  maxDistance: 70,
   zoomSpeed: 1.5,
+  enableDamping: false,
 };
 function Camera({ messageToCamera }) {
   const cameraRef = useRef();
@@ -13,7 +14,6 @@ function Camera({ messageToCamera }) {
 
   const focusCamera = ({ x, z }) => {
     const multiplier = 3;
-
     camera.position.set(x * multiplier, 20, z * multiplier + 15);
     cameraRef.current.target.set(x * multiplier, 0, z * multiplier);
   };
