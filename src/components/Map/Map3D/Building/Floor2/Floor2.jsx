@@ -426,6 +426,12 @@ export default function Model({ isVisible = true }) {
         position={[-1.52, -0.02, 2.59]}
         scale={[1.7, 1, 0.79]}
       />
+      <mesh
+        geometry={nodes.Plane.geometry}
+        material={materials.Wall}
+        position={[-4.4, -0.02, 1.99]}
+        scale={[0.2, 1, 0.22]}
+      />
     </group>
   );
 }

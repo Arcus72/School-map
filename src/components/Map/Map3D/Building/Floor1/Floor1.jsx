@@ -710,9 +710,9 @@ export default function Model({ isVisible = true }) {
       <mesh
         geometry={nodes.Plane001.geometry}
         material={nodes.Plane001.material}
-        position={[-3.22, 0.16, 2]}
+        position={[-3.22, 0.09, 2]}
         rotation={[0, 0, -Math.PI / 2]}
-        scale={[0.03, 0.2, 0.25]}
+        scale={[0.1, 0.2, 0.25]}
       />
       <mesh
         geometry={nodes.Wall030.geometry}

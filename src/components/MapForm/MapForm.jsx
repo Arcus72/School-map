@@ -193,8 +193,8 @@ function MapForm({
         </button>
       </div>
       <div className='Form__signature'>
-        Maciej Kimla 3K-G <br />
-        Kamil Kozik 3K-G
+        Maciej Kimla 4K-G <br />
+        Kamil Kozik 4K-G
       </div>
     </div>
   );
