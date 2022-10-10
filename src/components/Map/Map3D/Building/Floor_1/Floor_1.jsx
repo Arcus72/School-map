@@ -12,13 +12,6 @@ function Floor_1() {
   return (
     <group scale={[1, 1, 1]} dispose={null}>
       <mesh
-        geometry={nodes.Wall126.geometry}
-        material={nodes.Wall126.material}
-        position={[-3.07, 0.16, 2.54]}
-        rotation={[0, -Math.PI / 2, 0]}
-        scale={[0.82, 0.11, 0.39]}
-      />
-      <mesh
         geometry={nodes.Wall124.geometry}
         material={materials.Wall}
         position={[-11.82, 0, 2.98]}
@@ -102,12 +95,6 @@ function Floor_1() {
         position={[0.16, 0, 3.32]}
       />
       <mesh
-        geometry={nodes.Wall026.geometry}
-        material={materials.Wall}
-        position={[-2.84, 0, 2.8]}
-        rotation={[0, -1.57, 0]}
-      />
-      <mesh
         geometry={nodes.Wall023.geometry}
         material={materials.Wall}
         position={[-1.46, 0, 1.88]}
@@ -168,12 +155,6 @@ function Floor_1() {
         geometry={nodes.Wall.geometry}
         material={materials.Wall}
         position={[-11.81, 0, -1.51]}
-      />
-      <mesh
-        geometry={nodes.Stairs001.geometry}
-        material={nodes.Stairs001.material}
-        position={[-2.96, 0.02, 2.72]}
-        scale={[0.24, 0.06, 0.04]}
       />
       <mesh
         geometry={nodes.Wall005.geometry}
@@ -453,6 +434,10 @@ function Floor_1() {
         scale={[0.18, 0.12, 0.07]}
       >
         <mesh
+          geometry={nodes.Stairs001.geometry}
+          material={nodes.Stairs001.material}
+        />
+        <mesh
           geometry={nodes.Stairs001_1.geometry}
           material={nodes.Stairs001_1.material}
         />
@@ -480,11 +465,23 @@ function Floor_1() {
           geometry={nodes.Stairs001_7.geometry}
           material={nodes.Stairs001_7.material}
         />
+      </group>
+      <group position={[0.25, 0, -0.66]}>
         <mesh
-          geometry={nodes.Stairs001_8.geometry}
-          material={nodes.Stairs001_8.material}
+          geometry={nodes.Wall012_1.geometry}
+          material={materials['Wall.005']}
+        />
+        <mesh
+          geometry={nodes.Wall012_2.geometry}
+          material={materials['Wall.006']}
         />
       </group>
+      <mesh
+        geometry={nodes.Plane004.geometry}
+        material={nodes.Plane004.material}
+        position={[0, 0.12, 0]}
+        scale={21.62}
+      />
     </group>
   );
 }

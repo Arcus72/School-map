@@ -87,22 +87,30 @@ function MapInterface({
     }
   };
   function openFullscreen() {
-    let elem = document.documentElement;
-    if (elem.requestFullscreen) elem.requestFullscreen();
-    /* Safari */ else if (elem.webkitRequestFullscreen)
-      elem.webkitRequestFullscreen();
-    /* IE11 */ else if (elem.msRequestFullscreen) elem.msRequestFullscreen();
+    try {
+      let elem = document.documentElement;
+      if (elem.requestFullscreen) elem.requestFullscreen();
+      /* Safari */ else if (elem.webkitRequestFullscreen)
+        elem.webkitRequestFullscreen();
+      /* IE11 */ else if (elem.msRequestFullscreen) elem.msRequestFullscreen();
+    } catch (e) {
+      console.log('Failed to open fullscreen: ' + e);
+    }
   }
 
   function closeFullscreen() {
-    if (document.exitFullscreen) {
-      document.exitFullscreen();
-    } else if (document.webkitExitFullscreen) {
-      /* Safari */
-      document.webkitExitFullscreen();
-    } else if (document.msExitFullscreen) {
-      /* IE11 */
-      document.msExitFullscreen();
+    try {
+      if (document.exitFullscreen) {
+        document.exitFullscreen();
+      } else if (document.webkitExitFullscreen) {
+        /* Safari */
+        document.webkitExitFullscreen();
+      } else if (document.msExitFullscreen) {
+        /* IE11 */
+        document.msExitFullscreen();
+      }
+    } catch (e) {
+      console.log('Failed to close fullscreen: ' + e);
     }
   }
   const setMessageToCameraOnCurrentValue = (message) => {

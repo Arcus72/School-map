@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 import roomsLocation from '@data/roomsLocation.json';
-import logoTZN from '@assets/logoTZN.png';
+import logoTZN from '@assets/logoTZN.webp';
 
 import './MapForm.scss';
 
@@ -160,7 +160,9 @@ function MapForm({
         </span>
 
         <div className='Form__section'>
-          <h4 className='Form__qualityHeader'>Jakość:</h4>
+          <header>
+            <h2 className='Form__qualityHeader'>Jakość:</h2>
+          </header>
 
           <button
             onClick={() => setMapQuality('low')}

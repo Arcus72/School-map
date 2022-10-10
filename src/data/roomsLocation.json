@@ -75,15 +75,6 @@
   ],
   "floor0": [
     {
-      "name": "WC Męskie przy Pok. Nauczycielskim",
-      "displayName": "WC Męskie",
-      "position": {
-        "x": -9.5,
-        "y": 0.2,
-        "z": 2.5
-      }
-    },
-    {
       "name": "WC Męskie przy Świetlicy",
       "displayName": "WC Męskie",
       "position": {
@@ -277,6 +268,15 @@
     }
   ],
   "floor1": [
+    {
+      "name": "WC Męskie przy Pok. Nauczycielskim",
+      "displayName": "WC Męskie",
+      "position": {
+        "x": -9.5,
+        "y": 0.2,
+        "z": 2.5
+      }
+    },
     {
       "name": "Pokój Nauczycielski",
       "displayName": "Pok. Nauczycielski",
@@ -699,8 +699,8 @@
       }
     },
     {
-      "name": "WC Męstkie przy Sali 216",
-      "displayName": "WC Męstkie",
+      "name": "WC Męskie przy Sali 216",
+      "displayName": "WC Męskie",
       "position": {
         "x": 11.4,
         "y": 0.2,
