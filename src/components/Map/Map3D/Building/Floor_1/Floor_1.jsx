@@ -479,7 +479,7 @@ function Floor_1() {
       <mesh
         geometry={nodes.Plane004.geometry}
         material={nodes.Plane004.material}
-        position={[0, 0.12, 0]}
+        position={[0, 0.19, 0]}
         scale={21.62}
       />
     </group>
@@ -488,4 +488,4 @@ function Floor_1() {
 
 export default memo(Floor_1);
 
-useGLTF.preload(floorGltf);
+//useGLTF.preload(floorGltf);

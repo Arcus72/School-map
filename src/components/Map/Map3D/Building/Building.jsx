@@ -1,7 +1,6 @@
-import React from 'react';
-import { Suspense } from 'react';
+import React, { useMemo, Suspense } from 'react';
 import roomsLocations from '@data/roomsLocation.json';
-import PropTypes from 'prop-types';
+
 import Floor_1 from './Floor_1/Floor_1';
 import Floor0 from './Floor0/Floor0';
 import Floor1 from './Floor1/Floor1';
@@ -9,15 +8,14 @@ import Floor2 from './Floor2/Floor2';
 import RoomLabel from './RoomLabel/RoomLabel';
 
 function Building({ currentFloorNumber, roomsToHighlight }) {
-  const floorsArr = [Floor_1, Floor0, Floor1, Floor2];
   const scale = [3, 5, 3];
   const floorHeight = [1.51, 1.5, 1.51, 1.53];
   let startRoom = { ...roomsToHighlight.startRoom, status: 'start' };
   let endRoom = { ...roomsToHighlight.endRoom, status: 'end' };
 
   return (
-    <Suspense fallback={null}>
-      {floorsArr.map((Floor, index) => {
+    <group>
+      {[Floor_1, Floor0, Floor1, Floor2].map((Floor, index) => {
         return (
           <group
             scale={scale}
@@ -36,11 +34,19 @@ function Building({ currentFloorNumber, roomsToHighlight }) {
                 )
               );
             })}
-
-            {currentFloorNumber === index - 1 &&
-              roomsLocations[`floor` + (index - 1)].map((room, subIndex) => (
-                <RoomLabel key={subIndex} room={room} />
-              ))}
+            {useMemo(
+              () => (
+                <group>
+                  {currentFloorNumber === index - 1 &&
+                    roomsLocations[`floor` + (index - 1)].map(
+                      (room, subIndex) => (
+                        <RoomLabel key={subIndex} room={room} />
+                      ),
+                    )}
+                </group>
+              ),
+              [currentFloorNumber],
+            )}
 
             <Suspense fallback={null}>
               <Floor isVisible={currentFloorNumber >= index - 1} />
@@ -48,38 +54,8 @@ function Building({ currentFloorNumber, roomsToHighlight }) {
           </group>
         );
       })}
-    </Suspense>
+    </group>
   );
 }
-
-Building.propTypes = {
-  currentFloorNumber: PropTypes.number,
-  roomsToHighlight: PropTypes.shape({
-    start: PropTypes.shape({
-      floorNumber: PropTypes.number,
-      room: PropTypes.shape({
-        name: PropTypes.string,
-        displayName: PropTypes.string,
-        position: PropTypes.shape({
-          x: PropTypes.number,
-          y: PropTypes.number,
-          z: PropTypes.number,
-        }),
-      }),
-    }),
-    end: PropTypes.shape({
-      floorNumber: PropTypes.number,
-      room: PropTypes.shape({
-        name: PropTypes.string,
-        displayName: PropTypes.string,
-        position: PropTypes.shape({
-          x: PropTypes.number,
-          y: PropTypes.number,
-          z: PropTypes.number,
-        }),
-      }),
-    }),
-  }),
-};
 
 export default Building;

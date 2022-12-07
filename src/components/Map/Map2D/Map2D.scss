@@ -1,0 +1,18 @@
+.Floors {
+  &__plan {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+
+  &__floor {
+    width: 100vw;
+  }
+  &__labels {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

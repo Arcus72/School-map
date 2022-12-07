@@ -1,9 +1,14 @@
 import React, { useState, useMemo } from 'react';
 import Map3D from './Map3D/Map3D';
+import Map2D from './Map2D/Map2D';
+
 import './Map.scss';
 import DoubleArrow from '@src/assets/icons/DoubleArrow';
 import ArrowRight from '@src/assets/icons/ArrowRight';
 import ArrowLeft from '@src/assets/icons/ArrowLeft';
+import Minus from '@src/assets/icons/Minus';
+import Plus from '@src/assets/icons/Plus';
+import Center from '@src/assets/icons/Center';
 import roomsLocations from '@data/roomsLocation.json';
 
 const findRoom = (roomName) => {
@@ -11,7 +16,10 @@ const findRoom = (roomName) => {
   let floorNumber = -1;
   for (const floor in roomsLocations) {
     for (const room of roomsLocations[floor]) {
-      if (room.name == roomName || room.alias?.replace('<br>', ' ') == roomName)
+      if (
+        room.name == roomName ||
+        room.alias?.replaceAll('<br>', ' ') == roomName
+      )
         return {
           room: room,
           floorNumber: floorNumber,
@@ -25,6 +33,7 @@ function MapInterface({
   isFormVisible,
   setIsFormVisible,
   namesOfCrucialPoints,
+  mapQuality,
 }) {
   const [currentFloor, setCurrentFloor] = useState(2);
   let roomsToHighlight = {};
@@ -55,7 +64,6 @@ function MapInterface({
   const decreaseFloor = () => {
     if (currentFloor > -1) setCurrentFloor((number) => number - 1);
   };
-
   if (!isFormVisible) {
     const isMobile =
       /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
@@ -114,7 +122,7 @@ function MapInterface({
     }
   }
   const setMessageToCameraOnCurrentValue = (message) => {
-    let floorToSet;
+    let floorToSet = currentFloor;
     switch (message) {
       case 'reset':
         floorToSet = 2;
@@ -138,11 +146,20 @@ function MapInterface({
 
   return (
     <div className='MapInterface'>
-      <Map3D
-        messageToCamera={messageToCamera}
-        roomsToHighlight={roomsToHighlight}
-        currentFloor={currentFloor}
-      />
+      {mapQuality == 'low' ? (
+        <Map2D
+          messageToCamera={messageToCamera}
+          currentFloor={currentFloor}
+          roomsToHighlight={roomsToHighlight}
+        />
+      ) : (
+        <Map3D
+          messageToCamera={messageToCamera}
+          roomsToHighlight={roomsToHighlight}
+          currentFloor={currentFloor}
+        />
+      )}
+
       <div
         onClick={ToggleSwitch}
         className={`MapInterface__formActivator ${
@@ -153,12 +170,6 @@ function MapInterface({
       </div>
 
       <div className='MapInterface__positionMenu'>
-        <button
-          onClick={() => setMessageToCameraOnCurrentValue('reset')}
-          className='MapInterface__resetPositionBtn'
-        >
-          Wyśrodkuj
-        </button>
         {namesOfCrucialPoints.start && (
           <button
             onClick={() => setMessageToCameraOnCurrentValue('start')}
@@ -177,13 +188,15 @@ function MapInterface({
         )}
       </div>
 
-      <div className='MapInterface__background'></div>
-
-      <nav className='MapInterface__menu'>
-        {[2, 1, 0, -1].map((floorNumber) => (
-          <button
-            key={floorNumber}
-            className={`MapInterface__menuBtn
+      <div
+        className='MapInterface__menu
+      '
+      >
+        <nav className='MapInterface__innerMenu'>
+          {[2, 1, 0, -1].map((floorNumber) => (
+            <button
+              key={floorNumber}
+              className={`MapInterface__menuBtn
             ${
               currentFloor == floorNumber ? 'MapInterface__menuBtn--active' : ''
             }
@@ -197,12 +210,13 @@ function MapInterface({
                 ? 'MapInterface__menuBtn--endRoomFloor'
                 : ''
             }`}
-            onClick={() => setCurrentFloor(floorNumber)}
-          >
-            {floorNumber}
-          </button>
-        ))}
-      </nav>
+              onClick={() => setCurrentFloor(floorNumber)}
+            >
+              {floorNumber}
+            </button>
+          ))}
+        </nav>
+      </div>
 
       <nav className='MapInterface__mobileMenu'>
         <ArrowLeft onClick={() => decreaseFloor()} />
@@ -231,6 +245,29 @@ function MapInterface({
         ))}
         <ArrowRight onClick={() => increaseFloor()} />
       </nav>
+
+      <div className='MapInterface__zoomNav'>
+        <div
+          onClick={() => setMessageToCameraOnCurrentValue('zoomIn')}
+          className='MapInterface__zoomBtn'
+        >
+          <Plus />
+        </div>
+        <div className='MapInterface__zoomSpace'></div>
+        <div
+          onClick={() => setMessageToCameraOnCurrentValue('reset')}
+          className='MapInterface__zoomBtn'
+        >
+          <Center />
+        </div>
+        <div className='MapInterface__zoomSpace'></div>
+        <div
+          onClick={() => setMessageToCameraOnCurrentValue('zoomOut')}
+          className='MapInterface__zoomBtn'
+        >
+          <Minus />
+        </div>
+      </div>
     </div>
   );
 }

@@ -1,0 +1,32 @@
+.RoomLabel--2D {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  .RoomLabel {
+    &__mainText {
+      font-size: 1.1vw;
+      line-height: 1.2vw;
+      padding: 0.3vw 0.4vw;
+
+      &--start,
+      &--end {
+        &::before {
+          filter: blur(calc(0.0018 * 100vw + 0.45px));
+        }
+      }
+    }
+    &__subText {
+      font-size: 1.1vw;
+      line-height: 1.5vw;
+      padding: 0.1vw 0.3vw;
+    }
+    &__arrowDown {
+      margin: 1px auto !important;
+      border-left: calc(0.4vw + 1px) solid transparent;
+      border-right: calc(0.4vw + 1px) solid transparent;
+      border-top: calc(0.4vw + 1px) solid white;
+    }
+  }
+}

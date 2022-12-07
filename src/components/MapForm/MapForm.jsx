@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 import roomsLocation from '@data/roomsLocation.json';
-import logoTZN from '@assets/logoTZN.webp';
+import logoTZN from '@assets/logoTZN.png';
 
 import './MapForm.scss';
 
@@ -18,10 +18,10 @@ const findRooms = (roomName = '') => {
       if (room.alias) {
         let indexOfAlias = room.alias
           .toUpperCase()
-          .replace('<br>', ' ')
+          .replaceAll('<br>', ' ')
           .indexOf(roomName);
         if (indexOfAlias != -1) {
-          foundRooms.push(room.alias.replace('<br>', ' '));
+          foundRooms.push(room.alias.replaceAll('<br>', ' '));
         }
       }
       if (foundRooms.length >= 5) return foundRooms;
@@ -43,7 +43,7 @@ const doesRoomExist = (roomToFind) => {
     for (let room of roomsLocation[key]) {
       if (
         room.name === roomToFind ||
-        room.alias?.replace('<br>', ' ') === roomToFind
+        room.alias?.replaceAll('<br>', ' ') === roomToFind
       ) {
         return true;
       }
@@ -67,6 +67,11 @@ function MapForm({
 
   const ToggleFormVisible = () => {
     setIsFormVisible((value) => !value);
+  };
+
+  const setAndSaveMapQuality = (quality) => {
+    window.localStorage.setItem('quality', quality);
+    setMapQuality(quality);
   };
 
   const validateForm = () => {
@@ -165,16 +170,15 @@ function MapForm({
           </header>
 
           <button
-            onClick={() => setMapQuality('low')}
+            onClick={() => setAndSaveMapQuality('low')}
             className={`Form__btnInForm Form__qualityBtn ${
               mapQuality === 'low' ? 'Form__qualityBtn--active' : ''
             }`}
-            disabled
           >
             Niska
           </button>
           <button
-            onClick={() => setMapQuality('high')}
+            onClick={() => setAndSaveMapQuality('high')}
             className={`Form__btnInForm Form__qualityBtn ${
               mapQuality === 'high' && 'Form__qualityBtn--active'
             }`}

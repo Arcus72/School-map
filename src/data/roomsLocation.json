@@ -13,9 +13,19 @@
       "name": "Główne szatnie",
       "displayName": "Główne szatnie",
       "position": {
-        "x": -8,
+        "x": -7.5,
         "y": 0.2,
-        "z": 2.6
+        "z": 3
+      }
+    },
+
+    {
+      "name": "Wejście przy szatniach",
+      "displayName": "Wejście przy<br> szatniach",
+      "position": {
+        "x": -7.4,
+        "y": 0.2,
+        "z": 2.2
       }
     },
     {
@@ -24,7 +34,7 @@
       "position": {
         "x": -1,
         "y": 0.2,
-        "z": 2.6
+        "z": 2.5
       }
     },
     {
@@ -74,6 +84,15 @@
     }
   ],
   "floor0": [
+    {
+      "name": "Wejście główne",
+      "displayName": "Wejście<br>główne",
+      "position": {
+        "x": -11.5,
+        "y": 0.2,
+        "z": 3.1
+      }
+    },
     {
       "name": "WC Męskie przy Świetlicy",
       "displayName": "WC Męskie",
@@ -130,7 +149,7 @@
     },
     {
       "name": "Gabinet lekarski",
-      "displayName": "Lekarz",
+      "displayName": "Gabinet<br>lekarski",
       "position": {
         "x": 0.35,
         "y": 0.2,
@@ -187,6 +206,7 @@
     {
       "name": "Sala 26",
       "displayName": "26",
+      "alias": "Sek. główny i<br>Wic. ds. pedagogicznych<br>przy s. 26",
       "position": {
         "x": -11.5,
         "y": 0.2,
@@ -240,17 +260,8 @@
       }
     },
     {
-      "name": "Sala 39",
-      "displayName": "39",
-      "position": {
-        "x": -7.45,
-        "y": 0.2,
-        "z": 2.65
-      }
-    },
-    {
-      "name": "Sala 40",
-      "displayName": "40",
+      "name": "Sala 41",
+      "displayName": "41",
       "position": {
         "x": -6.25,
         "y": 0.2,
@@ -258,8 +269,8 @@
       }
     },
     {
-      "name": "Sala 41",
-      "displayName": "41",
+      "name": "Sala 42",
+      "displayName": "42",
       "position": {
         "x": -5.1,
         "y": 0.2,
@@ -298,7 +309,7 @@
     {
       "name": "Sala 48",
       "displayName": "48",
-      "alias": "Sek. Główny",
+      "alias": "Sek. główny i<br>Wic. ds. pedagogicznych<br>przy s. 48",
 
       "position": {
         "x": -11.5,
@@ -423,7 +434,8 @@
         "x": -2.78,
         "y": 0.2,
         "z": 2.85
-      }
+      },
+      "alias": "Kierownik szkolenia<br>praktycznego"
     },
     {
       "name": "Sala 91",
@@ -432,7 +444,8 @@
         "x": -2.2,
         "y": 0.2,
         "z": 2.85
-      }
+      },
+      "alias": "Pedagog"
     },
     {
       "name": "Sala 92",
@@ -627,6 +640,25 @@
       }
     },
     {
+      "name": "Sala 76",
+      "displayName": "76",
+      "position": {
+        "x": -10.45,
+        "y": 0.2,
+        "z": 1.15
+      }
+    },
+    {
+      "name": "Sala 77",
+      "displayName": "77",
+      "position": {
+        "x": -10.45,
+        "y": 0.2,
+        "z": 1.9
+      },
+      "alias": "Psycholog"
+    },
+    {
       "name": "Sala 79",
       "displayName": "79",
       "position": {
@@ -663,8 +695,8 @@
       }
     },
     {
-      "name": "Sala 84",
-      "displayName": "84",
+      "name": "Sala 83",
+      "displayName": "83",
       "position": {
         "x": -3.75,
         "y": 0.2,
@@ -678,6 +710,15 @@
         "x": -10.65,
         "y": 0.2,
         "z": 3.95
+      }
+    },
+    {
+      "name": "Sala 85",
+      "displayName": "85",
+      "position": {
+        "x": -11.5,
+        "y": 0.2,
+        "z": 3.1
       }
     },
     {
@@ -926,7 +967,7 @@
     {
       "name": "Sala 225",
       "displayName": "225",
-      "alias": "Wicedyrektor ds.<br>Pedagogicznych",
+      "alias": "Sek. główny i<br>Wic. ds. pedagogicznych<br>przy s. 225",
       "position": {
         "x": 0.3,
         "y": 0.2,
