@@ -1018,7 +1018,7 @@
             ],
             "translation" : [
                 5.522739887237549,
-                -0.07842670381069183,
+                -0.0801456943154335,
                 2.012300968170166
             ]
         },
@@ -1111,9 +1111,9 @@
             "name" : "Ground",
             "pbrMetallicRoughness" : {
                 "baseColorFactor" : [
-                    0.23302194476127625,
-                    0.23302194476127625,
-                    0.23302194476127625,
+                    0.4000000059604645,
+                    0.4000000059604645,
+                    0.4000000059604645,
                     1
                 ],
                 "metallicFactor" : 0,
@@ -1122,54 +1122,12 @@
         },
         {
             "doubleSided" : true,
-            "name" : "Wall.001",
+            "name" : "stairs",
             "pbrMetallicRoughness" : {
                 "baseColorFactor" : [
-                    1,
-                    1,
-                    1,
-                    5
-                ],
-                "metallicFactor" : 0,
-                "roughnessFactor" : 0.5
-            }
-        },
-        {
-            "doubleSided" : true,
-            "name" : "Wall.004",
-            "pbrMetallicRoughness" : {
-                "baseColorFactor" : [
-                    1,
-                    1,
-                    1,
-                    5
-                ],
-                "metallicFactor" : 0,
-                "roughnessFactor" : 0.5
-            }
-        },
-        {
-            "doubleSided" : true,
-            "name" : "Wall.002",
-            "pbrMetallicRoughness" : {
-                "baseColorFactor" : [
-                    1,
-                    1,
-                    1,
-                    5
-                ],
-                "metallicFactor" : 0,
-                "roughnessFactor" : 0.5
-            }
-        },
-        {
-            "doubleSided" : true,
-            "name" : "Ground.001",
-            "pbrMetallicRoughness" : {
-                "baseColorFactor" : [
-                    0.23302194476127625,
-                    0.23302194476127625,
-                    0.23302194476127625,
+                    0.800000011920929,
+                    0.800000011920929,
+                    0.800000011920929,
                     1
                 ],
                 "metallicFactor" : 0,
@@ -1968,8 +1926,7 @@
                         "POSITION" : 139,
                         "NORMAL" : 140
                     },
-                    "indices" : 15,
-                    "material" : 2
+                    "indices" : 15
                 }
             ]
         },
@@ -1982,7 +1939,7 @@
                         "NORMAL" : 142
                     },
                     "indices" : 2,
-                    "material" : 3
+                    "material" : 0
                 }
             ]
         },
@@ -1995,7 +1952,7 @@
                         "NORMAL" : 144
                     },
                     "indices" : 2,
-                    "material" : 4
+                    "material" : 0
                 }
             ]
         },
@@ -2007,7 +1964,8 @@
                         "POSITION" : 145,
                         "NORMAL" : 146
                     },
-                    "indices" : 147
+                    "indices" : 147,
+                    "material" : 2
                 }
             ]
         },
@@ -2019,7 +1977,8 @@
                         "POSITION" : 148,
                         "NORMAL" : 149
                     },
-                    "indices" : 147
+                    "indices" : 147,
+                    "material" : 2
                 }
             ]
         },
@@ -2031,7 +1990,8 @@
                         "POSITION" : 150,
                         "NORMAL" : 151
                     },
-                    "indices" : 147
+                    "indices" : 147,
+                    "material" : 2
                 }
             ]
         },
@@ -2058,7 +2018,7 @@
                         "TEXCOORD_0" : 156
                     },
                     "indices" : 157,
-                    "material" : 5
+                    "material" : 0
                 }
             ]
         },

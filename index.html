@@ -14,11 +14,265 @@
     <meta name="author" content="Kamil Kozik, Maciej Kimla" />
     <title>Mapa TZN</title>
     <link rel="icon" type="image/x-icon" href="./src/assets/icon-32x32.ico" />
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,700;1,200;1,500&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500&display=swap');
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body,
+      html {
+        height: 100vh;
+      }
+      body {
+        width: 100%;
+        height: 100%;
+      }
+      #app {
+        width: 100vw;
+      }
+      .LoaderMain {
+        z-index: 10000 !important;
+      }
+      .Loader {
+        background-color: #3d3b5c;
+        position: absolute;
+        height: 100vh;
+        width: 100vw;
+        z-index: 2;
+      }
+      .Loader__HeadContainer {
+        height: 50vh;
+        width: 200px;
+        justify-content: center;
+        left: 50vw;
+        transform: translateX(-180%);
+        position: absolute;
+      }
+      .Loader__container {
+        width: 300px;
+      }
+      .Loader__cross {
+        animation: animation 2s infinite alternate;
+        background: #616f83;
+        width: 750px;
+        height: 270px;
+        clip-path: inset(0 0 0 0 round 0 0 100% 0);
+        animation-delay: 0.3s;
+      }
+      .Loader__wrapper {
+        top: 30px;
+        z-index: 3;
+        position: absolute;
+        left: 8%;
+        filter: drop-shadow(5px 5px 10px black);
+      }
+      .Loader__text {
+        left: 24%;
+        font-size: 16em;
+      }
+      .Loader__block {
+        display: inline-block;
+        position: absolute;
+        animation: animation 2s infinite alternate;
+        font-family: 'Orbitron', sans-serif;
+        color: white;
+        font-size: 8em;
+        letter-spacing: -25px;
+        text-shadow: 0px 0px 28px black;
+      }
+      .Loader__block:nth-child(1) {
+        z-index: 4;
+        animation-delay: 0.2s;
+      }
+      .Loader__block:nth-child(3) {
+        left: 15%;
+        z-index: 2;
+        width: 750px;
+        height: 280px;
+        background: #fffa9c;
+        -webkit-box-shadow: 0px 0px 46px -1px black;
+        -moz-box-shadow: 0px 0px 46px -1px black;
+        box-shadow: 0px 0px 46px -1px black;
+        animation-delay: 0.1s;
+      }
+      .Loader__block:nth-child(4) {
+        -webkit-box-shadow: 0px 0px 46px -1px black;
+        -moz-box-shadow: 0px 0px 46px -1px black;
+        box-shadow: 0px 0px 46px -1px black;
+        z-index: 1;
+        animation-delay: 0.4s;
+        width: 720px;
+        height: 380px;
+        background: #615d5c;
+      }
+      .Loader__gravityEmmiter {
+        width: 100px;
+        height: 0px;
+        position: absolute;
+        top: 800px;
+        left: 50%;
+        box-shadow: 0 -10px 15px 5px #3ebff2;
+        animation: emmiting 2s infinite alternate;
+        transform: translateX(-50%);
+      }
+      .Loader__gravityEmmiter::after {
+        content: '';
+        position: absolute;
+        top: 0px;
+        width: 100%;
+        height: 100%;
+        box-shadow: 0 -30px 55px 5px #3ebff2;
+        animation: emmiting2 2s infinite alternate;
+      }
+      .Loader__gravityEmmiter::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0px;
+        box-shadow: 0 -60px 65px 5px #3ebff2;
+        animation: emmiting3 2s infinite alternate;
+      }
+      @media only screen and (min-width: 100px) {
+        .Loader__gravityEmmiter {
+          width: 150px;
+          top: 90vh;
+        }
+        .Loader__HeadContainer {
+          transform: translateX(-75%) scale(0.6);
+        }
+        .Loader__cross {
+          width: 350px;
+          height: 150px;
+          transform: scale(0.5);
+        }
+        .Loader__text {
+          font-size: 8em;
+          left: 25%;
+        }
+        .Loader__block {
+          transform: scale(0.5);
+        }
+        .Loader__block:nth-child(3) {
+          width: 350px;
+          height: 160px;
+        }
+        .Loader__block:nth-child(4) {
+          width: 380px;
+          height: 190px;
+        }
+      }
+      @media only screen and (min-width: 425px) {
+        .Loader__gravityEmmiter {
+          width: 200px;
+          top: 90vh;
+        }
+        .Loader__HeadContainer {
+          transform: translateX(-95%);
+        }
+        .Loader__cross {
+          width: 350px;
+          height: 150px;
+          transform: scale(0.5);
+        }
+        .Loader__text {
+          font-size: 8em;
+          left: 25%;
+        }
+        .Loader__block {
+          transform: scale(0.5);
+        }
+        .Loader__block:nth-child(3) {
+          width: 350px;
+          height: 160px;
+        }
+        .Loader__block:nth-child(4) {
+          width: 380px;
+          height: 190px;
+        }
+      }
+      @media only screen and (min-width: 768px) {
+        .Loader__HeadContainer {
+          top: 10vh;
+        }
+        .Loader__gravityEmmiter {
+          width: 300px;
+          top: 92%;
+        }
+        .Loader__cross {
+          animation: animation2 2s infinite alternate;
+          transform: scale(0.3);
+        }
+        .Loader__block {
+          transform: scale(0.3);
+          animation: animation2 2s infinite alternate;
+        }
+      }
+      @media only screen and (min-width: 1024px) {
+        .Loader__HeadContainer {
+          top: 15vh;
+        }
+        .Loader__gravityEmmiter {
+          width: 300px;
+        }
+      }
+      @media only screen and (min-width: 1440px) {
+        .Loader__HeadContainer {
+          top: 10vh;
+        }
+        .Loader__gravityEmmiter {
+          top: 90vh;
+          width: 25vw;
+        }
+      }
+      @keyframes animation {
+        100% {
+          transform: translateY(100%) scale(0.5);
+        }
+      }
+      @keyframes animation2 {
+        100% {
+          transform: translateY(80%) scale(0.3);
+        }
+      }
+      @keyframes emmiting {
+        100% {
+          box-shadow: 0 -20px 15px 5px #3ebff2;
+        }
+      }
+      @keyframes emmiting2 {
+        100% {
+          box-shadow: 0 -35px 25px 5px #3ebff2;
+        }
+      }
+      @keyframes emmiting3 {
+        100% {
+          box-shadow: 0 -60px 55px 5px #3ebff2;
+        }
+      }
+    </style>
   </head>
   <body>
+    <div class="LoaderMain Loader">
+      <div class="Loader__HeadContainer">
+        <h1 class="Loader__block Loader__text">TZN</h1>
+        <div class="Loader__wrapper">
+          <div class="Loader_block Loader__cross"></div>
+        </div>
+        <div class="Loader__block"></div>
+        <div class="Loader__block"></div>
+        <div class="Loader__wrapper">
+          <div class="Loader__box"></div>
+        </div>
+      </div>
+      <div class="Loader__gravityEmmiter"></div>
+    </div>
     <div id="app"></div>
     <script type="module" src="./src/main.jsx"></script>
-    <script>
+    <!-- <script>
       (function () {
         var script = document.createElement('script');
         script.onload = function () {
@@ -32,6 +286,6 @@
         script.src = '//mrdoob.github.io/stats.js/build/stats.min.js';
         document.head.appendChild(script);
       })();
-    </script>
+    </script> -->
   </body>
 </html>

@@ -7,7 +7,7 @@ function RoomLabel({
   const [isAliasShow, setIsAliasShow] = useState(false);
   return (
     <div
-      className='RoomLabel  RoomLabel--2D'
+      className='RoomLabel2D'
       style={{
         zIndex: isAliasShow ? 200 : status ? 100 : 0,
         transform: ` translate(calc(-50% + ${position.x}px),calc(-50% + ${position.z}px)`,
@@ -15,16 +15,16 @@ function RoomLabel({
       onClick={() => setIsAliasShow((value) => !value)}
     >
       <div
-        className={`RoomLabel__mainText
-  ${status == 'start' ? 'RoomLabel__mainText--start' : ''}
-  ${status == 'end' ? 'RoomLabel__mainText--end' : ''}`}
+        className={`RoomLabel2D__mainText
+  ${status == 'start' ? 'RoomLabel2D__mainText--start' : ''}
+  ${status == 'end' ? 'RoomLabel2D__mainText--end' : ''}`}
       >
-        <span className={displayName == '7' ? 'RoomLabel--goldenText' : ''}>
+        <span className={displayName == '7' ? 'RoomLabel2D--goldenText' : ''}>
           <span dangerouslySetInnerHTML={{ __html: displayName }}></span>
           {alias && (
             <div
-              className={`RoomLabel__arrowDown ${
-                isAliasShow ? 'RoomLabel__arrowDown--rotated ' : ''
+              className={`RoomLabel2D__arrowDown ${
+                isAliasShow ? 'RoomLabel2D__arrowDown--rotated ' : ''
               }`}
             ></div>
           )}
@@ -33,7 +33,7 @@ function RoomLabel({
       {isAliasShow && alias && (
         <div
           dangerouslySetInnerHTML={{ __html: alias }}
-          className='RoomLabel__subText'
+          className='RoomLabel2D__subText'
         ></div>
       )}
     </div>

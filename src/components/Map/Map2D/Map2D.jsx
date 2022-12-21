@@ -7,21 +7,19 @@ import floor2Img from '@assets/2Dplans/Floor2.jpg';
 import roomsLocations from '@data/roomsLocation.json';
 import RoomLabel from './RoomLabel/RoomLabel';
 import './Map2D.scss';
-function Floors({ currentFloor, roomsToHighlight, messageToCamera }) {
+let panzoom;
+function Map2D({ currentFloor, roomsToHighlight, messageToCamera }) {
   const floorImg = useRef();
   const listOfFloors = [floor_1Img, floor0Img, floor1Img, floor2Img];
   let startRoom = { ...roomsToHighlight.startRoom, status: 'start' };
   let endRoom = { ...roomsToHighlight.endRoom, status: 'end' };
 
   useEffect(() => {
-    floorImg.current.panzoom = Panzoom(floorImg.current, {
+    panzoom = Panzoom(floorImg.current, {
       canvas: true,
       minScale: 0.6,
       maxScale: 8,
     });
-
-    floorImg.current.parentElement.onwheel =
-      floorImg.current.panzoom.zoomWithWheel;
 
     focusCameraOnPoint(
       floorImg.current.offsetWidth / 2,
@@ -32,8 +30,8 @@ function Floors({ currentFloor, roomsToHighlight, messageToCamera }) {
   const focusCameraOnPoint = (x, z) => {
     x = -x + innerWidth / 2;
     z = -z + innerHeight / 2;
-    floorImg.current.panzoom.zoom(1);
-    floorImg.current.panzoom.pan(x, z);
+    panzoom.zoom(1);
+    panzoom.pan(x, z);
   };
 
   const transformSize = (position) => {
@@ -69,27 +67,26 @@ function Floors({ currentFloor, roomsToHighlight, messageToCamera }) {
         );
         break;
       case 'zoomIn':
-        floorImg.current.panzoom.zoomIn();
+        panzoom.zoomIn();
         break;
 
       case 'zoomOut':
-        floorImg.current.panzoom.zoomOut();
+        panzoom.zoomOut();
         break;
     }
   }, [messageToCamera.id]);
 
   return (
-    <div
-      className='Floors'
-      onWheel={floorImg?.current && floorImg.current.panzoom.zoomWithWheel}
-    >
-      <div className='Floors__plan' ref={floorImg}>
-        <img
-          className={`Floors__floor`}
-          src={listOfFloors[currentFloor + 1]}
-          alt='Plan'
-        />
-        <div className='Floors__labels'>
+    <div className='Map2D' onWheel={floorImg?.current && panzoom.zoomWithWheel}>
+      <div className='Map2D__plan' ref={floorImg}>
+        {listOfFloors.map(
+          (img, index) =>
+            currentFloor == index - 1 && (
+              <img key={img} className={`Map2D__floor`} src={img} alt='Plan' />
+            ),
+        )}
+
+        <div className='Map2D__labels'>
           {useMemo(
             () => (
               <>
@@ -136,4 +133,4 @@ function Floors({ currentFloor, roomsToHighlight, messageToCamera }) {
   );
 }
 
-export default Floors;
+export default Map2D;

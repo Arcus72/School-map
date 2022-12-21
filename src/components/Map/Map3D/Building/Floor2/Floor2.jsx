@@ -15,6 +15,10 @@ function Floor2({ isVisible = true }) {
   let [timeLineGsap] = useState(gsap.timeline());
 
   useEffect(() => {
+    document.hideLoader('.LoaderMap3D');
+  }, []);
+
+  useEffect(() => {
     timeLineGsap.clear();
     !isVisible
       ? timeLineGsap.to(group.current.position, { y: 15, duration: 1 })
@@ -372,38 +376,38 @@ function Floor2({ isVisible = true }) {
       />
       <mesh
         geometry={nodes.Wall012.geometry}
-        material={materials['Wall.001']}
+        material={nodes.Wall012.material}
         position={[0.97, -0.03, 2.29]}
       />
       <mesh
         geometry={nodes.Wall028.geometry}
-        material={materials['Wall.004']}
+        material={materials.Wall}
         position={[-11.82, 0, -0.53]}
         rotation={[0, 1.57, 0]}
       />
       <mesh
         geometry={nodes.Wall004.geometry}
-        material={materials['Wall.002']}
+        material={materials.Wall}
         position={[-10.84, -0.01, 2.74]}
         rotation={[Math.PI, 0, Math.PI]}
       />
       <mesh
         geometry={nodes.Stairs005.geometry}
-        material={nodes.Stairs005.material}
+        material={materials.stairs}
         position={[-4.52, -0.09, 2.48]}
         rotation={[-Math.PI, 0, -Math.PI]}
         scale={[0.15, 0.03, 0.07]}
       />
       <mesh
         geometry={nodes.Stairs011.geometry}
-        material={nodes.Stairs011.material}
+        material={materials.stairs}
         position={[0.43, -0.08, 1.98]}
         rotation={[-Math.PI, 0, -Math.PI]}
         scale={[0.15, 0.03, 0.07]}
       />
       <mesh
         geometry={nodes.Stairs003.geometry}
-        material={nodes.Stairs003.material}
+        material={materials.stairs}
         position={[5.52, -0.08, 2.01]}
         rotation={[-Math.PI, 0, -Math.PI]}
         scale={[0.15, 0.03, 0.07]}
@@ -417,7 +421,7 @@ function Floor2({ isVisible = true }) {
       />
       <mesh
         geometry={nodes.Plane003.geometry}
-        material={materials['Ground.001']}
+        material={materials.Wall}
         position={[-1.52, -0.02, 2.59]}
         scale={[1.7, 1, 0.79]}
       />

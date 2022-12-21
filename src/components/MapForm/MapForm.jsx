@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import roomsLocation from '@data/roomsLocation.json';
 import logoTZN from '@assets/logoTZN.png';
@@ -52,6 +52,11 @@ const doesRoomExist = (roomToFind) => {
   return false;
 };
 
+let isFirstTime = window.localStorage.getItem('isFirstTime');
+
+if (isFirstTime !== 'false')
+  window.localStorage.setItem('isFirstTime', 'false');
+
 function MapForm({
   isFormVisible,
   setIsFormVisible,
@@ -98,6 +103,10 @@ function MapForm({
     ToggleFormVisible();
   };
 
+  useEffect(() => {
+    document.hideLoader('.LoaderMain');
+  }, []);
+
   return (
     <div className={`Form ${isFormVisible ? 'Form--active' : ''}`}>
       <header className='Form__header Form__header--Desktop'>
@@ -109,7 +118,11 @@ function MapForm({
           <h1>Mapa</h1>
           <img src={logoTZN} alt='logoTZN' />
         </header>
-        <div className='Form__inputField'>
+        <div
+          className={`Form__inputField ${
+            isFirstTime != 'false' && 'Form__inputField--from'
+          }`}
+        >
           <input
             className='Form__input'
             id='Form__from'
@@ -136,7 +149,11 @@ function MapForm({
         <span className='Form__error Form__error'>
           {startPointMessageError}
         </span>
-        <div className='Form__inputField'>
+        <div
+          className={`Form__inputField ${
+            isFirstTime != 'false' && 'Form__inputField--to'
+          }`}
+        >
           <input
             className='Form__input'
             id='Form__to'

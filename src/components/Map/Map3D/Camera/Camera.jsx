@@ -1,18 +1,18 @@
-import React, { useEffect, useRef, memo } from 'react';
+import React, { useState, useEffect, useRef, memo } from 'react';
 import { MapControls } from '@react-three/drei';
 import { useThree } from '@react-three/fiber';
 
 const mapControlsSettings = {
   maxPolarAngle: Math.PI / 2.5,
-  minDistance: 25,
+  minDistance: 0,
   maxDistance: 70,
   zoomSpeed: 1.5,
   enableDamping: false,
 };
 
 function Camera({ messageToCamera }) {
+  const [camera] = useState(useThree().camera);
   const cameraRef = useRef();
-  const { camera } = useThree();
 
   const focusCamera = ({ x, z }) => {
     const multiplier = 3;

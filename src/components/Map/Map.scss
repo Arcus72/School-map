@@ -24,6 +24,8 @@ $color2: #2d3776;
 }
 
 .MapInterface {
+  position: relative;
+
   height: 100vh;
   display: flex;
   flex-direction: row-reverse;

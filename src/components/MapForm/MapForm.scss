@@ -7,7 +7,7 @@ $color2: #2d3776;
   width: 100%;
   left: 0;
   top: 0;
-  z-index: 2;
+  z-index: 10;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -101,6 +101,22 @@ $color2: #2d3776;
     position: relative;
     margin-bottom: 15px;
     width: 70%;
+    &--to::before,
+    &--from::after {
+      content: '';
+      width: 10px;
+      height: 10px;
+      background-color: #ff1818;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: -25px;
+      border: 2px solid white;
+      border-radius: 4px;
+    }
+    &--from::after {
+      background-color: #2ecc71;
+    }
   }
 
   &__input {

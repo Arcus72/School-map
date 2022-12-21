@@ -1,6 +1,4 @@
-import React, { useState, useMemo } from 'react';
-import Map3D from './Map3D/Map3D';
-import Map2D from './Map2D/Map2D';
+import React, { useState, useMemo, lazy, Suspense } from 'react';
 
 import './Map.scss';
 import DoubleArrow from '@src/assets/icons/DoubleArrow';
@@ -10,6 +8,10 @@ import Minus from '@src/assets/icons/Minus';
 import Plus from '@src/assets/icons/Plus';
 import Center from '@src/assets/icons/Center';
 import roomsLocations from '@data/roomsLocation.json';
+import Loader from './Loader/Loader';
+
+const Map3D = lazy(() => import('./Map3D/Map3D'));
+const Map2D = lazy(() => import('./Map2D/Map2D'));
 
 const findRoom = (roomName) => {
   if (roomName?.trim() === '' || roomName == null) return null;
@@ -29,7 +31,7 @@ const findRoom = (roomName) => {
   }
 };
 
-function MapInterface({
+function Map({
   isFormVisible,
   setIsFormVisible,
   namesOfCrucialPoints,
@@ -147,17 +149,26 @@ function MapInterface({
   return (
     <div className='MapInterface'>
       {mapQuality == 'low' ? (
-        <Map2D
-          messageToCamera={messageToCamera}
-          currentFloor={currentFloor}
-          roomsToHighlight={roomsToHighlight}
-        />
+        <>
+          <Suspense fallback={<Loader name='LoaderMap2D' />}>
+            <Map2D
+              messageToCamera={messageToCamera}
+              currentFloor={currentFloor}
+              roomsToHighlight={roomsToHighlight}
+            />
+          </Suspense>
+        </>
       ) : (
-        <Map3D
-          messageToCamera={messageToCamera}
-          roomsToHighlight={roomsToHighlight}
-          currentFloor={currentFloor}
-        />
+        <>
+          <Loader name='LoaderMap3D' />
+          <Suspense fallback={null}>
+            <Map3D
+              messageToCamera={messageToCamera}
+              roomsToHighlight={roomsToHighlight}
+              currentFloor={currentFloor}
+            />
+          </Suspense>
+        </>
       )}
 
       <div
@@ -272,4 +283,4 @@ function MapInterface({
   );
 }
 
-export default MapInterface;
+export default Map;
