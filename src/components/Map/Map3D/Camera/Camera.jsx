@@ -4,7 +4,7 @@ import { useThree } from '@react-three/fiber';
 
 const mapControlsSettings = {
   maxPolarAngle: Math.PI / 2.5,
-  minDistance: 0,
+  minDistance: 15,
   maxDistance: 70,
   zoomSpeed: 1.5,
   enableDamping: false,
