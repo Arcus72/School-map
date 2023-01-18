@@ -13,7 +13,7 @@ function RoomLabel({
     /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
       navigator.userAgent,
     );
-  const zIndex = isAliasShow ? 200 : status ? 100 : 0;
+  const zIndex = isAliasShow ? 200 : status ? 5 : 0;
 
   return (
     <Html

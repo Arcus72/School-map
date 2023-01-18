@@ -18,15 +18,6 @@ function Map3D({ roomsToHighlight, currentFloor, messageToCamera }) {
           roomsToHighlight={roomsToHighlight}
           currentFloorNumber={currentFloor}
         />
-
-        <mesh
-          position={[0, -1, 0]}
-          rotation={[Math.PI / 2, 0, 0]}
-          scale={[10, 10, 10]}
-        >
-          <ringBufferGeometry args={[6, 0, 50]} />
-          <meshBasicMaterial attach='material' color={0xd1d1d1} />
-        </mesh>
       </Canvas>
     </Suspense>
   );
