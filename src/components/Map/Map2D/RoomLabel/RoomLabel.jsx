@@ -10,9 +10,10 @@ function RoomLabel({
       className='RoomLabel2D'
       style={{
         zIndex: isAliasShow ? 200 : status ? 100 : 0,
-        transform: ` translate(calc(-50% + ${position.x}px),calc(-50% + ${position.z}px)`,
+        top: position.z + '%',
+        left: position.x + '%',
       }}
-      onClick={() => setIsAliasShow((value) => !value)}
+      onClick={() => alias && setIsAliasShow((value) => !value)}
     >
       <div
         className={`RoomLabel2D__mainText

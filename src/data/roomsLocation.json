@@ -206,7 +206,7 @@
     {
       "name": "Sala 26",
       "displayName": "26",
-      "alias": "Sek. główny i<br>Wic. ds. pedagogicznych<br>przy s. 26",
+      "alias": "Sek. główny i<br>Wic. ds. pedagogicznych<br>w s. 26",
       "position": {
         "x": -11.5,
         "y": 0.2,
@@ -309,7 +309,7 @@
     {
       "name": "Sala 48",
       "displayName": "48",
-      "alias": "Sek. główny i<br>Wic. ds. pedagogicznych<br>przy s. 48",
+      "alias": "Sek. główny i<br>Wic. ds. pedagogicznych<br>w s. 48",
 
       "position": {
         "x": -11.5,
@@ -595,6 +595,15 @@
   ],
   "floor2": [
     {
+      "name": "WC Damskie przy Sali 79",
+      "displayName": "WC Damskie",
+      "position": {
+        "x": -9.5,
+        "y": 0.2,
+        "z": 2.5
+      }
+    },
+    {
       "name": "Sala 67",
       "displayName": "67",
       "position": {
@@ -719,15 +728,6 @@
         "x": -11.5,
         "y": 0.2,
         "z": 3.1
-      }
-    },
-    {
-      "name": "WC Damskie przy Sali 79",
-      "displayName": "WC Damskie",
-      "position": {
-        "x": -9.5,
-        "y": 0.2,
-        "z": 2.5
       }
     },
     {
@@ -967,7 +967,7 @@
     {
       "name": "Sala 225",
       "displayName": "225",
-      "alias": "Sek. główny i<br>Wic. ds. pedagogicznych<br>przy s. 225",
+      "alias": "Sek. główny i<br>Wic. ds. pedagogicznych<br>w s. 225",
       "position": {
         "x": 0.3,
         "y": 0.2,

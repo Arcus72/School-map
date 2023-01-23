@@ -1,18 +1,28 @@
 .Map2D {
-  &__plan {
+  &__draggableBox {
     height: 100vh;
     display: flex;
     align-items: center;
-    position: relative;
   }
 
   &__floor {
     width: 100vw;
+    padding-top: 2.8%;
+    padding-left: 1.7%;
+    display: none;
+    &--isVisible {
+      display: block;
+    }
+  }
+
+  &__map {
+    position: relative;
   }
   &__labels {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: calc(100vw * 0.4117);
   }
 }

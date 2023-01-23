@@ -30,13 +30,28 @@ function Map2D({ currentFloor, roomsToHighlight, messageToCamera }) {
   const focusCameraOnPoint = (x, z) => {
     x = -x + innerWidth / 2;
     z = -z + innerHeight / 2;
+
     panzoom.zoom(1);
     panzoom.pan(x, z);
   };
 
-  const transformSize = (position) => {
+  const transform3DSizeTo2DPercents = (position) => {
     let newPosition = { x: 0, z: 0 };
-    newPosition.x = (innerWidth * position.x) / 25;
+    newPosition.x = (125 * position.x + 1550) / 31; // This line is a shortening of the following two
+    // newPosition.x = (innerWidth * position.x) / 24.8 + innerWidth / 2; // from 3D size to 2D size
+    // newPosition.x = (100 * newPosition.x) / innerWidth; // From size to percents
+
+    newPosition.z = (500 * position.z + 2550) / 51;
+    //newPosition.z =
+    // (innerWidth * 0.4117 * position.z) / 10.2 + (innerWidth * 0.4117) / 2;
+    //newPosition.z = (100 * newPosition.z) / (innerWidth * 0.4117);
+
+    return newPosition;
+  };
+
+  const transform3DSizeTo2D = (position) => {
+    let newPosition = { x: 0, z: 0 };
+    newPosition.x = (innerWidth * position.x) / 24.8;
     newPosition.z = (innerWidth * 0.4117 * position.z) / 10.2;
 
     return newPosition;
@@ -53,14 +68,16 @@ function Map2D({ currentFloor, roomsToHighlight, messageToCamera }) {
 
         break;
       case 'start':
-        position = transformSize(roomsToHighlight.startRoom.room.position);
+        position = transform3DSizeTo2D(
+          roomsToHighlight.startRoom.room.position,
+        );
         focusCameraOnPoint(
           position.x + innerWidth / 2,
           position.z + innerHeight / 2,
         );
         break;
       case 'end':
-        position = transformSize(roomsToHighlight.endRoom.room.position);
+        position = transform3DSizeTo2D(roomsToHighlight.endRoom.room.position);
         focusCameraOnPoint(
           position.x + innerWidth / 2,
           position.z + innerHeight / 2,
@@ -78,55 +95,66 @@ function Map2D({ currentFloor, roomsToHighlight, messageToCamera }) {
 
   return (
     <div className='Map2D' onWheel={floorImg?.current && panzoom.zoomWithWheel}>
-      <div className='Map2D__plan' ref={floorImg}>
-        {listOfFloors.map(
-          (img, index) =>
-            currentFloor == index - 1 && (
-              <img key={img} className={`Map2D__floor`} src={img} alt='Plan' />
-            ),
-        )}
+      <div className='Map2D__draggableBox' ref={floorImg}>
+        <div className='Map2D__map'>
+          {listOfFloors.map((img, index) => (
+            <img
+              key={img}
+              className={`Map2D__floor ${
+                currentFloor == index - 1 ? 'Map2D__floor--isVisible' : 'd'
+              } `}
+              src={img}
+              alt='Plan'
+            />
+          ))}
 
-        <div className='Map2D__labels'>
-          {useMemo(
-            () => (
-              <>
-                {[startRoom, endRoom].map(
-                  ({ floorNumber, room, status }, subIndex) => {
-                    return (
-                      floorNumber == currentFloor &&
-                      room && (
-                        <RoomLabel
-                          key={subIndex}
-                          room={{
-                            ...room,
-                            position: transformSize(room.position),
-                          }}
-                          status={status}
-                        />
-                      )
-                    );
-                  },
-                )}
-              </>
-            ),
-            [currentFloor, startRoom?.room?.name, endRoom?.room?.name],
-          )}
+          <div className='Map2D__labels'>
+            {useMemo(
+              () => (
+                <>
+                  {[startRoom, endRoom].map(
+                    ({ floorNumber, room, status }, subIndex) => {
+                      return (
+                        floorNumber == currentFloor &&
+                        room && (
+                          <RoomLabel
+                            key={subIndex}
+                            room={{
+                              ...room,
+                              position: transform3DSizeTo2DPercents(
+                                room.position,
+                              ),
+                            }}
+                            status={status}
+                          />
+                        )
+                      );
+                    },
+                  )}
+                </>
+              ),
+              [currentFloor, startRoom?.room?.name, endRoom?.room?.name],
+            )}
 
-          {useMemo(
-            () => (
-              <>
-                {roomsLocations[`floor` + currentFloor].map(
-                  (room, subIndex) => (
-                    <RoomLabel
-                      key={subIndex}
-                      room={{ ...room, position: transformSize(room.position) }}
-                    />
-                  ),
-                )}
-              </>
-            ),
-            [currentFloor],
-          )}
+            {useMemo(
+              () => (
+                <>
+                  {roomsLocations[`floor` + currentFloor].map(
+                    (room, subIndex) => (
+                      <RoomLabel
+                        key={subIndex}
+                        room={{
+                          ...room,
+                          position: transform3DSizeTo2DPercents(room.position),
+                        }}
+                      />
+                    ),
+                  )}
+                </>
+              ),
+              [currentFloor],
+            )}
+          </div>
         </div>
       </div>
     </div>
