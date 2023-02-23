@@ -203,7 +203,6 @@ $color2: #2d3776;
     font-size: 1.3em;
     margin-bottom: 25px;
   }
-
   &__qualityHeader {
     color: white;
     font-size: 1.5em;
@@ -216,9 +215,8 @@ $color2: #2d3776;
   &__btnInForm {
     cursor: pointer;
     width: 150px;
-    height: 60px;
+    height: 70px;
     font-family: 'Poppins', sans-serif;
-    font-size: 1.5em;
     margin-top: 25px;
     @media only screen and (max-width: 768px) {
       width: 120px;
@@ -226,15 +224,29 @@ $color2: #2d3776;
       font-size: 1.3em;
     }
   }
-
+  &__btnText{
+    font-size: 3.5em;
+    @media only screen and (max-width: 768px) {
+      font-size: 2em;
+    }
+  }
   &__qualityBtn {
+    color:$color2;
+    font-weight: bold;
     border: none;
     margin: 0 5px;
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: left;
+    box-shadow: inset black 0 0 2px 1px;
     &--active {
       box-shadow: inset 0px 0px 6px 1px black;
       border: none;
       border: 2px solid $color1;
+      .Form__btnText{
+        animation: textBtnAnimation 1s ease;
+      }
     }
   }
 
@@ -311,4 +323,22 @@ $color2: #2d3776;
     font-family: 'Poppins', sans-serif;
     line-height: 1.1;
   }
+}
+
+@keyframes textBtnAnimation {
+  0%{
+  }
+  25%{
+    transform: scale(0.8);
+  }
+  50%{
+    transform: scale(1.2);
+  }
+  75%{
+    transform: scale(0.9);
+  }
+  100%{
+    transform: scale(1);
+  }
+  
 }

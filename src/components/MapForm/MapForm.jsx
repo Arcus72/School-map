@@ -183,24 +183,24 @@ function MapForm({
 
         <div className='Form__section'>
           <header>
-            <h2 className='Form__qualityHeader'>Jakość:</h2>
+            <h2 className='Form__qualityHeader'>Wersja:</h2>
           </header>
 
           <button
-            onClick={() => setAndSaveMapQuality('low')}
+            onClick={() => setAndSaveMapQuality('2D')}
             className={`Form__btnInForm Form__qualityBtn ${
-              mapQuality === 'low' ? 'Form__qualityBtn--active' : ''
+              mapQuality === '2D' ? 'Form__qualityBtn--active' : ''
             }`}
           >
-            Niska
+            <p className='Form__btnText'>2D</p>
           </button>
           <button
-            onClick={() => setAndSaveMapQuality('high')}
+            onClick={() => setAndSaveMapQuality('3D')}
             className={`Form__btnInForm Form__qualityBtn ${
-              mapQuality === 'high' && 'Form__qualityBtn--active'
+              mapQuality === '3D' && 'Form__qualityBtn--active'
             }`}
           >
-            Wysoka
+            <p className='Form__btnText'>3D</p>
           </button>
         </div>
         <br />
