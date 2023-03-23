@@ -148,7 +148,7 @@ function Map({
 
   return (
     <div className='MapInterface'>
-      {mapQuality == 'low' ? (
+      {mapQuality == '2D' ? (
         <>
           <Suspense fallback={<Loader name='LoaderMap2D' />}>
             <Map2D

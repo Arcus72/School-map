@@ -188,9 +188,10 @@ function MapForm({
 
           <button
             onClick={() => setAndSaveMapQuality('2D')}
-            className={`Form__btnInForm Form__qualityBtn ${
-              mapQuality === '2D' ? 'Form__qualityBtn--active' : ''
-            }`}
+            className={`Form__btnInForm Form__qualityBtn  ${
+              mapQuality === '2D' ? 'Form__qualityBtn--active Form__qualityBtn--checked' : ''
+            }`
+          }
           >
             <p className='Form__btnText'>2D</p>
           </button>
@@ -202,6 +203,7 @@ function MapForm({
           >
             <p className='Form__btnText'>3D</p>
           </button>
+
         </div>
         <br />
         <button

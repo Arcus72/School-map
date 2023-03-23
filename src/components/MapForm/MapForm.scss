@@ -11,7 +11,6 @@ $color2: #2d3776;
   display: flex;
   align-items: center;
   flex-direction: column;
-
   transform: translateX(0);
   transition: all 0.5s ease-in-out;
 
@@ -70,12 +69,11 @@ $color2: #2d3776;
   &__main {
     padding: 40px;
     background: $color2;
-    z-index: 1;
+    z-index:2;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    // transition: all 0.5s ease-in-out;
     height: 75%;
     width: fit-content;
     border-radius: 25px;
@@ -226,12 +224,21 @@ $color2: #2d3776;
   }
   &__btnText{
     font-size: 3.5em;
+    position: absolute;
     @media only screen and (max-width: 768px) {
       font-size: 2em;
     }
   }
+  &__btnActiveBox{
+    position: absolute;
+    background: white;
+    width: 200px;
+    height: 75px;
+  }
+
   &__qualityBtn {
-    color:$color2;
+    background: transparent;
+    color:whitesmoke;
     font-weight: bold;
     border: none;
     margin: 0 5px;
@@ -240,14 +247,68 @@ $color2: #2d3776;
     align-items: center;
     float: left;
     box-shadow: inset black 0 0 2px 1px;
+    box-shadow: inset 0px 0px 6px 1px black;
+    border: none;
+    border: 2px solid $color1;
+
     &--active {
-      box-shadow: inset 0px 0px 6px 1px black;
-      border: none;
-      border: 2px solid $color1;
       .Form__btnText{
-        animation: textBtnAnimation 1s ease;
+        color: $color2;
+        transition: color 0.1s;
       }
     }
+    &:nth-child(2){
+      &::after{
+        transition: transform .3s ease-in-out;
+        -moz-transition: transform .3s;
+        -webkit-transition: transform .3s;
+        -o-transition: transform .3s;
+        -ms-transition: transform .3s;
+        transform: translateX(107%);
+      }
+    }
+    &--checked{
+      &:nth-child(2){
+        &::after{
+          transition: transform 0.3s ease-in-out;
+          -moz-transition: transform .3s;
+          -webkit-transition: transform .3s;
+          -o-transition: transform .3s;
+          -ms-transition: transform .3s;
+          transform: translateX(0);
+        }
+      }
+    }
+    &:nth-child(3){
+      &::after{
+        z-index: 2;
+        position: relative;
+        content: '';
+        width: 10px;
+        height: 70px;
+        left: -80px;
+        background: $color2;
+        @media only screen and (max-width: 768px) {
+          left: -65px;
+        }
+        @media only screen and (max-width: 500px) {
+          left: -65px;
+        }
+
+      }
+    }
+    &:nth-child(2){
+      &::after{
+        z-index: -1;
+        position: absolute;
+        content: '';
+        width: inherit;
+        height: inherit;
+        background: white;
+
+      }
+    }
+
   }
 
   &__showBtn {
@@ -323,22 +384,4 @@ $color2: #2d3776;
     font-family: 'Poppins', sans-serif;
     line-height: 1.1;
   }
-}
-
-@keyframes textBtnAnimation {
-  0%{
-  }
-  25%{
-    transform: scale(0.8);
-  }
-  50%{
-    transform: scale(1.2);
-  }
-  75%{
-    transform: scale(0.9);
-  }
-  100%{
-    transform: scale(1);
-  }
-  
 }

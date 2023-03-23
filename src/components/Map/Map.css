@@ -1,0 +1,237 @@
+.MapInterface {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  flex-direction: row-reverse;
+  font-family: "Poppins", sans-serif;
+  align-items: center;
+  overflow: hidden;
+}
+.MapInterface__formActivator {
+  background-color: #ffc229;
+  transition: all 0.2s ease-in-out;
+  z-index: 900;
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 30px;
+  top: 30px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+.MapInterface__formActivator svg {
+  width: 35px;
+  height: 35px;
+}
+.MapInterface__formActivator--active {
+  transform: rotate(180deg);
+  transition: all 0.2s ease-in-out;
+}
+@media only screen and (max-width: 767px), (max-height: 580px) {
+  .MapInterface__formActivator--active {
+    transform: rotate(180deg) translateY(calc(64px - 90vh));
+  }
+}
+.MapInterface__positionMenu {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 70%;
+}
+.MapInterface__showStartBtn {
+  cursor: pointer;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  border: none;
+  font-size: 1em;
+  padding: 0.5rem 1rem;
+  margin: 4px 2px;
+  border-radius: 2rem;
+  text-shadow: 5px 3px 6px rgb(0, 0, 0);
+  box-shadow: 4px 4px 16px -5px rgb(66, 68, 90);
+  background: linear-gradient(141deg, #3b4071 10%, #2ecc71 70%);
+}
+@media only screen and (max-width: 767px), (max-height: 580px) {
+  .MapInterface__showStartBtn {
+    font-size: 0.8em;
+    padding: 0.3rem 0.8rem;
+    margin: 4px 2px;
+  }
+}
+.MapInterface__showStartBtn::before {
+  background: linear-gradient(141deg, #3b4071 10%, #2ecc71 70%);
+}
+.MapInterface__showEndBtn {
+  cursor: pointer;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  border: none;
+  font-size: 1em;
+  padding: 0.5rem 1rem;
+  margin: 4px 2px;
+  border-radius: 2rem;
+  text-shadow: 5px 3px 6px rgb(0, 0, 0);
+  box-shadow: 4px 4px 16px -5px rgb(66, 68, 90);
+  background: linear-gradient(219deg, #3b4071 10%, #ff1818 70%);
+}
+@media only screen and (max-width: 767px), (max-height: 580px) {
+  .MapInterface__showEndBtn {
+    font-size: 0.8em;
+    padding: 0.3rem 0.8rem;
+    margin: 4px 2px;
+  }
+}
+.MapInterface__showEndBtn::before {
+  background: linear-gradient(219deg, #3b4071 10%, #ff1818 70%);
+}
+.MapInterface__menu {
+  background: #2d3776;
+  width: 170px;
+  height: clamp(450px, 70%, 550px);
+  left: 0;
+  border-top-right-radius: 80px;
+  border-bottom-right-radius: 80px;
+  position: absolute;
+  z-index: 1;
+  transform: translateY(30px);
+}
+@media only screen and (max-width: 767px), (max-height: 580px) {
+  .MapInterface__menu {
+    display: none;
+  }
+}
+.MapInterface__innerMenu {
+  width: 160px;
+  height: 100%;
+  background: #ffc229;
+  border-top-right-radius: 80px;
+  border-bottom-right-radius: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  z-index: 1;
+}
+.MapInterface__menuBtn {
+  cursor: pointer;
+  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.25), -4px -4px 4px hsla(0, 0%, 100%, 0.5);
+  background-color: #ffffff;
+  height: 90px;
+  width: 90px;
+  border-radius: 15px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.62em;
+  transition: box-shadow 0.3s ease;
+}
+.MapInterface__menuBtn:hover {
+  box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.25), -6px -6px 4px hsla(0, 0%, 100%, 0.5);
+}
+.MapInterface__menuBtn--active {
+  text-decoration: underline;
+}
+.MapInterface__menuBtn--startRoomFloor {
+  background: linear-gradient(-40deg, #2ecc70 0%, rgb(255, 255, 255) 45%);
+}
+.MapInterface__menuBtn--endRoomFloor {
+  background: linear-gradient(40deg, #ff1818 0%, rgb(255, 255, 255) 45%);
+}
+.MapInterface__menuBtn--endRoomFloor.MapInterface__menuBtn--startRoomFloor {
+  background: linear-gradient(-40deg, rgba(46, 204, 112, 0.8352941176) 0%, rgba(255, 255, 255, 0) 40%), linear-gradient(40deg, rgba(255, 24, 24, 0.8980392157) 0%, rgba(255, 255, 255, 0) 40%), #ffffff !important;
+}
+.MapInterface__mobileMenu {
+  z-index: 1;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.MapInterface__mobileMenu svg {
+  cursor: pointer;
+  height: min(18vw, 52px);
+  width: min(18vw, 32px);
+}
+@media only screen and (min-width: 768px) and (min-height: 581px) {
+  .MapInterface__mobileMenu {
+    display: none;
+  }
+}
+.MapInterface__mobileMenuBtn {
+  font-family: "Poppins", sans-serif;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  color: white;
+  background: #2d3776;
+  height: min(18vw, 60px);
+  width: min(18vw, 60px);
+  border-radius: 12px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  margin: 6px;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+}
+.MapInterface__mobileMenuBtn--active {
+  text-decoration: underline;
+}
+.MapInterface__mobileMenuBtn--startRoomFloor {
+  box-shadow: 4px 4px 4px rgb(46, 204, 113);
+}
+.MapInterface__mobileMenuBtn--endRoomFloor {
+  box-shadow: -5px -5px 4px rgb(255, 24, 24);
+}
+.MapInterface__mobileMenuBtn--endRoomFloor.MapInterface__mobileMenuBtn--startRoomFloor {
+  box-shadow: 4px 4px 4px rgb(46, 204, 113), -5px -5px 4px rgb(255, 24, 24);
+}
+.MapInterface__zoomNav {
+  z-index: 1;
+  position: absolute;
+  right: 15px;
+  bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background-color: white;
+  filter: drop-shadow(-4px 4px 4px rgba(0, 0, 0, 0.5));
+  border-radius: 15px;
+  padding: 7px;
+}
+@media only screen and (min-width: 768px) and (min-height: 581px) {
+  .MapInterface__zoomNav {
+    right: 30px;
+    bottom: 30px;
+  }
+}
+.MapInterface__zoomBtn {
+  display: flex;
+  align-items: center;
+  margin: 8px 0px;
+  width: 25px;
+  height: 25px;
+}
+.MapInterface__zoomBtn:nth-child(3) {
+  margin: 10px 0px;
+}
+.MapInterface__zoomBtn:nth-child(5) {
+  margin: 6px 0px;
+}
+.MapInterface__zoomSpace {
+  width: 80%;
+  height: 3px;
+  background-color: #e8eaed;
+}/*# sourceMappingURL=Map.css.map */
