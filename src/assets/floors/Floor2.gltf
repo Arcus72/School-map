@@ -1926,7 +1926,8 @@
                         "POSITION" : 139,
                         "NORMAL" : 140
                     },
-                    "indices" : 15
+                    "indices" : 15,
+                    "material" : 0
                 }
             ]
         },

@@ -1,0 +1,24 @@
+.Map2D__draggableBox {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+.Map2D__floor {
+  width: 100vw;
+  padding-top: 2.8%;
+  padding-left: 1.7%;
+  display: none;
+}
+.Map2D__floor--isVisible {
+  display: block;
+}
+.Map2D__map {
+  position: relative;
+}
+.Map2D__labels {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 41.17vw;
+}/*# sourceMappingURL=Map2D.css.map */

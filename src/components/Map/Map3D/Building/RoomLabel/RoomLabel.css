@@ -1,0 +1,97 @@
+@keyframes roomFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.blanket {
+  position: relative;
+  height: 100px;
+  width: 100px;
+  background-color: red;
+  z-index: 10;
+}
+
+.RoomLabel {
+  animation: roomFadeIn 0.5s linear;
+}
+.RoomLabel__mainText {
+  font-family: "Poppins", sans-serif;
+  background-color: #2d3776;
+  color: white;
+  text-shadow: 5px 3px 6px rgb(0, 0, 0);
+  box-shadow: 8px 8px 24px -5px rgb(66, 68, 90);
+  white-space: nowrap;
+  margin: 0 auto;
+  font-size: 5rem;
+  width: -moz-min-content;
+  width: min-content;
+  line-height: 4rem;
+  padding: 1rem;
+  border-radius: 2rem;
+  text-align: center;
+}
+.RoomLabel__mainText--start, .RoomLabel__mainText--end {
+  position: relative;
+  box-shadow: none !important;
+}
+.RoomLabel__mainText--start::before, .RoomLabel__mainText--end::before {
+  content: "";
+  position: absolute;
+  top: -15%;
+  left: -5%;
+  border-radius: 2rem;
+  z-index: -1;
+  filter: blur(18px);
+  height: 130%;
+  width: 110%;
+}
+.RoomLabel__mainText--start {
+  background: linear-gradient(141deg, #3b4071 10%, #2ecc71 70%);
+}
+.RoomLabel__mainText--start::before {
+  background: linear-gradient(141deg, #3b4071 10%, #2ecc71 70%);
+}
+.RoomLabel__mainText--end {
+  background: linear-gradient(219deg, #3b4071 10%, #ff1818 70%);
+}
+.RoomLabel__mainText--end::before {
+  background: linear-gradient(219deg, #3b4071 10%, #ff1818 70%);
+}
+.RoomLabel__subText {
+  font-family: "Poppins", sans-serif;
+  background-color: #2d3776;
+  color: white;
+  text-shadow: 5px 3px 6px rgb(0, 0, 0);
+  box-shadow: 8px 8px 24px -5px rgb(66, 68, 90);
+  white-space: nowrap;
+  margin: 0 auto;
+  font-size: 5rem;
+  width: -moz-min-content;
+  width: min-content;
+  line-height: 4rem;
+  padding: 1rem;
+  border-radius: 2rem;
+  text-align: center;
+  font-size: 4em;
+}
+.RoomLabel--goldenText {
+  background: linear-gradient(46.46deg, #f1c40f 34.6%, #ffffff 90.3%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 5px 3px 6px rgba(255, 255, 255, 0.212);
+}
+.RoomLabel__arrowDown {
+  margin: 5px auto 0px auto;
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 20px solid white;
+  transition: transform 0.2s ease-in-out;
+}
+.RoomLabel__arrowDown--rotated {
+  transform: rotateZ(180deg);
+}/*# sourceMappingURL=RoomLabel.css.map */

@@ -5,8 +5,8 @@ import MapForm from '@comp/MapForm/MapForm';
 function App() {
   let quality = window.localStorage.getItem('quality');
   if (!quality) {
-    window.localStorage.setItem('quality', 'low');
-    quality = 'low';
+    window.localStorage.setItem('quality', '2D');
+    quality = '2D';
   }
   const [mapQuality, setMapQuality] = useState(quality);
   const [isFormVisible, setIsFormVisible] = useState(true);
